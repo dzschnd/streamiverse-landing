@@ -1,0 +1,13 @@
+.features-content {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.feature-card {
+    max-width: 404px;
+    min-height: 600px;
+    padding: 60px 30px;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+}

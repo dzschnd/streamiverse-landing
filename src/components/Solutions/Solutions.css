@@ -1,0 +1,20 @@
+.solutions-content {
+    justify-content: center;
+    display: grid;
+    gap: 20px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.solution-card {
+    min-height: 460px;
+    padding: 60px;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+}
+
+.wide-card {
+    display: flex;
+    flex-direction: row-reverse;
+    grid-column: span 2;
+}

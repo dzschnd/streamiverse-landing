@@ -1,0 +1,11 @@
+.community-content {
+    padding-inline: 142px;
+    display: flex;
+    gap: 168px;
+}
+
+.cta {
+    display: grid;
+    align-content: center;
+    gap: 60px;
+}
