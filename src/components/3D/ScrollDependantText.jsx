@@ -1,21 +1,27 @@
-import {Text, useScroll} from "@react-three/drei";
-import {useState} from "react";
-import {useFrame} from "@react-three/fiber";
+import { Text, useScroll } from "@react-three/drei";
+import { useState } from "react";
+import { useFrame } from "@react-three/fiber";
+import font from '../../assets/fonts/IBMPlexMono-Medium.ttf';
 
-export const ScrollDependantText = ({ position, color, fontSize, offsetStart, offsetEnd, children }) => {
+export const ScrollDependantText = ({ position, rotation, fontSize, offsetStart, offsetEnd, children }) => {
     const scroll = useScroll();
-    const [visible, setVisible] = useState(false);
+    const [opacity, setOpacity] = useState(0);
 
     useFrame(() => {
         const offset = scroll.offset;
-        setVisible(offset >= offsetStart && offset <= offsetEnd);
+        const range = offsetEnd - offsetStart;
+        const progress = (offset - offsetStart) / range;
+
+        if (offset >= offsetStart && offset <= offsetEnd) {
+            setOpacity(Math.min(1, Math.max(0, progress)));
+        } else {
+            setOpacity(offset < offsetStart ? 0 : 1);
+        }
     });
 
     return (
-        visible && (
-            <Text position={position} color={color} fontSize={fontSize}>
-                {children}
-            </Text>
-        )
+        <Text position={position} rotation={rotation} font={font} fontSize={fontSize} material-toneMapped={false} material-opacity={opacity}>
+            {children}
+        </Text>
     );
 };

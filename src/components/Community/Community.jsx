@@ -1,19 +1,21 @@
 import './Community.css'
-import communityOrbits from '../../assets/images/community-orbits.png'
+import ImageOrbit from "./ImageOrbit";
 function Community() {
     return (
-        <div className={'section-wrapper'}>
+        <div id={'community'} className={'section-wrapper'}>
             <div className={'section-header'}>
                 Join our community
             </div>
            <div className={'community-content'}>
-               <img src={communityOrbits} alt={'Orbit image'}/>
+              <ImageOrbit/>
                <div className={'cta'}>
                    <div className={'section-subheader'}>
-                       Join universe of streamers
+                       Join the universe of streamers
                    </div>
-                   <button className={'button'}>
-                       Get Started
+                   <button className={'button button-gradient community-button'}>
+                        <span>
+                            Get Started
+                        </span>
                    </button>
                </div>
            </div>

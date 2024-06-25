@@ -1,20 +1,157 @@
 .solutions-content {
-    justify-content: center;
     display: grid;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr 3fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }
-
 .solution-card {
-    min-height: 460px;
-    padding: 60px;
-    border: 1px solid #ffffff;
+    position: relative;
+    width: 334px;
+    height: 334px;
+    background-color: rgba(93, 93, 93, 0.09);
+    padding: 24px 30px 0;
     border-radius: 30px;
+    overflow: hidden;
 }
 
-.wide-card {
-    display: flex;
-    flex-direction: row-reverse;
-    grid-column: span 2;
+.solution-image {
+    align-content: center;
+    max-width: 965px;
+    height: 688px;
+    background-color: var(--color-primary-400);
+    border-radius: 30px;
+    img {
+        width: 295px;
+        margin-inline: auto;
+    }
+    grid-column: 3/6;
+    grid-row: 1/3;
 }
+
+.solution-card button {
+    cursor: default;
+    background-image: linear-gradient(#8052FF, #6330E8);
+    position: absolute;
+}
+.solution-card button:hover {
+    transform: scale(1.1);
+}
+
+.solution-card #illustration-button-top {
+    right: 132px;
+    bottom: 132px;
+    transform: rotate(15deg);
+}
+.solution-card #illustration-button-top:hover {
+    transform: scale(1.1) rotate(15deg);
+}
+.solution-card #illustration-button-bottom {
+    left: 95px;
+    bottom: 22px;
+    transform: rotate(-15deg);
+}
+.solution-card #illustration-button-bottom:hover {
+    transform: scale(1.1) rotate(-15deg);
+}
+
+.solution-card#top-right img {
+    width: 216px;
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+}
+
+.solution-card#bottom-right img {
+    position: absolute;
+    bottom: 40px;
+}
+
+.payment-methods-static {
+    position: absolute;
+    bottom: 34px;
+    display: flex;
+    gap: 45px;
+}
+
+.payment-methods-carousel {
+    position: absolute;
+    bottom: 88px;
+    display: flex;
+    gap: 53px;
+}
+.payment-methods-carousel img {
+    width: 25px;
+}
+#carousel-set-1 {
+    animation: 30s slide-1 infinite linear;
+}
+#carousel-set-2 {
+    animation: 30s slide-2 infinite linear;
+}
+
+@keyframes slide-1 {
+    from {
+        left: 53px;
+    }
+    to {
+        left: calc(-100%);
+    }
+}
+@keyframes slide-2 {
+    from {
+        left: calc(100px + 100%);
+    }
+    to {
+        left: 53px;
+    }
+}
+
+@media (max-width: 1124px){
+    .solutions-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 334px 400px;
+    }
+    .solution-image img {
+        content: url('../../assets/images/solutions/phone-half.png');
+        max-width: 295px;
+        margin-inline: auto;
+    }
+    .solution-image {
+        max-width: 708px;
+        height: 400px;
+        align-content: end;
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+    .solution-card {
+        max-width: 334px;
+        width: auto;
+        min-height: 100%;
+    }
+}
+@media (max-width: 957px){
+    .solutions-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .solutions-content div {
+        margin-inline: auto;
+    }
+    .solution-image img {
+        content: url('../../assets/images/solutions/phone-half.png');
+        max-width: 295px;
+        margin-inline: auto;
+    }
+    .solution-image {
+        width: 380px;
+        height: 400px;
+    }
+    .solution-card {
+        max-width: min(380px, 100%);
+        width: min(380px, 100%);
+    }
+}
+
+
+

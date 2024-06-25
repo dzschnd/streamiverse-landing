@@ -4,14 +4,14 @@ import * as THREE from "three";
 
 
 const StarParticles = () => {
-    const starCount = 5000;
+    const starCount = 1000;
     const starSize = 4;
     const starColor = '#ffffff';
     const starTextureBackgroundColor = 'rgba(255,255,255,0)';
     const starClusterRef = useRef();
     const starClusterPosition = [0, 0, -400];
     const starClusterRadius = 400;
-    const starClusterRotationSpeed= 0.003;
+    const starClusterRotationSpeed= 0.004;
 
     function createCanvasMaterial(size) {
         let matCanvas = document.createElement('canvas');

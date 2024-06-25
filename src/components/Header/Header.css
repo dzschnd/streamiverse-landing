@@ -3,35 +3,71 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 75px;
+    z-index: 100;
 }
-
-.nav-list {
+.header-nav-list {
     display: flex;
-    gap: min(3.125vw, 60px);
-    a {
-        font-size: var(--font-size-400);
-        font-weight: var(--font-weight-regular);
-    }
+    gap: min(2vw, 60px);
 }
 
+.header-logo {
+    width: 175px;
+    height: 26px;
+}
 .mobile-nav-toggle {
     display: none;
 }
+.header-button-mobile {
+    display: none;
+}
 
-@media (max-width: 1160px) {
-    .nav {
-        display: none;
-        position: fixed;
-        inset: 2rem 0 0 0;
-        margin-inline: auto;
-        margin-top: 2rem;
+@media (max-width: 1470px) {
+    .header-logo {
+        content: url("../../assets/images/header/logo-accent.png");
+        width: 26px;
     }
+    .header-button {
+        width: 163px;
+    }
+}
+
+@media (max-width: 956px) {
     .header-button {
         display: none;
     }
-    .nav-list {
+    .header-button-mobile {
+        display: block;
+        margin-inline: auto;
+    }
+    .header-wrapper {
+        background-color: var(--color-neutral-900);
+    }
+    .header-nav {
         display: flex;
         flex-direction: column;
+        position: fixed;
+        top: 95px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-neutral-900);
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.6s ease, opacity 0.6s ease, visibility 0s 0.6s;
+    }
+    .header-nav.visible {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        transition: transform 0.6s ease, opacity 0.6s ease, visibility 0s 0s;
+    }
+    .header-nav-list {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         text-align: center;
         gap: 2rem;
     }
@@ -49,4 +85,3 @@
         display: none;
     }
 }
-

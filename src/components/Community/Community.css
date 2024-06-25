@@ -1,11 +1,38 @@
 .community-content {
-    padding-inline: 142px;
+    padding: 84px 142px 202px;
     display: flex;
-    gap: 168px;
+    justify-content: space-between;
 }
 
 .cta {
     display: grid;
     align-content: center;
     gap: 60px;
+}
+
+@media (max-width: 1933px) {
+    .community-content {
+        padding: 54px 95px 150px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1561px) {
+    .community-content {
+        padding: 54px 24px 150px;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .community-content * {
+        margin-inline: auto;
+    }
+    .cta {
+        text-align: center;
+        gap: 40px;
+    }
+    .community-button {
+        width: min(380px, 100%);
+
+    }
 }

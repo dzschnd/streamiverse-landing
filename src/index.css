@@ -2,11 +2,11 @@
     --font-family-primary: "IBM Plex Mono", monospace;
 
     --color-primary-100: #CD8CFF;
-    --color-primary-400: #8F00FF;
+    --color-primary-400: #7948FF;
 
     --color-neutral-100: #F1F0F1;
+    --color-neutral-500: #5D5D5D16;
     --color-neutral-900: #0F0E10;
-    /*--color-neutral-900: #000001ff;*/
 
     --font-size-400: 1rem;
     --font-size-500: 1.5rem;
@@ -55,22 +55,9 @@ picture,
 svg {
     max-width: 100%;
     display: block;
+    pointer-events: none;
+    user-select: none;
 }
-
-ul[role='list'],
-ol[role='list'] {
-    list-style: none;
-}
-
-a {
-    color: var(--color-neutral-100);
-    text-decoration: none;
-}
-
-/* could be useful later */
-/*:target {*/
-/*    scroll-margin-block: 5ex;*/
-/*}*/
 
 .canvas-html {
     width: 100vw;
@@ -79,7 +66,7 @@ a {
 }
 
 /* document later */
-.canvas-html div {
+div:has(.canvas-html) {
     transform: none !important;
 }
 
@@ -88,13 +75,19 @@ a {
     color: var(--color-neutral-100);
 }
 
-.background-primary {
+.background-neutral-900 {
     background-color: var(--color-neutral-900);
+}
+
+
+.background-neutral-500 {
+    background-color: var(--color-neutral-500);
 }
 
 .sticky {
     position: sticky;
     top: 0;
+    z-index: 2;
 }
 
 .blur {
