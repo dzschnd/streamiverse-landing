@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/streamiverse-landing/static/css/main.1a3f02c4.css",
-    "main.js": "/streamiverse-landing/static/js/main.23763a97.js",
+    "main.js": "/streamiverse-landing/static/js/main.8d0e0c7b.js",
     "static/media/orbit-2-red-girl.svg": "/streamiverse-landing/static/media/orbit-2-red-girl.fa48c58c55efb875037e386754fee3e3.svg",
     "static/media/orbit-3-guy.svg": "/streamiverse-landing/static/media/orbit-3-guy.33abe51e9eeedf315099d8c3ac0927d1.svg",
     "static/media/orbit-2-blonde-girl.svg": "/streamiverse-landing/static/media/orbit-2-blonde-girl.d72ab1aab23a01b29c03fddb8a05543c.svg",
@@ -40,10 +40,10 @@
     "static/media/mastercard-logo.svg": "/streamiverse-landing/static/media/mastercard-logo.9de7f5da15f6a767365c9fa481b1c725.svg",
     "static/media/orbit-1-dot.svg": "/streamiverse-landing/static/media/orbit-1-dot.76150e073d604a8be1208b375780294b.svg",
     "main.1a3f02c4.css.map": "/streamiverse-landing/static/css/main.1a3f02c4.css.map",
-    "main.23763a97.js.map": "/streamiverse-landing/static/js/main.23763a97.js.map"
+    "main.8d0e0c7b.js.map": "/streamiverse-landing/static/js/main.8d0e0c7b.js.map"
   },
   "entrypoints": [
     "static/css/main.1a3f02c4.css",
-    "static/js/main.23763a97.js"
+    "static/js/main.8d0e0c7b.js"
   ]
 }
