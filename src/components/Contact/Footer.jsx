@@ -2,14 +2,17 @@ import './Footer.css'
 import logoFull from "../../assets/images/header/logo-accent-full.png";
 import twitterLogo from "../../assets/images/footer/twitter-logo.svg";
 import discordLogo from "../../assets/images/footer/discord-logo.svg";
+import {Carousel} from "react-responsive-carousel";
+import visaLogo from "../../assets/images/solutions/payment-icons/visa-logo.svg";
+import mastercardLogo from "../../assets/images/solutions/payment-icons/mastercard-logo.svg";
+import googlePayLogo from "../../assets/images/solutions/payment-icons/google-pay-logo.svg";
+import applePayLogo from "../../assets/images/solutions/payment-icons/apple-pay-logo.svg";
 function Footer() {
     return (
         <div className={'background-neutral-500'}>
             <div id={'contact'} className={'section-wrapper'}>
                 <div className={'footer-wrapper'}>
-                    <a href={'#'}>
-                        <img className={'footer-logo'} src={logoFull} alt={'streamiverse'}/>
-                    </a>
+                    <img className={'footer-logo'} src={logoFull} alt={'streamiverse'}/>
                     <div className={'nav-list footer-nav-list'}>
                         <ul className={'nav-set-1'}>
                             <li><a href={'#'}>Contact Us</a></li>

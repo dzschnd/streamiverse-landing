@@ -7,7 +7,7 @@
 #orbit-logo {
     position: absolute;
     top: 278px;
-    left: 278px;
+    left: calc(50% - 63px);
     width: 126px;
     height: 126px;
 }
@@ -101,13 +101,10 @@
     }
 }
 
-@media (max-width: 1933px) {
+@media (max-width: 1440px) {
     .image-orbit-wrapper {
         height: calc((478/682) * 682px);
         width: calc((478/682) * 682px);
-    }
-    .image-orbit-wrapper img {
-       transform: scale(calc(478/682));
     }
     #orbit-logo {
         top: calc(50% - 44px);
@@ -139,54 +136,60 @@
     }
 
     #orbit-1-girl {
-        top: -42px;
-        left: 145px;
+        top: -30px;
+        left: 90px;
+        width: 60px;
     }
     #orbit-1-guy {
-        top: 252px;
-        left: 320px;
+        top: 183px;
+        left: 217px;
+        width: 40px;
     }
     #orbit-1-headphones-guy {
-        top: 252px;
-        left: -8px;
+        top: 176px;
+        left: -4px;
+        width: 50px;
     }
     #orbit-dot-1 {
-        top: 94px;
-        left: 343px;
+        top: 64px;
+        left: 238px;
+        width: 21px;
     }
     #orbit-dot-2 {
-        top: 360px;
-        left: 156px;
+        top: 251px;
+        left: 122px;
+        width: 21px;
     }
     #orbit-dot-3 {
-        top: 94px;
-        left: 1px;
+        top: 64px;
+        left: 5px;
+        width: 21px;
     }
     #orbit-2-red-girl {
-        top: 94px;
-        left: 460px;
+        top: 65px;
+        left: 318px;
     }
     #orbit-2-blonde-girl {
-        top: 210px;
-        left: -35px;
+        top: 190px;
+        left: -21px;
+        width: 50px;
     }
     #orbit-3-guy {
-        top: -11px;
-        left: 230px;
+        top: -10px;
+        left: 170px;
+        width: 30px;
     }
     #orbit-3-glasses-guy {
-        top: 633px;
-        left: 420px;
+        top: 445px;
+        left: 290px;
+        width: 38px;
     }
 }
 
-@media (max-width: 690px) {
+@media (max-width: 621px) {
     .image-orbit-wrapper {
         height: calc((380/682) * 682px);
         width: calc((380/682) * 682px);
-    }
-    .image-orbit-wrapper img {
-        transform: scale(calc(380/682));
     }
     #orbit-logo {
         top: calc(50% - 35px);
@@ -218,44 +221,64 @@
     }
 
     #orbit-1-girl {
-        top: calc(-(380/682) * 84px);;
+        top: -20px;
         left: calc(50% - 42px);
+        width: 46px;
     }
 
     #orbit-1-guy {
-        top: 252px;
-        left: 320px;
+        top: 140px;
+        left: 177px;
+        width: 32px;
     }
     #orbit-1-headphones-guy {
-        top: 252px;
-        left: -8px;
+        top: 130px;
+        left: -10px;
+        width: 38px;
     }
     #orbit-dot-1 {
-        top: 94px;
-        left: 343px;
+        top: 42px;
+        left: 185px;
+        width: 17px;
     }
     #orbit-dot-2 {
-        top: 360px;
-        left: 156px;
+        top: 200px;
+        left: 100px;
+        width: 17px;
     }
     #orbit-dot-3 {
-        top: 94px;
-        left: 1px;
+        top: 42px;
+        left: 5px;
+        width: 17px;
     }
     #orbit-2-red-girl {
-        top: 94px;
-        left: 460px;
+        top: 20px;
+        left: 227px;
+        width: 25px;
     }
     #orbit-2-blonde-girl {
-        top: 210px;
-        left: -35px;
+        top: 140px;
+        left: -18px;
+        width: 40px;
     }
     #orbit-3-guy {
-        top: -11px;
+        top: -5px;
         left: 230px;
+        width: 24px;
     }
     #orbit-3-glasses-guy {
-        top: 633px;
-        left: 420px;
+        top: 354px;
+        left: 220px;
+        width: 32px;
+    }
+}
+
+@media (max-width: 428px) {
+    .image-orbit-wrapper {
+        height: calc((380/682) * 0.75*682px);
+        width: calc((380/682) * 0.75*682px);
+    }
+    #orbit-3 {
+        display: none;
     }
 }

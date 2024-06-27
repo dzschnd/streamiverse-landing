@@ -5,13 +5,13 @@ import moneyJar from '../../assets/images/features/money-jar.png'
 import platform from '../../assets/images/features/platform.png'
 function Features() {
     return (
-        <div id={'features'} className={'section-wrapper'}>
+        <div className={'section-wrapper'}>
             <div className={'section-header'}>
                 Why Streamiverse?
             </div>
             <div className={'features-content'}>
-                <div className={'feature-card background-gradient'} id={'upper-right'}>
-                    <img id={'globe'} src={globe} alt={'Feature 1'}/>
+                <div className={'feature-card background-gradient'} id={'gradient-upper-right'}>
+                    <img id={'globe'} src={globe} alt={''}/>
                     <div className={'feature-text'}>
                         <div className={'section-subheader'}>
                             Global Payment Methods
@@ -21,9 +21,9 @@ function Features() {
                         </div>
                     </div>
                 </div>
-                <div className={'feature-card background-gradient'} id={'bottom'}>
+                <div className={'feature-card background-gradient'} id={'gradient-bottom'}>
                     <div className={'bricks-image'}>
-                        <img id={'brick-top'} src={brick} alt={'Feature 2'}/>
+                        <img id={'brick-top'} src={brick} alt={''}/>
                         <img id={'brick-bottom'} src={brick}/>
                     </div>
                     <div className={'feature-text'}>
@@ -35,8 +35,8 @@ function Features() {
                         </div>
                     </div>
                 </div>
-                <div className={'feature-card background-gradient'} id={'upper-left'}>
-                    <img id={'money-jar'} src={moneyJar} alt={'Feature 3'}/>
+                <div className={'feature-card background-gradient'} id={'gradient-upper-left'}>
+                    <img id={'money-jar'} src={moneyJar} alt={''}/>
                     <div className={'feature-text'}>
                         <div className={'section-subheader'}>
                             Digital Asset Wallet
@@ -46,9 +46,9 @@ function Features() {
                         </div>
                     </div>
                 </div>
-                <div className={'feature-card background-gradient'} id={'bottom'}>
+                <div className={'feature-card background-gradient'} id={'gradient-bottom'}>
                     <div className={'platform-image'}>
-                        <img id={'platform-bottom'} src={platform} alt={'Feature 4'}/>
+                        <img id={'platform-bottom'} src={platform} alt={''}/>
                         <img id={'platform-mid'} src={platform}/>
                         <img id={'platform-top'} src={platform}/>
                     </div>

@@ -1,116 +1,321 @@
 import {Sphere} from "@react-three/drei";
-import {useLoader} from "@react-three/fiber";
+import {useFrame, useLoader} from "@react-three/fiber";
 import {TextureLoader} from "three";
 import {ScrollDependantText} from "./ScrollDependantText";
 import planet1 from '../../assets/images/hero/planet-1.svg'
 import planet2 from '../../assets/images/hero/planet-2.svg'
 import planet3 from '../../assets/images/hero/planet-3.svg'
 import planet4 from '../../assets/images/hero/planet-4.svg'
+import {useEffect, useRef, useState} from "react";
+import {ScrollDependantSphere} from "./ScrollDependantSphere";
 
 function Tools() {
-    const planet1Texture = useLoader(TextureLoader, planet1)
-    const planet2Texture = useLoader(TextureLoader, planet2)
-    const planet3Texture = useLoader(TextureLoader, planet3)
-    const planet4Texture = useLoader(TextureLoader, planet4)
+    const [screenWidth, setScreenWidth] = useState('desktop');
+    const handleResize = () => {
+        if (window.innerWidth >= 1170) {
+            setScreenWidth('desktop')
+        } else if (window.innerWidth >= 690) {
+            setScreenWidth('tablet')
+        } else {
+            setScreenWidth('mobile')
+        }
+    }
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <>
             <group position={[0, 0, -147.5]}>
-                <ScrollDependantText position={[0, 0, 0]} fontSize={1.5} offsetStart={0.03} offsetEnd={0.1}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [0, 0, 0]
+                                             : screenWidth === 'tablet' ? [0, 0, 20]
+                                                                        : [0, 0, -7]}
+                                     fontSize={screenWidth === 'desktop' ? 1.5
+                                             : screenWidth === 'tablet' ? 0.75
+                                                                        : 0.75}
+                                     offsetStart={0.03} offsetEnd={0.1}>
                     The Streamiverse Universe
                 </ScrollDependantText>
-                <ScrollDependantText position={[0, -2, 0]} fontSize={0.75} offsetStart={0.03} offsetEnd={0.1}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [0, -2, 0]
+                                             : screenWidth === 'tablet' ? [0, -1, 20]
+                                                                        : [0, -1, -7]}
+                                     fontSize={screenWidth === 'desktop' ? 0.75
+                                             : screenWidth === 'tablet' ? 0.35
+                                                                        : 0.35}
+                                     offsetStart={0.03} offsetEnd={0.1}>
                     Streamiverse is like a vast, interconnected space for
                 </ScrollDependantText>
-                <ScrollDependantText position={[0, -3.2, 0]} fontSize={0.75} offsetStart={0.03} offsetEnd={0.1}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [0, -3.2, 0]
+                                             : screenWidth === 'tablet' ? [0, -1.5, 20]
+                                                                        : [0, -1.5, -7]}
+                                     fontSize={screenWidth === 'desktop' ? 0.75
+                                             : screenWidth === 'tablet' ? 0.35
+                                                                        : 0.35}
+                                     offsetStart={0.03} offsetEnd={0.1}>
                     streamers. Each tool and feature is an orbiting body within
                 </ScrollDependantText>
-                <ScrollDependantText position={[0, -4.4, 0]} fontSize={0.75} offsetStart={0.03} offsetEnd={0.1}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [0, -4.4, 0]
+                                             : screenWidth === 'tablet' ? [0, -2, 20]
+                                                                        : [0, -2, -7]}
+                                     fontSize={screenWidth === 'desktop' ? 0.75
+                                             : screenWidth === 'tablet' ? 0.35
+                                                                        : 0.35}
+                                     offsetStart={0.03} offsetEnd={0.1}>
                     this universe, working together to create a seamless and
                 </ScrollDependantText>
-                <ScrollDependantText position={[0, -5.6, 0]} fontSize={0.75} offsetStart={0.03} offsetEnd={0.1}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [0, -5.6, 0]
+                                             : screenWidth === 'tablet' ? [0, -2.5, 20]
+                                                                        : [0, -2.5, -7]}
+                                     fontSize={screenWidth === 'desktop' ? 0.75
+                                             : screenWidth === 'tablet' ? 0.35
+                                                                        : 0.35}
+                                     offsetStart={0.03} offsetEnd={0.1}>
                     powerful platform for streamers
                 </ScrollDependantText>
             </group>
+
+
             <group position={[-140, 0, -200]}>
-                <Sphere position={[0, 0, -5]} args={[5, 32, 32]}>
-                    <meshBasicMaterial map={planet1Texture}/>
-                </Sphere>
-                <ScrollDependantText position={[0, 3, 4]} rotation={[0, 1.5708, 0]} fontSize={1} offsetStart={0.17} offsetEnd={0.2}>
+                <ScrollDependantSphere
+                        position={screenWidth === 'desktop' ? [0, 0, -9]
+                            : screenWidth === 'tablet' ? [0, 0, -4.5]
+                                                       : [0, 3, 0]}
+                        args={screenWidth === 'desktop' ? [5, 32, 32]
+                            : screenWidth === 'tablet' ? [4, 32, 32]
+                                                       : [3, 32, 32]}
+                        texture={planet1}
+                        offsetStart={0.14} offsetEnd={0.2}/>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [0, 3, 2]
+                                             : screenWidth === 'tablet' ? [0, 2, 3]
+                                                                        : [0, -1.5, 0]}
+                                     fontSize={screenWidth === 'desktop' ? 1
+                                         : screenWidth === 'tablet' ? 0.5
+                                                                    : 0.5}
+                                     rotation={[0, 1.5708, 0]}
+                                     offsetStart={0.14} offsetEnd={0.2}>
                     #1
                 </ScrollDependantText>
-                <ScrollDependantText position={[0, 1, 10]} rotation={[0, 1.5708, 0]} fontSize={1.5} offsetStart={0.17} offsetEnd={0.2}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [0, 1, 8]
+                                             : screenWidth === 'tablet' ? [0, 1, 6]
+                                                                        : [0, -2.5, 0]}
+                                     fontSize={screenWidth === 'desktop' ? 1.5
+                                         : screenWidth === 'tablet' ? 0.75
+                                             : 0.75}
+                                     rotation={[0, 1.5708, 0]}
+                                     offsetStart={0.14} offsetEnd={0.2}>
                     Streaming Tools
                 </ScrollDependantText>
-                <ScrollDependantText position={[0, -1, 8.5]} rotation={[0, 1.5708, 0]} fontSize={0.75} offsetStart={0.17} offsetEnd={0.2}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [0, -1, 6.5]
+                                             : screenWidth === 'tablet' ? [0, 0, 5.1]
+                                                                        : [0, -3.5, 0]}
+                                     fontSize={screenWidth === 'desktop' ? 0.75
+                                         : screenWidth === 'tablet' ? 0.35
+                                             : 0.35}
+                                     rotation={[0, 1.5708, 0]}
+                                     offsetStart={0.14} offsetEnd={0.2}>
                     Tools for enhancing the
                 </ScrollDependantText>
-                <ScrollDependantText position={[0, -2, 8.9]} rotation={[0, 1.5708, 0]} fontSize={0.75} offsetStart={0.17} offsetEnd={0.2}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [0, -2, 6.9]
+                                             : screenWidth === 'tablet' ? [0, -0.5, 5.3]
+                                                                        : [0, -4, 0]}
+                                     fontSize={screenWidth === 'desktop' ? 0.75
+                                         : screenWidth === 'tablet' ? 0.35
+                                             : 0.35}
+                                     rotation={[0, 1.5708, 0]}
+                                     offsetStart={0.14} offsetEnd={0.2}>
                     streaming experience with
                 </ScrollDependantText>
-                <ScrollDependantText position={[0, -3, 9.1]} rotation={[0, 1.5708, 0]} fontSize={0.75} offsetStart={0.17} offsetEnd={0.2}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [0, -3, 7.1]
+                                             : screenWidth === 'tablet' ? [0, -1, 5.35]
+                                                                        : [0, -4.5, 0]}
+                                     fontSize={screenWidth === 'desktop' ? 0.75
+                                              : screenWidth === 'tablet' ? 0.35
+                                                                         : 0.35}
+                                     rotation={[0, 1.5708, 0]}
+                                     offsetStart={0.14} offsetEnd={0.2}>
                     alerts, overlays, and more
                 </ScrollDependantText>
             </group>
 
+
             <group position={[-210, 0, -340]}>
-                <Sphere position={[1.6, 0, 0]} args={[5, 32, 32]}>
-                    <meshBasicMaterial map={planet2Texture}/>
-                </Sphere>
-                <ScrollDependantText position={[11.8, 3, 0]} fontSize={1} offsetStart={0.28} offsetEnd={0.31}>
+                <ScrollDependantSphere
+                    position={screenWidth === 'desktop' ? [1.6, 0, 0]
+                        : screenWidth === 'tablet' ? [5, 0, 0]
+                            : [10, 4, 0]}
+                    args={screenWidth === 'desktop' ? [5, 32, 32]
+                        : screenWidth === 'tablet' ? [4, 32, 32]
+                            : [3, 32, 32]}
+                    texture={planet2}
+                    offsetStart={0.24} offsetEnd={0.29}/>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [11.8, 3, 0]
+                                            : screenWidth === 'tablet' ? [13.8, 1, 0]
+                                                                       : [10, -0.8, 0]}
+                                     fontSize={screenWidth === 'desktop' ? 1
+                                         : screenWidth === 'tablet' ? 0.5
+                                             : 0.5}
+                                     offsetStart={0.24} offsetEnd={0.29}>
                     #2
                 </ScrollDependantText>
-                <ScrollDependantText position={[15.2, 1, 0]} fontSize={1.5} offsetStart={0.28} offsetEnd={0.31}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [15.2, 1, 0]
+                                              : screenWidth === 'tablet' ? [15.5, 0, 0]
+                                                                          : [10, -1.8, 0]}
+                                     fontSize={screenWidth === 'desktop' ? 1.5
+                                             : screenWidth === 'tablet' ? 0.75
+                                                                        : 0.75}
+                                     offsetStart={0.24} offsetEnd={0.29}>
                     Donations
                 </ScrollDependantText>
-                <ScrollDependantText position={[16, -1, 0]} fontSize={0.75} offsetStart={0.28} offsetEnd={0.31}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [16, -1, 0]
+                                              : screenWidth === 'tablet' ? [15.7, -1, 0]
+                                                                         : [10, -2.8, 0]}
+                                     fontSize={screenWidth === 'desktop' ? 0.75
+                                             : screenWidth === 'tablet' ? 0.35
+                                                                        : 0.35}
+                                     offsetStart={0.24} offsetEnd={0.29}>
                     Accept donations from
                 </ScrollDependantText>
-                <ScrollDependantText position={[16, -2, 0]} fontSize={0.75} offsetStart={0.28} offsetEnd={0.31}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [16, -2, 0]
+                                             : screenWidth === 'tablet' ? [15.7, -1.5, 0]
+                                                                        : [10, -3.3, 0]}
+                                     fontSize={screenWidth === 'desktop' ? 0.75
+                                              : screenWidth === 'tablet' ? 0.35
+                                                                         : 0.35}
+                                     offsetStart={0.24} offsetEnd={0.29}>
                     around the world with
                 </ScrollDependantText>
-                <ScrollDependantText position={[16.95, -3, 0]} fontSize={0.75} offsetStart={0.28} offsetEnd={0.31}>
-                    multiple payment options.
+                <ScrollDependantText position={screenWidth === 'desktop' ? [16.75, -3, 0]
+                                              : screenWidth === 'tablet' ? [16.05, -2, 0]
+                                                                         : [10, -3.8, 0]}
+                                     fontSize={screenWidth === 'desktop' ? 0.75
+                                              : screenWidth === 'tablet' ? 0.35
+                                                                         : 0.35}
+                                     offsetStart={0.24} offsetEnd={0.29}>
+                    multiple payment options
                 </ScrollDependantText>
             </group>
 
+
             <group position={[-200, 0, -530]}>
-                <Sphere position={[7, 0, -5]} args={[4, 32, 32]}>
-                    <meshBasicMaterial map={planet3Texture}/>
-                </Sphere>
-                <ScrollDependantText position={[-1.4, 3, -5]} fontSize={1} offsetStart={0.38} offsetEnd={0.41}>
+                <ScrollDependantSphere position={screenWidth === 'desktop' ? [7, 0, -5]
+                                                : screenWidth === 'tablet' ? [4.5, 0, -5]
+                                                                           : [0, 3, -5]}
+                                       args={screenWidth === 'desktop' ? [4, 32, 32]
+                                            : screenWidth === 'tablet' ? [3, 32, 32]
+                                                                       : [2.3, 32, 32]}
+                                       texture={planet3}
+                                       offsetStart={0.32} offsetEnd={0.37}/>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [-1.4, 3, -5]
+                                              : screenWidth === 'tablet' ? [-1.4, 2, -5]
+                                                                         : [0, -1, -5]}
+                                     fontSize={screenWidth === 'desktop' ? 1
+                                              : screenWidth === 'tablet' ? 0.5
+                                                                         : 0.5}
+                                     offsetStart={0.32} offsetEnd={0.37}>
                     #3
                 </ScrollDependantText>
-                <ScrollDependantText position={[-3.5, 1, -5]} fontSize={1.5} offsetStart={0.38} offsetEnd={0.41}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [-3.5, 1, -5]
+                                              : screenWidth === 'tablet' ? [-2.5, 1, -5]
+                                                                         : [0, -2, -5]}
+                                     fontSize={screenWidth === 'desktop' ? 1.5
+                                              : screenWidth === 'tablet' ? 0.75
+                                                                         : 0.75}
+                                     offsetStart={0.32} offsetEnd={0.37}>
                     Wallet
                 </ScrollDependantText>
-                <ScrollDependantText position={[-7, -1, -5]} fontSize={0.75} offsetStart={0.38} offsetEnd={0.41}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [-7, -1, -5]
+                                              : screenWidth === 'tablet' ? [-4, 0, -5]
+                                                                         : [0, -3, -5]}
+                                     fontSize={screenWidth === 'desktop' ? 0.75
+                                              : screenWidth === 'tablet' ? 0.35
+                                                                         : 0.35}
+                                     offsetStart={0.32} offsetEnd={0.37}>
                     A digital wallet for easily
                 </ScrollDependantText>
-                <ScrollDependantText position={[-5.9, -2, -5]} fontSize={0.75} offsetStart={0.38} offsetEnd={0.41}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [-5.9, -2, -5]
+                                              : screenWidth === 'tablet' ? [-3.5, -0.5, -5]
+                                                                         : [0, -3.5, -5]}
+                                     fontSize={screenWidth === 'desktop' ? 0.75
+                                              : screenWidth === 'tablet' ? 0.35
+                                                                         : 0.35}
+                                     offsetStart={0.32} offsetEnd={0.37}>
                     managing donations and
                 </ScrollDependantText>
-                <ScrollDependantText position={[-6.8, -3, -5]} fontSize={0.75} offsetStart={0.38} offsetEnd={0.41}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [-6.8, -3, -5]
+                                              : screenWidth === 'tablet' ? [-3.9, -1, -5]
+                                                                         : [0, -4, -5]}
+                                     fontSize={screenWidth === 'desktop' ? 0.75
+                                              : screenWidth === 'tablet' ? 0.35
+                                                                         : 0.35}
+                                     offsetStart={0.32} offsetEnd={0.37}>
                     payments. All in one place
                 </ScrollDependantText>
             </group>
 
+
             <group position={[-200, 140, -600]} args={[1, 32, 32]}>
-                <Sphere position={[-7.5, 0, 0]} args={[5, 32, 32]} rotation={[1.2, 3.3, 0]}>
-                    <meshBasicMaterial map={planet4Texture}/>
-                </Sphere>
-                <ScrollDependantText position={[2.7, 0, 3]} fontSize={1} rotation={[1.5807, 0, 0]} offsetStart={0.52} offsetEnd={0.55}>
+                <ScrollDependantSphere position={screenWidth === 'desktop' ? [-9, 0, 0]
+                                                : screenWidth === 'tablet' ? [-4.5, 0, 0]
+                                                                           : [0, 0, 3]}
+                                      args={screenWidth === 'desktop' ? [5, 32, 32]
+                                           : screenWidth === 'tablet' ? [4, 32, 32]
+                                                                      : [3, 32, 32]}
+                        rotation={[1.2, 3.3, 0]}
+                                       texture={planet4}
+                                       offsetStart={0.43} offsetEnd={0.47}/>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [1.2, 0, 3]
+                                             : screenWidth === 'tablet' ? [2.2, 0, 2]
+                                                                        : [0, 0, -1.5]}
+                                     fontSize={screenWidth === 'desktop' ? 1
+                                             : screenWidth === 'tablet' ? 0.5
+                                                                        : 0.5}
+                                     rotation={[1.5807, 0, 0]}
+                                     offsetStart={0.43} offsetEnd={0.47}>
                     #4
                 </ScrollDependantText>
-                <ScrollDependantText position={[7.5, 0, 1]} fontSize={1.5} rotation={[1.5807, 0, 0]} offsetStart={0.52} offsetEnd={0.55}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [6, 0, 1]
+                                             : screenWidth === 'tablet' ? [4.6, 0, 1]
+                                                                        : [0, 0, -2.5]}
+                                     fontSize={screenWidth === 'desktop' ? 1.5
+                                             : screenWidth === 'tablet' ? 0.75
+                                             : 0.75}
+                                     rotation={[1.5807, 0, 0]}
+                                     offsetStart={0.43} offsetEnd={0.47}>
                     Monetization
                 </ScrollDependantText>
-                <ScrollDependantText position={[9.35, 0, -1]} fontSize={0.75} rotation={[1.5807, 0, 0]} offsetStart={0.52} offsetEnd={0.55}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [7.85, 0, -1]
+                                             : screenWidth === 'tablet' ? [5.3, 0, 0]
+                                                                        : [0, 0, -3.5]}
+                                     fontSize={screenWidth === 'desktop' ? 0.75
+                                             : screenWidth === 'tablet' ? 0.35
+                                                                        : 0.35}
+                                     rotation={[1.5807, 0, 0]}
+                                     offsetStart={0.43} offsetEnd={0.47}>
                     Innovative ways to monetize your
                 </ScrollDependantText>
-                <ScrollDependantText position={[8.25, 0, -2]} fontSize={0.75} rotation={[1.5807, 0, 0]} offsetStart={0.52} offsetEnd={0.55}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [6.75, 0, -2]
+                                             : screenWidth === 'tablet' ? [4.8, 0, -0.5]
+                                                                        : [0, 0, -4]}
+                                     fontSize={screenWidth === 'desktop' ? 0.75
+                                             : screenWidth === 'tablet' ? 0.35
+                                                                        : 0.35}
+                                     rotation={[1.5807, 0, 0]}
+                                     offsetStart={0.43} offsetEnd={0.47}>
                     brand and community through
                 </ScrollDependantText>
-                <ScrollDependantText position={[7.83, 0, -3]} fontSize={0.75} rotation={[1.5807, 0, 0]} offsetStart={0.52} offsetEnd={0.55}>
+                <ScrollDependantText position={screenWidth === 'desktop' ? [6.33, 0, -3]
+                                             : screenWidth === 'tablet' ? [4.6, 0, -1]
+                                                                        : [0, 0, -4.5]}
+                                     fontSize={screenWidth === 'desktop' ? 0.75
+                                             : screenWidth === 'tablet' ? 0.35
+                                                                        : 0.35}
+                                     rotation={[1.5807, 0, 0]}
+                                     offsetStart={0.43} offsetEnd={0.47}>
                     tokens and digital assets
                 </ScrollDependantText>
             </group>

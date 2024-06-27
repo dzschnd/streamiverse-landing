@@ -65,7 +65,7 @@ function Hero() {
             } else {
                 clearInterval(fadeInInterval);
             }
-        }, 1);
+        }, 50);
 
         return () => clearInterval(fadeInInterval);
     }, [logoOpacity]);

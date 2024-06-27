@@ -8,18 +8,19 @@ import applePayLogo from '../../assets/images/solutions/payment-icons/apple-pay-
 import mastercardLogo from '../../assets/images/solutions/payment-icons/mastercard-logo.svg'
 
 import tetherLogo from '../../assets/images/solutions/payment-icons/tether-logo.svg'
-import dogeLogo from '../../assets/images/solutions/payment-icons/doge-logo.png'
+import dogeLogo from '../../assets/images/solutions/payment-icons/doge-logo.svg'
 import shibaInuLogo from '../../assets/images/solutions/payment-icons/shiba-inu-logo.svg'
 import ethereumLogo from '../../assets/images/solutions/payment-icons/ethereum-logo.svg'
 import bitcoinLogo from '../../assets/images/solutions/payment-icons/bitcoin-logo.svg'
+import {Carousel} from "react-responsive-carousel";
 function Solutions() {
     return (
-        <div id={'solutions'} className={'section-wrapper'}>
+        <div className={'section-wrapper'}>
             <div className={'section-header'}>
                 How Streamiverse Works
             </div>
             <div className={'solutions-content'}>
-                <div className={'solution-card'} id={'top-left'}>
+                <div className={'solution-card'} id={'solution-card-1'}>
                     <div className={'card-text'}>
                         <div className={'section-subheader'}>
                             Sign Up
@@ -31,7 +32,7 @@ function Solutions() {
                         <button className={'button'} id={'illustration-button-bottom'}>Get started</button>
                     </div>
                 </div>
-                <div className={'solution-card'} id={'top-right'}>
+                <div className={'solution-card'} id={'solution-card-2'}>
                     <div className={'card-text'}>
                         <div className={'section-subheader'}>
                             Integrate Tools
@@ -42,7 +43,7 @@ function Solutions() {
                     </div>
                     <img src={integrate} alt={'Illustration'}/>
                 </div>
-                <div className={'solution-card'} id={'bottom-left'}>
+                <div className={'solution-card'} id={'solution-card-3'}>
                     <div className={'card-text'}>
                         <div className={'section-subheader'}>
                             Start Accepting Donations
@@ -66,13 +67,13 @@ function Solutions() {
                         <img src={shibaInuLogo} alt={'Shiba inu coin'}/>
                     </div>
                     <div className={'payment-methods-static'}>
-                        <img src={visaLogo} alt={'Visa'}/>
-                        <img src={mastercardLogo} alt={'Mastercard'}/>
-                        <img src={googlePayLogo} alt={'Google Pay'}/>
-                        <img src={applePayLogo} alt={'Apple Pay'}/>
+                            <img src={visaLogo} alt={'Visa'}/>
+                            <img src={mastercardLogo} alt={'Mastercard'}/>
+                            <img src={googlePayLogo} alt={'Google Pay'}/>
+                            <img src={applePayLogo} alt={'Apple Pay'}/>
                     </div>
                 </div>
-                <div className={'solution-card'} id={'bottom-right'}>
+                <div className={'solution-card'} id={'solution-card-4'}>
                     <div className={'card-text'}>
                         <div className={'section-subheader'}>
                             Withdraw Funds Instantly

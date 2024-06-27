@@ -22,8 +22,7 @@ a {
 .button {
     position: relative;
     z-index: 0;
-    width: 263px;
-    height: 50px;
+    padding: 15px 50px;
     border-radius: 30px;
     font-size: var(--font-size-400);
     font-weight: var(--font-weight-bold);
@@ -58,7 +57,7 @@ a {
 
 .section-wrapper {
     --max-width: 1680px;
-    --padding: 240px;
+    --padding: 60px;
 
     width: min(var(--max-width), 100% - var(--padding));
     margin-inline: auto;
@@ -85,7 +84,7 @@ a {
     line-height: 1.6;
 }
 
-@media (max-width: 1320px){
+@media (max-width: 861px){
     .section-wrapper {
         --max-width: 1252px;
         --padding: 48px;
@@ -100,6 +99,9 @@ a {
     }
     .section-subheader {
         font-size: var(--font-size-500);
+    }
+    .button {
+        padding: 15px 25px;
     }
 }
 

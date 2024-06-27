@@ -10,11 +10,11 @@ function Community() {
               <ImageOrbit/>
                <div className={'cta'}>
                    <div className={'section-subheader'}>
-                       Join the universe of streamers
+                       Join the universe<br/>of streamers
                    </div>
                    <button className={'button button-gradient community-button'}>
                         <span>
-                            Get Started
+                            Join the Waitlist
                         </span>
                    </button>
                </div>
