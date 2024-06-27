@@ -273,10 +273,10 @@
     }
 }
 
-@media (max-width: 428px) {
+@media (max-width: 489px) {
     .image-orbit-wrapper {
-        height: calc((380/682) * 0.75*682px);
-        width: calc((380/682) * 0.75*682px);
+        height: calc((380/682) * 0.5*682px);
+        width: calc((380/682) * 0.5*682px);
     }
     #orbit-3 {
         display: none;

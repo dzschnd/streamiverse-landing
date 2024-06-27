@@ -1,5 +1,6 @@
 .community-content {
     padding: 84px 142px 202px;
+    max-width: 1396px;
     display: flex;
     justify-content: space-between;
 }
@@ -22,7 +23,7 @@
     .community-content {
         padding: 54px 24px 150px;
         flex-direction: column;
-        gap: 40px;
+        gap: 60px;
     }
 
     .community-content * {
@@ -31,7 +32,7 @@
 
     .cta {
         text-align: center;
-        gap: 40px;
+        gap: 20px;
     }
 
     .community-button {

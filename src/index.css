@@ -5,7 +5,7 @@
     --color-primary-400: #7948FF;
 
     --color-neutral-100: #F1F0F1;
-    --color-neutral-500: #5D5D5D16;
+    --color-neutral-500: rgba(93, 93, 93, 0.09);
     --color-neutral-900: #0F0E10;
 
     --font-size-400: 1rem;

@@ -14,6 +14,13 @@
     max-height: 26px;
 }
 
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(20%);
+}
+
 @media (max-width: 861px) {
     .header-logo {
         content: url("../../assets/images/header/logo-accent.png");

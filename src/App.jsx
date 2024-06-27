@@ -3,8 +3,8 @@ import { Canvas } from '@react-three/fiber';
 import { Html, Scroll, ScrollControls } from "@react-three/drei";
 import { SheetProvider } from "@theatre/r3f";
 import { getProject } from "@theatre/core";
-import animation from './assets/animations/animation-full-v10.json';
-import React, { useEffect, useState } from "react";
+import animation from './assets/animations/animation-full-v15.json';
+import React, { useEffect, useState, useCallback } from "react";
 
 import Scene from "./components/3D/Scene";
 import Header from "./components/Header/Header";
@@ -12,18 +12,19 @@ import Features from "./components/Features/Features";
 import Solutions from "./components/Solutions/Solutions";
 import Community from "./components/Community/Community";
 import Footer from "./components/Contact/Footer";
+import WaitlistWidget from "./components/Header/WaitlistWidget";
 
 function App() {
+    const [widgetVisible, setWidgetVisible] = useState(false);
     const [sheet, setSheet] = useState(null);
     const [scrollOffset, setScrollOffset] = useState(0);
-    const animationPages = 10;
+    const animationPages = 3;
     const [dimensions, setDimensions] = useState({
         width: window.innerWidth,
         height: window.innerHeight
-
     });
 
-    const updateScrollOffset = (width) => {
+    const updateScrollOffset = useCallback((width) => {
         let featuresHeight =
             width >= 1440 ? 689 :
                 width >= 861 ? 1212 :
@@ -40,9 +41,9 @@ function App() {
                 width >= 1200 ? 950 :
                     width >= 861 ? 1100 :
                         width >= 621 ? 1010 :
-                            width >= 422 ? 912 :
-                                width >= 395 ? 817 :
-                                    865;
+                            width >= 489 ? 912 :
+                                width >= 410 ? 722 :
+                                    770;
         let footerHeight =
             width >= 1440 ? 151 :
                 width >= 887 ? 272 :
@@ -50,23 +51,19 @@ function App() {
                         557;
         const newScrollOffset = featuresHeight + solutionsHeight + communityHeight + footerHeight;
         setScrollOffset(newScrollOffset);
+    }, []);
 
-        console.log('height: ' + width);
-        console.log('featuresHeight: ' + featuresHeight);
-        console.log('solutionsHeight: ' + solutionsHeight);
-        console.log('communityHeight: ' + communityHeight);
-        console.log('footerHeight: ' + footerHeight);
-        console.log('Scroll offset: ' + newScrollOffset);
-    };
-
-    const handleResize = () => {
+    const handleResize = useCallback(() => {
         const newDimensions = {
             width: window.innerWidth,
             height: window.innerHeight
         };
-        setDimensions(newDimensions);
-        updateScrollOffset(newDimensions.width);
-    };
+        if (newDimensions.width !== dimensions.width) {
+            setDimensions(newDimensions);
+            updateScrollOffset(newDimensions.width);
+        }
+        // window.location.reload();
+    }, [dimensions.width, updateScrollOffset]);
 
     useEffect(() => {
         const project = getProject('Streamiverse', { state: animation });
@@ -74,35 +71,45 @@ function App() {
         setSheet(sheet);
 
         window.addEventListener('resize', handleResize);
-        handleResize();
+        updateScrollOffset(window.innerWidth);
 
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []);
+    }, [handleResize, updateScrollOffset]);
 
     return (
         <div className={'app background-neutral-900'}>
-            <Canvas id={'canvas'} gl={{ preserveDrawingBuffer: true }}>
-                <ScrollControls pages={animationPages + scrollOffset / dimensions.height}
-                                key={window.innerWidth + window.innerHeight}
-                >
+            <Canvas id={'canvas'} gl={{preserveDrawingBuffer: true}}
+                    key={window.innerWidth + window.innerHeight}
+            >
+                <ScrollControls
+                    pages={dimensions.width <= 690 ? animationPages + scrollOffset / dimensions.height : 1.6 * animationPages + scrollOffset / dimensions.height}>
                     <Scroll>
                         <SheetProvider sheet={sheet}>
-                            <Scene />
+                            <Scene/>
                             <Html className={'canvas-html'}>
                                 <div>
                                     <div className={'sticky blur'}>
-                                        <Header />
+                                        <Header onWidgetToggle={() => setWidgetVisible(!widgetVisible)}/>
+                                        <div className={'popup'} style={{
+                                            visibility: widgetVisible ? 'visible' : 'hidden',
+                                            position: 'absolute',
+                                            left: '50%',
+                                            top: '50%',
+                                            transform: 'translateX(-50%) translateY(25%)'
+                                        }}>
+                                            <WaitlistWidget/>
+                                        </div>
                                     </div>
                                     <div className={'background-neutral-900'}
-                                         style={{ marginTop: `${animationPages * dimensions.height + scrollOffset}px` }}
-                                    >
-                                        <Features />
-                                        <Solutions />
-                                        <Community />
-                                        <Footer />
+                                         style={{marginTop: `${animationPages * dimensions.height + scrollOffset}px`}}>
+                                        <Features/>
+                                        <Solutions/>
+                                        <Community onWidgetToggle={() => setWidgetVisible(!widgetVisible)}/>
+                                        <Footer/>
                                     </div>
+
                                 </div>
                             </Html>
                         </SheetProvider>

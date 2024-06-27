@@ -12,11 +12,11 @@ const descriptionText = "Empowering Streamers with Next-Gen Tools and Payment So
 function Hero() {
     const [logoOpacity, setLogoOpacity] = useState(0);
     const [typedText, setTypedText] = useState('');
-    const [descriptionVisible, setDescriptionVisible] = useState(window.innerWidth >= 1040);
+    const [descriptionVisible, setDescriptionVisible] = useState(window.innerWidth >= 780);
 
     useEffect(() => {
         const handleResize = () => {
-            setDescriptionVisible(window.innerWidth >= 1040);
+            setDescriptionVisible(window.innerWidth >= 780);
         };
 
         window.addEventListener('resize', handleResize);
@@ -32,9 +32,7 @@ function Hero() {
     const logoHeight = logoWidth / LOGO_WIDTH_TO_HEIGHT_RATIO;
 
     const descriptionFontSize = (1080/window.innerHeight) * 0.16;
-    // const descriptionX = -3.3 * (window.innerWidth / 1920) + ((1920 / window.innerHeight) * LOGO_SCALE - logoWidth)/3.5;
-    const descriptionX = -1.856 * (1920 / window.innerHeight);
-    const descriptionY = -1 * (window.innerHeight / 1080) -0.2;
+    const descriptionY = window.innerWidth >= 1050 ? -1 * (window.innerHeight / 1080) - 0.55 : -1 * (window.innerHeight / 1080) - 0.9;
 
     useEffect(() => {
         let currentIndex = 0;
@@ -72,17 +70,16 @@ function Hero() {
 
     return (
         <>
-            {/*{descriptionVisible && (*/}
-            {/*    <Text*/}
-            {/*        position={[descriptionX, descriptionY, -15]}*/}
-            {/*        font={font}*/}
-            {/*        fontSize={descriptionFontSize}*/}
-            {/*        fontWeight={500}*/}
-            {/*        color={'#ffffff'}*/}
-            {/*    >*/}
-            {/*        {typedText}*/}
-            {/*    </Text>*/}
-            {/*)}*/}
+            {descriptionVisible && (
+            <Text
+                position={[0, descriptionY, -15]}
+                font={font}
+                fontSize={window.innerWidth >= 1050 ? descriptionFontSize : 0.75*descriptionFontSize}
+                fontWeight={500}
+                color={'#ffffff'}
+            >
+                {typedText}
+            </Text>)}
             <Plane args={[logoWidth, logoHeight, 1, 1]} position={[0, -2.5, -15]}>
                 <meshStandardMaterial map={useLoader(THREE.TextureLoader, logo)} transparent opacity={logoOpacity} />
             </Plane>

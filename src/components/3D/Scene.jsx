@@ -23,7 +23,6 @@ function Scene() {
             console.log(scroll.el.scrollTop);
         };
 
-        // Use a timeout to ensure the element is available in the DOM
         const timeoutId = setTimeout(() => {
             if (anchor) {
                 anchor.addEventListener("click", handleScroll);

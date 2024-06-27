@@ -12,7 +12,6 @@ import dogeLogo from '../../assets/images/solutions/payment-icons/doge-logo.svg'
 import shibaInuLogo from '../../assets/images/solutions/payment-icons/shiba-inu-logo.svg'
 import ethereumLogo from '../../assets/images/solutions/payment-icons/ethereum-logo.svg'
 import bitcoinLogo from '../../assets/images/solutions/payment-icons/bitcoin-logo.svg'
-import {Carousel} from "react-responsive-carousel";
 function Solutions() {
     return (
         <div className={'section-wrapper'}>

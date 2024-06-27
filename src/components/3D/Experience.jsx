@@ -1,6 +1,5 @@
 import Hero from "./Hero";
 import StarParticles from "./StarParticles";
-import {Box} from "@react-three/drei";
 import Tools from "./Tools";
 
 function Experience() {
