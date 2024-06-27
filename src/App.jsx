@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { Html, Scroll, ScrollControls } from "@react-three/drei";
 import { SheetProvider } from "@theatre/r3f";
 import { getProject } from "@theatre/core";
-import animation from './assets/animations/animation-full-v15.json';
+import animation from './assets/animations/animation-fly-through.json';
 import React, { useEffect, useState, useCallback, lazy } from "react";
 
 const Scene = lazy(()=> import("./components/3D/Scene"));
@@ -18,7 +18,7 @@ function App() {
     const [widgetVisible, setWidgetVisible] = useState(false);
     const [sheet, setSheet] = useState(null);
     const [scrollOffset, setScrollOffset] = useState(0);
-    const animationPages = 3;
+    const animationPages = 10;
     const [dimensions, setDimensions] = useState({
         width: window.innerWidth,
         height: window.innerHeight
@@ -78,13 +78,17 @@ function App() {
         };
     }, [handleResize, updateScrollOffset]);
 
+    console.log('pages: ' + animationPages + scrollOffset / dimensions.height);
+
     return (
         <div className={'app background-neutral-900'}>
             <Canvas id={'canvas'} gl={{preserveDrawingBuffer: true}}
                     key={window.innerWidth + window.innerHeight}
             >
                 <ScrollControls
-                    pages={dimensions.width <= 690 ? animationPages + scrollOffset / dimensions.height : 1.6 * animationPages + scrollOffset / dimensions.height}>
+                    pages={animationPages + scrollOffset / dimensions.height
+                    // dimensions.width <= 690 ? animationPages + scrollOffset / dimensions.height : 1.6 * animationPages + scrollOffset / dimensions.height
+                }>
                     <Scroll>
                         <SheetProvider sheet={sheet}>
                             <Scene/>

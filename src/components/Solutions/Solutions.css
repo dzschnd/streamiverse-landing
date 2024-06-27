@@ -84,7 +84,7 @@
     overflow: hidden;
     bottom: 88px;
     display: flex;
-    gap: max(53px, 4.80943738vw);
+    gap: min(53px, 4.80943738vw);
 }
 
 .payment-methods-carousel img {
@@ -99,19 +99,19 @@
 
 @keyframes slide-1 {
     from {
-        left: max(53px, 4.80943738vw);
+        left: min(53px, 4.80943738vw);
     }
     to {
-        left: calc(-125px - 4 * max(53px, 4.80943738vw));
+        left: calc(-125px - 4 * min(53px, 4.80943738vw));
     }
 }
 
 @keyframes slide-2 {
     from {
-        left: calc(125px + 6 * max(53px, 4.80943738vw));
+        left: calc(125px + 6 * min(53px, 4.80943738vw));
     }
     to {
-        left: max(53px, 4.80943738vw);
+        left: min(53px, 4.80943738vw);
     }
 }
 

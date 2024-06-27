@@ -1,7 +1,7 @@
 {
   "name": "streamiverse-landing",
   "version": "0.1.0",
-  "homepage": "https://streamiverse-ebon.vercel.app/",
+  "homepage": "https://streamiverse.io/",
   "private": true,
   "dependencies": {
     "@react-three/drei": "^9.107.0",
@@ -31,7 +31,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "CI=false && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

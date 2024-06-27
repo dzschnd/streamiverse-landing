@@ -12,11 +12,11 @@ const descriptionText = "Empowering Streamers with Next-Gen Tools and Payment So
 function Hero() {
     const [logoOpacity, setLogoOpacity] = useState(0);
     const [typedText, setTypedText] = useState('');
-    const [descriptionVisible, setDescriptionVisible] = useState(window.innerWidth >= 780);
+    const [descriptionVisible, setDescriptionVisible] = useState(2560 >= window.innerWidth && window.innerWidth >= 780);
 
     useEffect(() => {
         const handleResize = () => {
-            setDescriptionVisible(window.innerWidth >= 780);
+            setDescriptionVisible(2560 >= window.innerWidth && window.innerWidth >= 780);
         };
 
         window.addEventListener('resize', handleResize);

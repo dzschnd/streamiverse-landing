@@ -65,7 +65,6 @@ function Solutions() {
         bitcoinLogo: null
     });
 
-    // Load images when the component mounts
     React.useEffect(() => {
         importImages().then((importedImages) => {
             setImages(importedImages);

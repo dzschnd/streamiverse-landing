@@ -264,14 +264,14 @@ function Tools() {
                                            : screenWidth === 'tablet' ? [3, 32, 32]
                                                : [2.3, 32, 32]}
                                        texture={planet3}
-                                       offsetStart={0.35} offsetEnd={0.4}/>
+                                       offsetStart={0.53} offsetEnd={0.6}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [-1.4, 3, -5]
                     : screenWidth === 'tablet' ? [-1.4, 2, -5]
                         : [0, -1.5, -5]}
                                      fontSize={screenWidth === 'desktop' ? 1
                                          : screenWidth === 'tablet' ? 0.5
                                              : 0.5}
-                                     offsetStart={0.35} offsetEnd={0.4}>
+                                     offsetStart={0.53} offsetEnd={0.6}>
                     #3
                 </ScrollDependantText>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [-3.5, 1, -5]
@@ -280,7 +280,7 @@ function Tools() {
                                      fontSize={screenWidth === 'desktop' ? 1.5
                                          : screenWidth === 'tablet' ? 0.75
                                              : 0.75}
-                                     offsetStart={0.35} offsetEnd={0.4}>
+                                     offsetStart={0.53} offsetEnd={0.6}>
                     Wallet
                 </ScrollDependantText>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [-7, -1, -5]
@@ -289,7 +289,7 @@ function Tools() {
                                      fontSize={screenWidth === 'desktop' ? 0.75
                                          : screenWidth === 'tablet' ? 0.35
                                              : 0.35}
-                                     offsetStart={0.35} offsetEnd={0.4}>
+                                     offsetStart={0.53} offsetEnd={0.6}>
                     A digital wallet for easily
                 </ScrollDependantText>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [-5.9, -2, -5]
@@ -298,7 +298,7 @@ function Tools() {
                                      fontSize={screenWidth === 'desktop' ? 0.75
                                          : screenWidth === 'tablet' ? 0.35
                                              : 0.35}
-                                     offsetStart={0.35} offsetEnd={0.4}>
+                                     offsetStart={0.53} offsetEnd={0.6}>
                     managing donations and
                 </ScrollDependantText>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [-6.8, -3, -5]
@@ -307,7 +307,7 @@ function Tools() {
                                      fontSize={screenWidth === 'desktop' ? 0.75
                                          : screenWidth === 'tablet' ? 0.35
                                              : 0.35}
-                                     offsetStart={0.35} offsetEnd={0.4}>
+                                     offsetStart={0.53} offsetEnd={0.6}>
                     payments. All in one place
                 </ScrollDependantText>
             </group>
