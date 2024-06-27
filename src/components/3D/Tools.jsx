@@ -3,7 +3,7 @@ import planet1 from '../../assets/images/hero/planet-1.svg'
 import planet2 from '../../assets/images/hero/planet-2.svg'
 import planet3 from '../../assets/images/hero/planet-3.svg'
 import planet4 from '../../assets/images/hero/planet-4.svg'
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 import {ScrollDependantSphere} from "./ScrollDependantSphere";
 
 function Tools() {

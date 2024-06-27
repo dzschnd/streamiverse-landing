@@ -24,7 +24,7 @@ function Features() {
                 <div className={'feature-card background-gradient'} id={'gradient-bottom'}>
                     <div className={'bricks-image'}>
                         <img id={'brick-top'} src={brick} alt={''}/>
-                        <img id={'brick-bottom'} src={brick}/>
+                        <img id={'brick-bottom'} src={brick} alt={''}/>
                     </div>
                     <div className={'feature-text'}>
                         <div className={'section-subheader'}>
@@ -49,8 +49,8 @@ function Features() {
                 <div className={'feature-card background-gradient'} id={'gradient-bottom'}>
                     <div className={'platform-image'}>
                         <img id={'platform-bottom'} src={platform} alt={''}/>
-                        <img id={'platform-mid'} src={platform}/>
-                        <img id={'platform-top'} src={platform}/>
+                        <img id={'platform-mid'} src={platform} alt={''}/>
+                        <img id={'platform-top'} src={platform} alt={''}/>
                     </div>
                     <div className={'feature-text'}>
                         <div className={'section-subheader'}>

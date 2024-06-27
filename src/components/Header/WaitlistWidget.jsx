@@ -28,11 +28,10 @@ function WaitlistWidget({ onClose }) {
         };
 
         loadScript('https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.js', 'waitlist-widget-script', initializeWaitlistWidget);
-    }, [key]); // Reload script when key changes
+    }, [key]);
 
     useEffect(() => {
         const handleResize = () => {
-            // Trigger key change to force component remount
             setKey(prevKey => prevKey + 1);
         };
 
@@ -41,7 +40,7 @@ function WaitlistWidget({ onClose }) {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []); // Only add/remove event listener once on mount/unmount
+    }, []);
 
     return (
         <>

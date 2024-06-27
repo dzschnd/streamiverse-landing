@@ -1,7 +1,5 @@
 import './Community.css'
 import ImageOrbit from "./ImageOrbit";
-import WaitlistWidget from "../Header/WaitlistWidget";
-import {useState} from "react";
 function Community({onWidgetToggle}) {
     return (
         <div id={'community'} className={'section-wrapper'}>
