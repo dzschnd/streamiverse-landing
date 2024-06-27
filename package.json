@@ -1,7 +1,7 @@
 {
   "name": "streamiverse-landing",
   "version": "0.1.0",
-  "homepage": "https://dzschnd.github.io/streamiverse-landing/",
+  "homepage": "https://streamiverse-ebon.vercel.app/",
   "private": true,
   "dependencies": {
     "@react-three/drei": "^9.107.0",

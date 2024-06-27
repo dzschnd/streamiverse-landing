@@ -62,7 +62,7 @@ function App() {
             setDimensions(newDimensions);
             updateScrollOffset(newDimensions.width);
         }
-        // window.location.reload();
+        window.location.reload();
     }, [dimensions.width, updateScrollOffset]);
 
     useEffect(() => {
