@@ -54,6 +54,7 @@ function App() {
     }, []);
 
     const handleResize = useCallback(() => {
+        window.location.reload();
         const newDimensions = {
             width: window.innerWidth,
             height: window.innerHeight
@@ -62,7 +63,6 @@ function App() {
             setDimensions(newDimensions);
             updateScrollOffset(newDimensions.width);
         }
-        window.location.reload();
     }, [dimensions.width, updateScrollOffset]);
 
     useEffect(() => {
@@ -77,8 +77,6 @@ function App() {
             window.removeEventListener('resize', handleResize);
         };
     }, [handleResize, updateScrollOffset]);
-
-    console.log('pages: ' + animationPages + scrollOffset / dimensions.height);
 
     return (
         <div className={'app background-neutral-900'}>
