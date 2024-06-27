@@ -3,6 +3,9 @@ import planet1 from '../../assets/images/hero/planet-1.svg'
 import planet2 from '../../assets/images/hero/planet-2.svg'
 import planet3 from '../../assets/images/hero/planet-3.svg'
 import planet4 from '../../assets/images/hero/planet-4.svg'
+import planet1Upscale from '../../assets/images/hero/planet-1-upscale.png'
+import planet2Upscale from '../../assets/images/hero/planet-2-upscale.png'
+import planet4Upscale from '../../assets/images/hero/planet-4-upscale.png'
 import {useEffect, useState} from "react";
 import {ScrollDependantSphere} from "./ScrollDependantSphere";
 
@@ -143,7 +146,7 @@ function Tools() {
                     args={screenWidth === 'desktop' ? [5, 32, 32]
                         : screenWidth === 'tablet' ? [4, 32, 32]
                             : [3, 32, 32]}
-                    texture={planet1}
+                    texture={planet1Upscale}
                     offsetStart={0.14} offsetEnd={0.2}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [0, 3, 2]
                     : screenWidth === 'tablet' ? [0, 2, 3]
@@ -206,7 +209,8 @@ function Tools() {
                     args={screenWidth === 'desktop' ? [5, 32, 32]
                         : screenWidth === 'tablet' ? [4, 32, 32]
                             : [3, 32, 32]}
-                    texture={planet2}
+                    texture={planet2Upscale}
+                    rotation={[0, -1, 0.1]}
                     offsetStart={0.24} offsetEnd={0.29}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [11.8, 3, 0]
                     : screenWidth === 'tablet' ? [13.8, 2, 0]
@@ -320,8 +324,8 @@ function Tools() {
                                        args={screenWidth === 'desktop' ? [5, 32, 32]
                                            : screenWidth === 'tablet' ? [4, 32, 32]
                                                : [3, 32, 32]}
-                                       rotation={[1.2, 3.3, 0]}
-                                       texture={planet4}
+                                       rotation={[1.3, 4.4, 0]}
+                                       texture={planet4Upscale}
                                        offsetStart={0.43} offsetEnd={0.47}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [1.2, 0, 3]
                     : screenWidth === 'tablet' ? [2.2, 0, 2]
