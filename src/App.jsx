@@ -20,6 +20,7 @@ function App() {
     const [dimensions, setDimensions] = useState({
         width: window.innerWidth,
         height: window.innerHeight
+
     });
 
     const updateScrollOffset = (width) => {
