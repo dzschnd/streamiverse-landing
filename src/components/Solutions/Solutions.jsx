@@ -1,18 +1,79 @@
-import './Solutions.css'
-import phone from '../../assets/images/solutions/phone.png'
-import withdraw from '../../assets/images/solutions/solution-card-image-withdraw.png'
-import integrate from '../../assets/images/solutions/solution-card-integrate.png'
-import visaLogo from '../../assets/images/solutions/payment-icons/visa-logo.svg'
-import googlePayLogo from '../../assets/images/solutions/payment-icons/google-pay-logo.svg'
-import applePayLogo from '../../assets/images/solutions/payment-icons/apple-pay-logo.svg'
-import mastercardLogo from '../../assets/images/solutions/payment-icons/mastercard-logo.svg'
+import React from 'react';
+import './Solutions.css';
 
-import tetherLogo from '../../assets/images/solutions/payment-icons/tether-logo.svg'
-import dogeLogo from '../../assets/images/solutions/payment-icons/doge-logo.svg'
-import shibaInuLogo from '../../assets/images/solutions/payment-icons/shiba-inu-logo.svg'
-import ethereumLogo from '../../assets/images/solutions/payment-icons/ethereum-logo.svg'
-import bitcoinLogo from '../../assets/images/solutions/payment-icons/bitcoin-logo.svg'
 function Solutions() {
+    // Dynamically import images
+    const importImages = async () => {
+        const [
+            phone,
+            withdraw,
+            integrate,
+            visaLogo,
+            googlePayLogo,
+            applePayLogo,
+            mastercardLogo,
+            tetherLogo,
+            dogeLogo,
+            shibaInuLogo,
+            ethereumLogo,
+            bitcoinLogo
+        ] = await Promise.all([
+            import('../../assets/images/solutions/phone.png'),
+            import('../../assets/images/solutions/solution-card-image-withdraw.png'),
+            import('../../assets/images/solutions/solution-card-integrate.png'),
+            import('../../assets/images/solutions/payment-icons/visa-logo.svg'),
+            import('../../assets/images/solutions/payment-icons/google-pay-logo.svg'),
+            import('../../assets/images/solutions/payment-icons/apple-pay-logo.svg'),
+            import('../../assets/images/solutions/payment-icons/mastercard-logo.svg'),
+            import('../../assets/images/solutions/payment-icons/tether-logo.svg'),
+            import('../../assets/images/solutions/payment-icons/doge-logo.svg'),
+            import('../../assets/images/solutions/payment-icons/shiba-inu-logo.svg'),
+            import('../../assets/images/solutions/payment-icons/ethereum-logo.svg'),
+            import('../../assets/images/solutions/payment-icons/bitcoin-logo.svg')
+        ]);
+
+        // Return the imported images
+        return {
+            phone: phone.default,
+            withdraw: withdraw.default,
+            integrate: integrate.default,
+            visaLogo: visaLogo.default,
+            googlePayLogo: googlePayLogo.default,
+            applePayLogo: applePayLogo.default,
+            mastercardLogo: mastercardLogo.default,
+            tetherLogo: tetherLogo.default,
+            dogeLogo: dogeLogo.default,
+            shibaInuLogo: shibaInuLogo.default,
+            ethereumLogo: ethereumLogo.default,
+            bitcoinLogo: bitcoinLogo.default
+        };
+    };
+
+    // State to hold the images
+    const [images, setImages] = React.useState({
+        phone: null,
+        withdraw: null,
+        integrate: null,
+        visaLogo: null,
+        googlePayLogo: null,
+        applePayLogo: null,
+        mastercardLogo: null,
+        tetherLogo: null,
+        dogeLogo: null,
+        shibaInuLogo: null,
+        ethereumLogo: null,
+        bitcoinLogo: null
+    });
+
+    // Load images when the component mounts
+    React.useEffect(() => {
+        importImages().then((importedImages) => {
+            setImages(importedImages);
+        }).catch((error) => {
+            console.error('Failed to import images:', error);
+        });
+    }, []);
+
     return (
         <div className={'section-wrapper'}>
             <div className={'section-header'}>
@@ -40,7 +101,7 @@ function Solutions() {
                             Customize your streaming setup
                         </div>
                     </div>
-                    <img src={integrate} alt={'Illustration'}/>
+                    <img src={images.integrate} alt={'Illustration'} />
                 </div>
                 <div className={'solution-card'} id={'solution-card-3'}>
                     <div className={'card-text'}>
@@ -52,24 +113,24 @@ function Solutions() {
                         </div>
                     </div>
                     <div className={'payment-methods-carousel'} id={'carousel-set-1'}>
-                        <img src={tetherLogo} alt={'Tether'}/>
-                        <img src={bitcoinLogo} alt={'Bitcoin'}/>
-                        <img src={ethereumLogo} alt={'Ethereum'}/>
-                        <img src={dogeLogo} alt={'Doge coin'}/>
-                        <img src={shibaInuLogo} alt={'Shiba inu coin'}/>
+                        <img src={images.tetherLogo} alt={'Tether'} />
+                        <img src={images.bitcoinLogo} alt={'Bitcoin'} />
+                        <img src={images.ethereumLogo} alt={'Ethereum'} />
+                        <img src={images.dogeLogo} alt={'Doge coin'} />
+                        <img src={images.shibaInuLogo} alt={'Shiba inu coin'} />
                     </div>
                     <div className={'payment-methods-carousel'} id={'carousel-set-2'}>
-                        <img src={tetherLogo} alt={'Tether'}/>
-                        <img src={bitcoinLogo} alt={'Bitcoin'}/>
-                        <img src={ethereumLogo} alt={'Ethereum'}/>
-                        <img src={dogeLogo} alt={'Doge coin'}/>
-                        <img src={shibaInuLogo} alt={'Shiba inu coin'}/>
+                        <img src={images.tetherLogo} alt={'Tether'} />
+                        <img src={images.bitcoinLogo} alt={'Bitcoin'} />
+                        <img src={images.ethereumLogo} alt={'Ethereum'} />
+                        <img src={images.dogeLogo} alt={'Doge coin'} />
+                        <img src={images.shibaInuLogo} alt={'Shiba inu coin'} />
                     </div>
                     <div className={'payment-methods-static'}>
-                            <img src={visaLogo} alt={'Visa'}/>
-                            <img src={mastercardLogo} alt={'Mastercard'}/>
-                            <img src={googlePayLogo} alt={'Google Pay'}/>
-                            <img src={applePayLogo} alt={'Apple Pay'}/>
+                        <img src={images.visaLogo} alt={'Visa'} />
+                        <img src={images.mastercardLogo} alt={'Mastercard'} />
+                        <img src={images.googlePayLogo} alt={'Google Pay'} />
+                        <img src={images.applePayLogo} alt={'Apple Pay'} />
                     </div>
                 </div>
                 <div className={'solution-card'} id={'solution-card-4'}>
@@ -80,15 +141,15 @@ function Solutions() {
                         <div className={'section-text'}>
                             Access your earnings in&nbsp;real-time.
                         </div>
-                        <img src={withdraw} alt={'Illustration'}/>
+                        <img src={images.withdraw} alt={'Illustration'} />
                     </div>
                 </div>
                 <div className={'solution-image'}>
-                    <img src={phone} alt={'Phone'}/>
+                    <img src={images.phone} alt={'Phone'} />
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Solutions;

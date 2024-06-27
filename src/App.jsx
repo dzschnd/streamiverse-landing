@@ -4,15 +4,15 @@ import { Html, Scroll, ScrollControls } from "@react-three/drei";
 import { SheetProvider } from "@theatre/r3f";
 import { getProject } from "@theatre/core";
 import animation from './assets/animations/animation-full-v15.json';
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, lazy } from "react";
 
-import Scene from "./components/3D/Scene";
-import Header from "./components/Header/Header";
-import Features from "./components/Features/Features";
-import Solutions from "./components/Solutions/Solutions";
-import Community from "./components/Community/Community";
-import Footer from "./components/Contact/Footer";
-import WaitlistWidget from "./components/Header/WaitlistWidget";
+const Scene = lazy(()=> import("./components/3D/Scene"));
+const Header = lazy(()=> import("./components/Header/Header"));
+const Features = lazy(()=> import("./components/Features/Features"));
+const Solutions = lazy(()=> import("./components/Solutions/Solutions"));
+const Community = lazy(()=> import("./components/Community/Community"));
+const Footer = lazy(()=> import("./components/Contact/Footer"));
+const WaitlistWidget = lazy(()=> import("./components/Header/WaitlistWidget"));
 
 function App() {
     const [widgetVisible, setWidgetVisible] = useState(false);
