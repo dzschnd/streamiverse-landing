@@ -109,7 +109,7 @@ function App() {
                                         <div className={`popup ${widgetVisible ? 'visible' : ''}`} style={{
                                             position: 'absolute',
                                             left: '50%',
-                                            top: '50%',
+                                            top: '25%',
                                             transform: 'translateX(-50%) translateY(25%)'
                                         }}>
                                             <WaitlistWidget closeWidget={() => setWidgetVisible(false)}/>
