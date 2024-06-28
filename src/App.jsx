@@ -97,7 +97,7 @@ function App() {
             >
                 <ScrollControls
                     pages={
-                    dimensions.width >= 690 ? animationPages + scrollOffset / dimensions.height : 0.6 * (animationPages + scrollOffset / dimensions.height)
+                    dimensions.width >= 690 ? animationPages + scrollOffset / dimensions.height : 0.4 * (animationPages + scrollOffset / dimensions.height)
                 }>
                     <Scroll>
                         <SheetProvider sheet={sheet}>
@@ -117,7 +117,7 @@ function App() {
                                         </div>
                                     </div>
                                     <div className={'background-neutral-900'}
-                                         style={{marginTop: `${dimensions.width >= 690 ? animationPages * dimensions.height + scrollOffset : 0.6 * (animationPages * dimensions.height + scrollOffset)}px`}}>
+                                         style={{marginTop: `${dimensions.width >= 690 ? animationPages * dimensions.height + scrollOffset : 0.8 * (animationPages * dimensions.height + scrollOffset)}px`}}>
                                         <Features/>
                                         <Solutions/>
                                         <Community onWidgetToggle={() => setWidgetVisible(!widgetVisible)}/>
