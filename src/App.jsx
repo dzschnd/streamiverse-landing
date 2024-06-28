@@ -117,7 +117,7 @@ function App() {
                                         </div>
                                     </div>
                                     <div className={'background-neutral-900'}
-                                         style={{marginTop: `${dimensions.width >= 690 ? animationPages * dimensions.height + scrollOffset : 2 * (animationPages * dimensions.height + scrollOffset)}px`}}>
+                                         style={{marginTop: `${dimensions.width >= 690 ? animationPages * dimensions.height + scrollOffset : 0.5 * (animationPages * dimensions.height + scrollOffset)}px`}}>
                                         <Features/>
                                         <Solutions/>
                                         <Community onWidgetToggle={() => setWidgetVisible(!widgetVisible)}/>
