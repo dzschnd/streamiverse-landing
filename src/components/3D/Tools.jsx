@@ -326,7 +326,7 @@ function Tools() {
                                        args={screenWidth === 'desktop' ? [5, 32, 32]
                                            : screenWidth === 'tablet' ? [4, 32, 32]
                                                : [3, 32, 32]}
-                                       rotation={[1.57, 4.8, 0]}
+                                       rotation={[1.45, 4.8, 0]}
                                        texture={planet4Upscale}
                                        offsetStart={0.43} offsetEnd={0.47}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [1.2, 0, 3]
