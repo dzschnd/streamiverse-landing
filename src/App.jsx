@@ -105,22 +105,21 @@ function App() {
                             <Html className={'canvas-html'}>
                                 <div>
                                     <div className={'sticky blur'}>
-                                        <Header onWidgetToggle={() => setWidgetVisible(!widgetVisible)}/>
-                                        <div className={'popup'} style={{
-                                            visibility: widgetVisible ? 'visible' : 'hidden',
+                                        <Header openWidget={() => setWidgetVisible(true)}/>
+                                        <div className={`popup ${widgetVisible ? 'visible' : ''}`} style={{
                                             position: 'absolute',
                                             left: '50%',
                                             top: '50%',
                                             transform: 'translateX(-50%) translateY(25%)'
                                         }}>
-                                            <WaitlistWidget/>
+                                            <WaitlistWidget closeWidget={() => setWidgetVisible(false)}/>
                                         </div>
                                     </div>
                                     <div className={'background-neutral-900'}
                                          style={{marginTop: `${dimensions.width >= 690 ? animationPages * dimensions.height + scrollOffset : 0.5 * (animationPages * dimensions.height + scrollOffset)}px`}}>
                                         <Features/>
                                         <Solutions/>
-                                        <Community onWidgetToggle={() => setWidgetVisible(!widgetVisible)}/>
+                                        <Community openWidget={() => setWidgetVisible(true)}/>
                                         <Footer/>
                                     </div>
 
