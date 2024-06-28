@@ -39,3 +39,12 @@
         width: min(380px, 100%);
     }
 }
+
+@media (max-width: 489px) {
+    .community-content {
+        gap: 75px;
+    }
+    .cta {
+        gap: 5px;
+    }
+}

@@ -55,7 +55,7 @@ function App() {
 
     const handleResize = useCallback(() => {
         if (window.innerWidth !== dimensions.width) {
-            window.location.reload();
+            // window.location.reload();
         }
     }, [dimensions.width]);
 
@@ -77,17 +77,17 @@ function App() {
 
     return (
         <div className={'app background-neutral-900'}>
-            <Canvas id={'canvas'} gl={{preserveDrawingBuffer: true}}
-                    key={window.innerWidth + window.innerHeight}
-            >
-                <ScrollControls
-                    pages={
-                    dimensions.width >= 690 ? animationPages + scrollOffset / dimensions.height : 0.5 * (animationPages + scrollOffset / dimensions.height)
-                }>
-                    <Scroll>
-                        <SheetProvider sheet={sheet}>
-                            <Scene/>
-                            <Html className={'canvas-html'}>
+            {/*<Canvas id={'canvas'} gl={{preserveDrawingBuffer: true}}*/}
+            {/*        key={window.innerWidth + window.innerHeight}*/}
+            {/*>*/}
+            {/*    <ScrollControls*/}
+            {/*        pages={*/}
+            {/*        dimensions.width >= 690 ? animationPages + scrollOffset / dimensions.height : 0.5 * (animationPages + scrollOffset / dimensions.height)*/}
+            {/*    }>*/}
+            {/*        <Scroll>*/}
+            {/*            <SheetProvider sheet={sheet}>*/}
+            {/*                <Scene/>*/}
+            {/*                <Html className={'canvas-html'}>*/}
                                 <div>
                                     <div className={'sticky blur'}>
                                         <Header openWidget={() => setWidgetVisible(true)}/>
@@ -109,11 +109,11 @@ function App() {
                                     </div>
 
                                 </div>
-                            </Html>
-                        </SheetProvider>
-                    </Scroll>
-                </ScrollControls>
-            </Canvas>
+            {/*                </Html>*/}
+            {/*            </SheetProvider>*/}
+            {/*        </Scroll>*/}
+            {/*    </ScrollControls>*/}
+            {/*</Canvas>*/}
         </div>
     );
 }
