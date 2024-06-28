@@ -66,13 +66,16 @@ function App() {
     }, [dimensions.width, updateScrollOffset]);
 
     useEffect(() => {
-        const project = getProject('Streamiverse', { state: animation });
+        const project = getProject('Streamiverse', {state: animation});
         const sheet = project.sheet('Scene');
         setSheet(sheet);
+    }, []);
 
+    useEffect(() => {
         window.addEventListener('resize', handleResize);
 
         updateScrollOffset(dimensions.width);
+
         if (!localStorage.getItem('reloaded')) {
             localStorage.setItem('reloaded', 'true');
             window.location.reload();
@@ -94,7 +97,7 @@ function App() {
             >
                 <ScrollControls
                     pages={
-                    dimensions.width >= 690 ? animationPages + scrollOffset / dimensions.height : 0.75 * animationPages + scrollOffset / dimensions.height
+                    dimensions.width >= 690 ? animationPages + scrollOffset / dimensions.height : 0.8 * animationPages + scrollOffset / dimensions.height
                 }>
                     <Scroll>
                         <SheetProvider sheet={sheet}>
