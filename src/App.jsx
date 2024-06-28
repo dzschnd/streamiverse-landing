@@ -75,14 +75,11 @@ function App() {
         updateScrollOffset(dimensions.width);
         if (!localStorage.getItem('reloaded')) {
             localStorage.setItem('reloaded', 'true');
-            console.log('true')
             window.location.reload();
         } else if (localStorage.getItem('reloaded') === true) {
             localStorage.setItem('reloaded', 'false');
-            console.log('false')
         } else if (localStorage.getItem('reloaded') === 'false') {
             localStorage.removeItem('reloaded')
-            console.log('removed')
         }
 
         return () => {

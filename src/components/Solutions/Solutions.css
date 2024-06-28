@@ -164,6 +164,27 @@
         display: flex;
         flex-direction: column;
     }
+    .payment-methods-carousel {
+        gap: max(53px, 4.80943738vw);
+    }
+
+    @keyframes slide-1 {
+        from {
+            left: max(53px, 4.80943738vw);
+        }
+        to {
+            left: calc(-125px - 4 * max(53px, 4.80943738vw));
+        }
+    }
+
+    @keyframes slide-2 {
+        from {
+            left: calc(125px + 6 * max(53px, 4.80943738vw));
+        }
+        to {
+            left: max(53px, 4.80943738vw);
+        }
+    }
     .solutions-content div {
         margin-inline: auto;
     }
