@@ -5,6 +5,7 @@ import planet3 from '../../assets/images/hero/planet-3.svg'
 import planet4 from '../../assets/images/hero/planet-4.svg'
 import planet1Upscale from '../../assets/images/hero/planet-1-upscale.png'
 import planet2Upscale from '../../assets/images/hero/planet-2-upscale.png'
+import planet3Upscale from '../../assets/images/hero/planet-3-upscale.png'
 import planet4Upscale from '../../assets/images/hero/planet-4-upscale.png'
 import {useEffect, useState} from "react";
 import {ScrollDependantSphere} from "./ScrollDependantSphere";
@@ -267,7 +268,8 @@ function Tools() {
                                        args={screenWidth === 'desktop' ? [4, 32, 32]
                                            : screenWidth === 'tablet' ? [3, 32, 32]
                                                : [2.3, 32, 32]}
-                                       texture={planet3}
+                                       texture={planet3Upscale}
+                                       rotation={[0,-1.5,0]}
                                        offsetStart={0.53} offsetEnd={0.6}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [-1.4, 3, -5]
                     : screenWidth === 'tablet' ? [-1.4, 2, -5]
@@ -324,7 +326,7 @@ function Tools() {
                                        args={screenWidth === 'desktop' ? [5, 32, 32]
                                            : screenWidth === 'tablet' ? [4, 32, 32]
                                                : [3, 32, 32]}
-                                       rotation={[1.3, 4.4, 0]}
+                                       rotation={[1.57, 4.8, 0]}
                                        texture={planet4Upscale}
                                        offsetStart={0.43} offsetEnd={0.47}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [1.2, 0, 3]

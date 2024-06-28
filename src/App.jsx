@@ -54,7 +54,6 @@ function App() {
     }, []);
 
     const handleResize = useCallback(() => {
-        window.location.reload();
         const newDimensions = {
             width: window.innerWidth,
             height: window.innerHeight
@@ -63,6 +62,7 @@ function App() {
             setDimensions(newDimensions);
             updateScrollOffset(newDimensions.width);
         }
+        window.location.reload();
     }, [dimensions.width, updateScrollOffset]);
 
     useEffect(() => {
@@ -71,7 +71,19 @@ function App() {
         setSheet(sheet);
 
         window.addEventListener('resize', handleResize);
-        updateScrollOffset(window.innerWidth);
+
+        updateScrollOffset(dimensions.width);
+        if (!localStorage.getItem('reloaded')) {
+            localStorage.setItem('reloaded', 'true');
+            console.log('true')
+            window.location.reload();
+        } else if (localStorage.getItem('reloaded') === true) {
+            localStorage.setItem('reloaded', 'false');
+            console.log('false')
+        } else if (localStorage.getItem('reloaded') === 'false') {
+            localStorage.removeItem('reloaded')
+            console.log('removed')
+        }
 
         return () => {
             window.removeEventListener('resize', handleResize);
@@ -84,8 +96,8 @@ function App() {
                     key={window.innerWidth + window.innerHeight}
             >
                 <ScrollControls
-                    pages={
-                    dimensions.width >= 1170 ? animationPages + scrollOffset / dimensions.height : 0.6 * animationPages + scrollOffset / dimensions.height
+                    pages={animationPages + scrollOffset / dimensions.height
+                    // dimensions.width <= 690 ? animationPages + scrollOffset / dimensions.height : 1.6 * animationPages + scrollOffset / dimensions.height
                 }>
                     <Scroll>
                         <SheetProvider sheet={sheet}>
