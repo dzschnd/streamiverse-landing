@@ -94,7 +94,7 @@ function App() {
             >
                 <ScrollControls
                     pages={
-                    dimensions.width >= 690 ? animationPages + scrollOffset / dimensions.height : 0.5 * animationPages + scrollOffset / dimensions.height
+                    dimensions.width >= 690 ? animationPages + scrollOffset / dimensions.height : 0.75 * animationPages + scrollOffset / dimensions.height
                 }>
                     <Scroll>
                         <SheetProvider sheet={sheet}>
