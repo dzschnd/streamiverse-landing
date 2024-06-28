@@ -54,16 +54,10 @@ function App() {
     }, []);
 
     const handleResize = useCallback(() => {
-        const newDimensions = {
-            width: window.innerWidth,
-            height: window.innerHeight
-        };
-        if (newDimensions.width !== dimensions.width) {
-            setDimensions(newDimensions);
-            updateScrollOffset(newDimensions.width);
+        if (window.innerWidth !== dimensions.width) {
             window.location.reload();
         }
-    }, [dimensions.width, updateScrollOffset]);
+    }, [dimensions.width]);
 
     useEffect(() => {
         const project = getProject('Streamiverse', {state: animation});
@@ -76,19 +70,10 @@ function App() {
 
         updateScrollOffset(dimensions.width);
 
-        if (!localStorage.getItem('reloaded')) {
-            localStorage.setItem('reloaded', 'true');
-            window.location.reload();
-        } else if (localStorage.getItem('reloaded') === true) {
-            localStorage.setItem('reloaded', 'false');
-        } else if (localStorage.getItem('reloaded') === 'false') {
-            localStorage.removeItem('reloaded')
-        }
-
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, [handleResize, updateScrollOffset]);
+    }, [dimensions.width, handleResize, updateScrollOffset]);
 
     return (
         <div className={'app background-neutral-900'}>
