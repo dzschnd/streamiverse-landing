@@ -1,9 +1,12 @@
-import { PerspectiveCamera, useCurrentSheet } from "@theatre/r3f";
-import { useScroll } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
-import { val } from "@theatre/core";
-import Experience from "./Experience";
-import { useRef } from "react";
+import { useScroll } from '@react-three/drei';
+import { useFrame } from '@react-three/fiber';
+import { PerspectiveCamera, useCurrentSheet } from '@theatre/r3f';
+import { useRef } from 'react';
+import Experience from './Experience';
+
+function clamp(num, min, max) {
+    return Math.min(Math.max(num, min), max);
+}
 
 function Scene() {
     const sheet = useCurrentSheet();
@@ -11,7 +14,7 @@ function Scene() {
     const camera = useRef();
 
     useFrame(() => {
-        const sequenceLength = val(sheet.sequence.pointer.length);
+        const sequenceLength = 5;
         sheet.sequence.position = scroll.offset * sequenceLength;
     });
 
@@ -20,7 +23,7 @@ function Scene() {
             <Experience />
             <PerspectiveCamera
                 ref={camera}
-                theatreKey='Camera'
+                theatreKey="Camera"
                 makeDefault
                 near={0.1}
                 far={900}

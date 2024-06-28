@@ -1,12 +1,11 @@
-import {Sphere, useScroll} from "@react-three/drei";
-import { useState, useRef } from "react";
-import { useFrame } from "@react-three/fiber";
-import { useLoader } from "@react-three/fiber";
-import { TextureLoader } from "three";
+import { Sphere, useScroll } from '@react-three/drei';
+import { useFrame, useLoader } from '@react-three/fiber';
+import { useRef, useState } from 'react';
+import { TextureLoader } from 'three';
 
 export const ScrollDependantSphere = ({ position, args, offsetStart, offsetEnd, texture, ...props }) => {
     const scroll = useScroll();
-    const [opacity, setOpacity] = useState(0);
+    const [opacity, setOpacity] = useState(1);
     const sphereRef = useRef();
     const textureMap = useLoader(TextureLoader, texture);
 
@@ -16,9 +15,9 @@ export const ScrollDependantSphere = ({ position, args, offsetStart, offsetEnd, 
         const progress = (offset - offsetStart) / range;
 
         if (offset >= offsetStart && offset <= offsetEnd) {
-            setOpacity(Math.min(1, Math.max(0, progress)));
+            // setOpacity(Math.min(1, Math.max(0, progress)));
         } else {
-            setOpacity(offset < offsetStart ? 0 : 1);
+            // setOpacity(offset < offsetStart ? 0 : 1);
         }
         if (sphereRef.current) {
             sphereRef.current.material.opacity = opacity;
