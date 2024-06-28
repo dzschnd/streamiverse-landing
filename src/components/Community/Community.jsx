@@ -1,6 +1,6 @@
 import './Community.css'
 import ImageOrbit from "./ImageOrbit";
-function Community({onWidgetToggle}) {
+function Community({openWidget}) {
     return (
         <div id={'community'} className={'section-wrapper'}>
             <div className={'section-header'}>
@@ -12,7 +12,7 @@ function Community({onWidgetToggle}) {
                    <div className={'section-subheader'}>
                        Join the universe<br/>of streamers
                    </div>
-                   <button className={'button button-gradient community-button'} onClick={onWidgetToggle}>
+                   <button className={'button button-gradient community-button'} onClick={openWidget}>
                         <span>
                             Join the Waitlist
                         </span>
