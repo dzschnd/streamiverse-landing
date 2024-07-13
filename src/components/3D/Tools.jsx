@@ -148,7 +148,7 @@ function Tools() {
                         : screenWidth === 'tablet' ? [4, 32, 32]
                             : [3, 32, 32]}
                     texture={planet1Upscale}
-                    offsetStart={0.14} offsetEnd={0.2}/>
+                    offsetStart={0} offsetEnd={0}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [0, 3, 2]
                     : screenWidth === 'tablet' ? [0, 2, 3]
                         : [0, -1.5, 0]}
@@ -212,14 +212,14 @@ function Tools() {
                             : [3, 32, 32]}
                     texture={planet2Upscale}
                     rotation={[0, -1, 0.1]}
-                    offsetStart={0.24} offsetEnd={0.29}/>
+                    offsetStart={0.3} offsetEnd={0.3}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [11.8, 3, 0]
                     : screenWidth === 'tablet' ? [13.8, 2, 0]
                         : [10, -1.5, 0]}
                                      fontSize={screenWidth === 'desktop' ? 1
                                          : screenWidth === 'tablet' ? 0.5
                                              : 0.5}
-                                     offsetStart={0.24} offsetEnd={0.29}>
+                                     offsetStart={0.3} offsetEnd={0.3}>
                     #2
                 </ScrollDependantText>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [15.2, 1, 0]
@@ -228,7 +228,7 @@ function Tools() {
                                      fontSize={screenWidth === 'desktop' ? 1.5
                                          : screenWidth === 'tablet' ? 0.75
                                              : 0.75}
-                                     offsetStart={0.24} offsetEnd={0.29}>
+                                     offsetStart={0.3} offsetEnd={0.3}>
                     Donations
                 </ScrollDependantText>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [16, -1, 0]
@@ -237,7 +237,7 @@ function Tools() {
                                      fontSize={screenWidth === 'desktop' ? 0.75
                                          : screenWidth === 'tablet' ? 0.35
                                              : 0.35}
-                                     offsetStart={0.24} offsetEnd={0.29}>
+                                     offsetStart={0.3} offsetEnd={0.3}>
                     Accept donations from
                 </ScrollDependantText>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [16, -2, 0]
@@ -246,7 +246,7 @@ function Tools() {
                                      fontSize={screenWidth === 'desktop' ? 0.75
                                          : screenWidth === 'tablet' ? 0.35
                                              : 0.35}
-                                     offsetStart={0.24} offsetEnd={0.29}>
+                                     offsetStart={0.3} offsetEnd={0.3}>
                     around the world with
                 </ScrollDependantText>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [16.75, -3, 0]
@@ -255,7 +255,7 @@ function Tools() {
                                      fontSize={screenWidth === 'desktop' ? 0.75
                                          : screenWidth === 'tablet' ? 0.35
                                              : 0.35}
-                                     offsetStart={0.24} offsetEnd={0.29}>
+                                     offsetStart={0.3} offsetEnd={0.3}>
                     multiple payment options
                 </ScrollDependantText>
             </group>
@@ -270,14 +270,14 @@ function Tools() {
                                                : [2.3, 32, 32]}
                                        texture={planet3Upscale}
                                        rotation={[0,-1.5,0]}
-                                       offsetStart={0.53} offsetEnd={0.6}/>
+                                       offsetStart={0.5} offsetEnd={0.55}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [-1.4, 3, -5]
                     : screenWidth === 'tablet' ? [-1.4, 2, -5]
                         : [0, -1.5, -5]}
                                      fontSize={screenWidth === 'desktop' ? 1
                                          : screenWidth === 'tablet' ? 0.5
                                              : 0.5}
-                                     offsetStart={0.53} offsetEnd={0.6}>
+                                     offsetStart={0.5} offsetEnd={0.55}>
                     #3
                 </ScrollDependantText>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [-3.5, 1, -5]
@@ -286,7 +286,7 @@ function Tools() {
                                      fontSize={screenWidth === 'desktop' ? 1.5
                                          : screenWidth === 'tablet' ? 0.75
                                              : 0.75}
-                                     offsetStart={0.53} offsetEnd={0.6}>
+                                     offsetStart={0.5} offsetEnd={0.55}>
                     Wallet
                 </ScrollDependantText>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [-7, -1, -5]
@@ -295,7 +295,7 @@ function Tools() {
                                      fontSize={screenWidth === 'desktop' ? 0.75
                                          : screenWidth === 'tablet' ? 0.35
                                              : 0.35}
-                                     offsetStart={0.53} offsetEnd={0.6}>
+                                     offsetStart={0.5} offsetEnd={0.55}>
                     A digital wallet for easily
                 </ScrollDependantText>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [-5.9, -2, -5]
@@ -304,7 +304,7 @@ function Tools() {
                                      fontSize={screenWidth === 'desktop' ? 0.75
                                          : screenWidth === 'tablet' ? 0.35
                                              : 0.35}
-                                     offsetStart={0.53} offsetEnd={0.6}>
+                                     offsetStart={0.5} offsetEnd={0.55}>
                     managing donations and
                 </ScrollDependantText>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [-6.8, -3, -5]
@@ -313,7 +313,7 @@ function Tools() {
                                      fontSize={screenWidth === 'desktop' ? 0.75
                                          : screenWidth === 'tablet' ? 0.35
                                              : 0.35}
-                                     offsetStart={0.53} offsetEnd={0.6}>
+                                     offsetStart={0.5} offsetEnd={0.55}>
                     payments. All in one place
                 </ScrollDependantText>
             </group>
@@ -328,7 +328,7 @@ function Tools() {
                                                : [3, 32, 32]}
                                        rotation={[1.45, 4.8, 0]}
                                        texture={planet4Upscale}
-                                       offsetStart={0.43} offsetEnd={0.47}/>
+                                       offsetStart={0.55} offsetEnd={0.55}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [1.2, 0, 3]
                     : screenWidth === 'tablet' ? [2.2, 0, 2]
                         : [0, 0, -1.5]}
@@ -336,7 +336,7 @@ function Tools() {
                                          : screenWidth === 'tablet' ? 0.5
                                              : 0.5}
                                      rotation={[1.5807, 0, 0]}
-                                     offsetStart={0.43} offsetEnd={0.47}>
+                                     offsetStart={0.55} offsetEnd={0.55}>
                     #4
                 </ScrollDependantText>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [6, 0, 1]
@@ -346,7 +346,7 @@ function Tools() {
                                          : screenWidth === 'tablet' ? 0.75
                                              : 0.75}
                                      rotation={[1.5807, 0, 0]}
-                                     offsetStart={0.43} offsetEnd={0.47}>
+                                     offsetStart={0.55} offsetEnd={0.55}>
                     Monetization
                 </ScrollDependantText>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [7.85, 0, -1]
@@ -356,7 +356,7 @@ function Tools() {
                                          : screenWidth === 'tablet' ? 0.35
                                              : 0.35}
                                      rotation={[1.5807, 0, 0]}
-                                     offsetStart={0.43} offsetEnd={0.47}>
+                                     offsetStart={0.55} offsetEnd={0.55}>
                     Innovative ways to monetize your
                 </ScrollDependantText>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [6.75, 0, -2]
@@ -366,7 +366,7 @@ function Tools() {
                                          : screenWidth === 'tablet' ? 0.35
                                              : 0.35}
                                      rotation={[1.5807, 0, 0]}
-                                     offsetStart={0.43} offsetEnd={0.47}>
+                                     offsetStart={0.55} offsetEnd={0.55}>
                     brand and community through
                 </ScrollDependantText>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [6.33, 0, -3]
@@ -376,7 +376,7 @@ function Tools() {
                                          : screenWidth === 'tablet' ? 0.35
                                              : 0.35}
                                      rotation={[1.5807, 0, 0]}
-                                     offsetStart={0.43} offsetEnd={0.47}>
+                                     offsetStart={0.55} offsetEnd={0.55}>
                     tokens and digital assets
                 </ScrollDependantText>
             </group>
