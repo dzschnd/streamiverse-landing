@@ -275,8 +275,8 @@
 
 @media (max-width: 489px) {
     .image-orbit-wrapper {
-        height: calc((380/682) * 0.5*682px);
-        width: calc((380/682) * 0.5*682px);
+        width: calc((380/682) * 376px);
+        height: calc((380/682) * 530px);
     }
     #orbit-3 {
         display: none;

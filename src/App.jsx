@@ -19,7 +19,7 @@ function App() {
     const [sheet, setSheet] = useState(null);
     const [scrollOffset, setScrollOffset] = useState(0);
     const animationPages = 10;
-    const [dimensions, setDimensions] = useState({
+    const [dimensions] = useState({
         width: window.innerWidth,
         height: window.innerHeight
     });
