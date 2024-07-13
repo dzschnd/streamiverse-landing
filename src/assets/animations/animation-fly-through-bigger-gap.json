@@ -36,7 +36,7 @@
       },
       "sequence": {
         "subUnitsPerUnit": 30,
-        "length": 4.53,
+        "length": 3.3,
         "type": "PositionalSequence",
         "tracksByObject": {
           "Camera": {
@@ -307,7 +307,7 @@
                   },
                   {
                     "id": "GdAW8KE5KB",
-                    "position": 3.5,
+                    "position": 3.633,
                     "connectedRight": true,
                     "handles": [
                       0.745,
@@ -586,7 +586,7 @@
                   },
                   {
                     "id": "7g6xEYUfT2",
-                    "position": 3.5,
+                    "position": 3.633,
                     "connectedRight": true,
                     "handles": [
                       0.745,
@@ -865,7 +865,7 @@
                   },
                   {
                     "id": "Cn1_u7aCFg",
-                    "position": 3.5,
+                    "position": 3.633,
                     "connectedRight": true,
                     "handles": [
                       0.745,
@@ -1144,7 +1144,7 @@
                   },
                   {
                     "id": "eI3Vug6lQj",
-                    "position": 3.5,
+                    "position": 3.633,
                     "connectedRight": true,
                     "handles": [
                       0.745,
@@ -1423,7 +1423,7 @@
                   },
                   {
                     "id": "C22ojqIaZz",
-                    "position": 3.5,
+                    "position": 3.633,
                     "connectedRight": true,
                     "handles": [
                       0.745,
@@ -1702,7 +1702,7 @@
                   },
                   {
                     "id": "mokeNylkm6",
-                    "position": 3.5,
+                    "position": 3.633,
                     "connectedRight": true,
                     "handles": [
                       0.745,
@@ -1981,7 +1981,7 @@
                   },
                   {
                     "id": "F8KRhbH5pT",
-                    "position": 3.5,
+                    "position": 3.633,
                     "connectedRight": true,
                     "handles": [
                       0.745,
@@ -2260,7 +2260,7 @@
                   },
                   {
                     "id": "UKZwWTknfq",
-                    "position": 3.5,
+                    "position": 3.633,
                     "connectedRight": true,
                     "handles": [
                       0.745,
@@ -2539,7 +2539,7 @@
                   },
                   {
                     "id": "OnFVNA-K86",
-                    "position": 3.5,
+                    "position": 3.633,
                     "connectedRight": true,
                     "handles": [
                       0.745,
@@ -2818,7 +2818,7 @@
                   },
                   {
                     "id": "goioO3OXwF",
-                    "position": 3.5,
+                    "position": 3.633,
                     "connectedRight": true,
                     "handles": [
                       0.745,
@@ -3097,7 +3097,7 @@
                   },
                   {
                     "id": "KhVG9a8KbS",
-                    "position": 3.5,
+                    "position": 3.633,
                     "connectedRight": true,
                     "handles": [
                       0.745,
@@ -3376,7 +3376,7 @@
                   },
                   {
                     "id": "XraIRqttaH",
-                    "position": 3.5,
+                    "position": 3.633,
                     "connectedRight": true,
                     "handles": [
                       0.745,
@@ -3655,7 +3655,7 @@
                   },
                   {
                     "id": "kOmQditHBF",
-                    "position": 3.5,
+                    "position": 3.633,
                     "connectedRight": true,
                     "handles": [
                       0.745,
@@ -4102,6 +4102,8 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "DTOgCyot0N0EHatV",
+    "SC8K1-_CeI7iSKFE",
     "EQW0XGqWMOpKT5iV",
     "oAzK7hsTwoFrYASi",
     "RHLyRpRr30zTZGLt",

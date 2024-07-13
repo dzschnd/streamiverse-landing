@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { Html, Scroll, ScrollControls } from "@react-three/drei";
 import { SheetProvider } from "@theatre/r3f";
 import { getProject } from "@theatre/core";
-import animation from './assets/animations/animation-fly-through.json';
+import animation from './assets/animations/animation-fly-through-bigger-gap.json';
 import React, { useEffect, useState, useCallback, lazy } from "react";
 
 const Scene = lazy(()=> import("./components/3D/Scene"));
@@ -101,7 +101,7 @@ function App() {
                                         </div>
                                     </div>
                                     <div className={'background-neutral-900'}
-                                         style={{marginTop: `${dimensions.width >= 690 ? animationPages * dimensions.height + scrollOffset : 0.5 * (animationPages * dimensions.height + scrollOffset)}px`}}>
+                                         style={{marginTop: `${dimensions.width >= 690 ? 0.95 * (animationPages * dimensions.height + scrollOffset) : 0.5 * (animationPages * dimensions.height + scrollOffset)}px`}}>
                                         <Features/>
                                         <Solutions/>
                                         <Community openWidget={() => setWidgetVisible(true)}/>
