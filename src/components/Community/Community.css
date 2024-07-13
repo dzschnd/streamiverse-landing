@@ -3,6 +3,7 @@
     max-width: 1396px;
     display: flex;
     justify-content: space-between;
+    margin-inline: auto;
 }
 
 .cta {
