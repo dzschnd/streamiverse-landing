@@ -54,7 +54,7 @@ function App() {
     }, []);
 
     const handleResize = useCallback(() => {
-        if (window.innerWidth !== dimensions.width) {
+        if (window.innerWidth !== dimensions.width || Math.abs(dimensions.height - window.innerHeight) >= window.innerHeight) {
             window.location.reload();
         }
     }, [dimensions.width]);
