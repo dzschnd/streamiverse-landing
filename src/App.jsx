@@ -54,7 +54,6 @@ function App() {
     }, []);
 
     const handleResize = useCallback(() => {
-        console.log(dimensions.width + "x" + dimensions.height + " -> " + window.innerWidth + "x" + window.innerHeight)
         if (window.innerWidth !== dimensions.width || Math.abs(dimensions.height - window.innerHeight) >= window.innerHeight) {
             window.location.reload();
         }
@@ -68,6 +67,11 @@ function App() {
     }, []);
 
     useEffect(() => {
+        console.log('pages: ')
+        console.log(dimensions.width >= 690 ? animationPages + scrollOffset / dimensions.height : 0.5 * (animationPages + scrollOffset / dimensions.height))
+        console.log('margin: ')
+        console.log(dimensions.width >= 690 ? 0.95 * (animationPages * dimensions.height + scrollOffset) : 0.5 * (animationPages * dimensions.height + scrollOffset))
+
         window.addEventListener('resize', handleResize);
 
         updateScrollOffset(dimensions.width);
@@ -80,7 +84,7 @@ function App() {
     return (
         <div className={'app background-neutral-900'}>
             <Canvas id={'canvas'} gl={{preserveDrawingBuffer: true}}
-                    // key={window.innerWidth + window.innerHeight}
+                    key={window.innerWidth + window.innerHeight}
             >
                 <ScrollControls
                     pages={
