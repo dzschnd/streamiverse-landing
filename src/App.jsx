@@ -54,10 +54,12 @@ function App() {
     }, []);
 
     const handleResize = useCallback(() => {
-        if (window.innerWidth !== dimensions.width || Math.abs(dimensions.height - window.innerHeight) >= window.innerHeight) {
+        if (window.innerWidth !== dimensions.width || Math.abs(dimensions.height - window.innerHeight) >= window.innerHeight
+        ) {
             window.location.reload();
         }
-    }, [dimensions.width]);
+        dimensions.height = window.innerHeight;
+    }, [dimensions.width, dimensions.height]);
 
     useEffect(() => {
         const project = getProject('Streamiverse', {state: animation});
@@ -78,7 +80,7 @@ function App() {
     return (
         <div className={'app background-neutral-900'}>
             <Canvas id={'canvas'} gl={{preserveDrawingBuffer: true}}
-                    key={window.innerWidth + window.innerHeight}
+                    // key={window.innerWidth + window.innerHeight}
             >
                 <ScrollControls
                     pages={
