@@ -67,10 +67,7 @@ function App() {
     }, []);
 
     useEffect(() => {
-        console.log('pages: ')
-        console.log(dimensions.width >= 690 ? animationPages + scrollOffset / dimensions.height : 0.5 * (animationPages + scrollOffset / dimensions.height))
-        console.log('margin: ')
-        console.log(dimensions.width >= 690 ? 0.95 * (animationPages * dimensions.height + scrollOffset) : 0.5 * (animationPages * dimensions.height + scrollOffset))
+        console.log('res: ' + window.innerWidth + 'x' + window.innerHeight);
 
         window.addEventListener('resize', handleResize);
 
