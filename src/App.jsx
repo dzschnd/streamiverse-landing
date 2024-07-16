@@ -67,8 +67,6 @@ function App() {
     }, []);
 
     useEffect(() => {
-        console.log('res: ' + window.innerWidth + 'x' + window.innerHeight);
-
         window.addEventListener('resize', handleResize);
 
         updateScrollOffset(dimensions.width);

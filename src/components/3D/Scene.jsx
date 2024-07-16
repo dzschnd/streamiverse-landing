@@ -13,7 +13,6 @@ function Scene() {
 
     useFrame(() => {
         const sequenceLength = val(sheet.sequence.pointer.length);
-        console.log(scroll.pages);
         let offset = scroll.offset;
         if (offset < 0) offset = abs(scroll.offset / scroll.pages);
         sheet.sequence.position = offset * sequenceLength;
