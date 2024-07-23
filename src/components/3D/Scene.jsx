@@ -4,7 +4,6 @@ import { useFrame } from "@react-three/fiber";
 import { val } from "@theatre/core";
 import Experience from "./Experience";
 import { useRef } from "react";
-import {abs} from "three/examples/jsm/nodes/math/MathNode";
 
 function Scene() {
     const sheet = useCurrentSheet();
@@ -15,7 +14,7 @@ function Scene() {
         const sequenceLength = val(sheet.sequence.pointer.length);
         let offset = scroll.offset;
         console.log('init offset: ' + offset);
-        if (offset < 0) offset = abs(scroll.offset / scroll.pages);
+        if (offset < 0) offset = Math.abs(scroll.offset / scroll.pages);
         console.log('real offset: ' + offset);
         sheet.sequence.position = offset * sequenceLength;
     });
