@@ -2,7 +2,7 @@ import './Community.css'
 import ImageOrbit from "./ImageOrbit";
 function Community({openWidget}) {
     return (
-        <div id={'community'} className={'section-wrapper'}>
+        <div className={'section-wrapper'}>
             <div className={'section-header'}>
                 Join our community
             </div>

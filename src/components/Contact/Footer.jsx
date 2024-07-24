@@ -7,7 +7,7 @@ function Footer() {
         <div className={'background-neutral-500'}>
             <div id={'contact'} className={'section-wrapper'}>
                 <div className={'footer-wrapper'}>
-                    <img className={'footer-logo'} src={logoFull} alt={'streamiverse'}/>
+                    <img className={'footer-logo'} src={logoFull} alt={'Streamiverse'}/>
                     <div className={'nav-list footer-nav-list'}>
                         <ul className={'nav-set-1'}>
                             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
@@ -27,11 +27,11 @@ function Footer() {
                     <div className={'social-media'}>
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <a href={'#'}>
-                            <img src={discordLogo} alt={'Discord link'}/>
+                            <img src={discordLogo} alt={'Discord'}/>
                         </a>
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <a href={'#'}>
-                            <img src={twitterLogo} alt={'Twitter link'}/>
+                            <img src={twitterLogo} alt={'Twitter'}/>
                         </a>
                     </div>
                 </div>

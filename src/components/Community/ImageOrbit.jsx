@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './ImageOrbit.css';
 
 function ImageOrbit() {
-    // Function to import images dynamically
     const importImages = async () => {
         const [
             logo,
@@ -26,7 +25,6 @@ function ImageOrbit() {
             import('../../assets/images/community/orbit-3-glasses-guy.svg')
         ]);
 
-        // Return the imported images
         return {
             logo: logo.default,
             orbit1Guy: orbit1Guy.default,
@@ -40,7 +38,6 @@ function ImageOrbit() {
         };
     };
 
-    // State to hold the images
     const [images, setImages] = useState({
         logo: null,
         orbit1Guy: null,
@@ -53,7 +50,6 @@ function ImageOrbit() {
         orbit3GlassesGuy: null
     });
 
-    // Load images when the component mounts
     useEffect(() => {
         importImages().then((importedImages) => {
             setImages(importedImages);

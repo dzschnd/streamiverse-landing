@@ -65,13 +65,13 @@
     opacity: 0;
     transition: opacity 1s;
 }
-.background-gradient#gradient-upper-left::before, .background-gradient#gradient-upper-left:hover::before {
+.background-gradient#gradient-upper-left:hover::before {
     background-image: url('../../assets/images/features/feature-card-gradient-upper-left.png');
 }
-.background-gradient#gradient-upper-right::before, .background-gradient#gradient-upper-right:hover::before {
+.background-gradient#gradient-upper-right:hover::before {
     background-image: url('../../assets/images/features/feature-card-gradient-upper-right.png');
 }
-.background-gradient#gradient-bottom::before, .background-gradient#gradient-bottom:hover::before {
+.background-gradient#gradient-bottom:hover::before {
     background-image: url('../../assets/images/features/feature-card-gradient-bottom.png');
 }
 .background-gradient#gradient-upper-left:hover::before,

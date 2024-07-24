@@ -58,7 +58,7 @@ function App() {
             window.location.reload();
         }
         dimensions.height = window.innerHeight;
-    }, [dimensions.width, dimensions.height]);
+    }, [dimensions]);
 
     useEffect(() => {
         const project = getProject('Streamiverse', {state: animation});

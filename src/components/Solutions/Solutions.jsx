@@ -2,7 +2,6 @@ import React from 'react';
 import './Solutions.css';
 
 function Solutions() {
-    // Dynamically import images
     const importImages = async () => {
         const [
             phone,
@@ -32,7 +31,6 @@ function Solutions() {
             import('../../assets/images/solutions/payment-icons/bitcoin-logo.svg')
         ]);
 
-        // Return the imported images
         return {
             phone: phone.default,
             withdraw: withdraw.default,
@@ -49,7 +47,6 @@ function Solutions() {
         };
     };
 
-    // State to hold the images
     const [images, setImages] = React.useState({
         phone: null,
         withdraw: null,
@@ -100,7 +97,7 @@ function Solutions() {
                             Customize your streaming setup
                         </div>
                     </div>
-                    <img src={images.integrate} alt={'Illustration'} />
+                    <img src={images.integrate} alt={''} />
                 </div>
                 <div className={'solution-card'} id={'solution-card-3'}>
                     <div className={'card-text'}>
@@ -112,24 +109,24 @@ function Solutions() {
                         </div>
                     </div>
                     <div className={'payment-methods-carousel'} id={'carousel-set-1'}>
-                        <img src={images.tetherLogo} alt={'Tether'} />
-                        <img src={images.bitcoinLogo} alt={'Bitcoin'} />
-                        <img src={images.ethereumLogo} alt={'Ethereum'} />
-                        <img src={images.dogeLogo} alt={'Doge coin'} />
-                        <img src={images.shibaInuLogo} alt={'Shiba inu coin'} />
+                        <img src={images.tetherLogo} alt={''} />
+                        <img src={images.bitcoinLogo} alt={''} />
+                        <img src={images.ethereumLogo} alt={''} />
+                        <img src={images.dogeLogo} alt={''} />
+                        <img src={images.shibaInuLogo} alt={''} />
                     </div>
                     <div className={'payment-methods-carousel'} id={'carousel-set-2'}>
-                        <img src={images.tetherLogo} alt={'Tether'} />
-                        <img src={images.bitcoinLogo} alt={'Bitcoin'} />
-                        <img src={images.ethereumLogo} alt={'Ethereum'} />
-                        <img src={images.dogeLogo} alt={'Doge coin'} />
-                        <img src={images.shibaInuLogo} alt={'Shiba inu coin'} />
+                        <img src={images.tetherLogo} alt={''} />
+                        <img src={images.bitcoinLogo} alt={''} />
+                        <img src={images.ethereumLogo} alt={''} />
+                        <img src={images.dogeLogo} alt={''} />
+                        <img src={images.shibaInuLogo} alt={''} />
                     </div>
                     <div className={'payment-methods-static'}>
-                        <img src={images.visaLogo} alt={'Visa'} />
-                        <img src={images.mastercardLogo} alt={'Mastercard'} />
-                        <img src={images.googlePayLogo} alt={'Google Pay'} />
-                        <img src={images.applePayLogo} alt={'Apple Pay'} />
+                        <img src={images.visaLogo} alt={''} />
+                        <img src={images.mastercardLogo} alt={''} />
+                        <img src={images.googlePayLogo} alt={''} />
+                        <img src={images.applePayLogo} alt={''} />
                     </div>
                 </div>
                 <div className={'solution-card'} id={'solution-card-4'}>
@@ -140,11 +137,11 @@ function Solutions() {
                         <div className={'section-text'}>
                             Access your earnings in&nbsp;real-time.
                         </div>
-                        <img src={images.withdraw} alt={'Illustration'} />
+                        <img src={images.withdraw} alt={''} />
                     </div>
                 </div>
                 <div className={'solution-image'}>
-                    <img src={images.phone} alt={'Phone'} />
+                    <img src={images.phone} alt={''} />
                 </div>
             </div>
         </div>
