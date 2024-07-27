@@ -14,6 +14,10 @@ function Scene() {
         const sequenceLength = val(sheet.sequence.pointer.length);
         let offset = scroll.offset;
         if (offset < 0) offset = Math.abs(scroll.offset / scroll.pages);
+        console.log(scroll.offset);
+        //1.7307712356546439
+        //1.7734736910458289
+        //0.042702455391185
         sheet.sequence.position = offset * sequenceLength;
     });
 

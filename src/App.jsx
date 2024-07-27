@@ -5,17 +5,11 @@ import { SheetProvider } from "@theatre/r3f";
 import { getProject } from "@theatre/core";
 import animation from './assets/animations/animation-fly-through-bigger-gap.json';
 import React, { useEffect, useState, useCallback, lazy } from "react";
+import StaticPages from "./components/StaticPages/StaticPages";
 
 const Scene = lazy(()=> import("./components/3D/Scene"));
-const Header = lazy(()=> import("./components/Header/Header"));
-const Features = lazy(()=> import("./components/Features/Features"));
-const Solutions = lazy(()=> import("./components/Solutions/Solutions"));
-const Community = lazy(()=> import("./components/Community/Community"));
-const Footer = lazy(()=> import("./components/Contact/Footer"));
-const WaitlistWidget = lazy(()=> import("./components/Header/WaitlistWidget"));
 
 function App() {
-    const [widgetVisible, setWidgetVisible] = useState(false);
     const [sheet, setSheet] = useState(null);
     const [scrollOffset, setScrollOffset] = useState(0);
     const animationPages = 10;
@@ -81,34 +75,12 @@ function App() {
             <Canvas id={'canvas'} gl={{preserveDrawingBuffer: true}}
                     key={window.innerWidth + window.innerHeight}
             >
-                <ScrollControls
-                    pages={
-                    dimensions.width >= 690 ? animationPages + scrollOffset / dimensions.height : 0.5 * (animationPages + scrollOffset / dimensions.height)
-                }>
+                <ScrollControls pages={dimensions.width >= 690 ? animationPages + scrollOffset / dimensions.height : 0.5 * (animationPages + scrollOffset / dimensions.height)}>
                     <Scroll>
                         <SheetProvider sheet={sheet}>
                             <Scene/>
                             <Html className={'canvas-html'}>
-                                <div>
-                                    <div className={'sticky blur'}>
-                                        <Header openWidget={() => setWidgetVisible(true)}/>
-                                        <div className={`popup ${widgetVisible ? 'visible' : ''}`} style={{
-                                            position: 'absolute',
-                                            left: '50%',
-                                            top: '25%',
-                                            transform: 'translateX(-50%) translateY(25%)'
-                                        }}>
-                                            <WaitlistWidget closeWidget={() => setWidgetVisible(false)}/>
-                                        </div>
-                                    </div>
-                                    <div className={'background-neutral-900'}
-                                         style={{marginTop: `${dimensions.width >= 690 ? 0.95 * (animationPages * dimensions.height + scrollOffset) : 0.5 * (animationPages * dimensions.height + scrollOffset)}px`}}>
-                                        <Features/>
-                                        <Solutions/>
-                                        <Community openWidget={() => setWidgetVisible(true)}/>
-                                        <Footer/>
-                                    </div>
-                                </div>
+                                <StaticPages scrollOffset={scrollOffset} animationPages={animationPages} dimensions={dimensions}/>
                             </Html>
                         </SheetProvider>
                     </Scroll>
