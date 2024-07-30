@@ -5,7 +5,7 @@ const Header = lazy(()=> import("../Header/Header"));
 const Features = lazy(()=> import("../Features/Features"));
 const Solutions = lazy(()=> import("../Solutions/Solutions"));
 const Community = lazy(()=> import("../Community/Community"));
-const Footer = lazy(()=> import("../Contact/Footer"));
+const Footer = lazy(()=> import("../Footer/Footer"));
 const WaitlistWidget = lazy(()=> import("../Header/WaitlistWidget"));
 
 

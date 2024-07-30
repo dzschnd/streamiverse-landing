@@ -85,6 +85,10 @@ div:has(.canvas-html) {
     background-color: var(--color-neutral-500);
 }
 
+.h-full {
+    height: 100vh;
+}
+
 .sticky {
     position: sticky;
     top: 0;
