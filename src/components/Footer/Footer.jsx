@@ -20,10 +20,10 @@ function Footer() {
                         </ul>
                     </div>
                     <div className={'social-media'}>
-                        <a href={'#'}>
+                        <a href={'https://discord.gg/6APUn7Xq'} target='_blank'>
                             <img src={discordLogo} alt={'Discord'}/>
                         </a>
-                        <a href={'#'}>
+                        <a href={'https://x.com/Streamiverseio'} target='_blank'>
                             <img src={twitterLogo} alt={'Twitter'}/>
                         </a>
                     </div>
