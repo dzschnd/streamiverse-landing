@@ -1,7 +1,6 @@
-import './PrivacyPolicy.css'
 function PrivacyPolicy() {
     return (
-        <div className={'privacy-policy'}>
+        <div className={'doc'}>
             <p className={'doc-header'} style={{marginBottom: '12px'}}>
                 Privacy Policy
             </p>

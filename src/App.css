@@ -108,6 +108,32 @@ a {
     font-size: var(--font-size-200);
 }
 
+.doc {
+    padding: 42px 52px 84px 52px;
+
+    * {
+        font-family: Calibri, sans-serif;
+        color: var(--color-neutral-900);
+    }
+
+    a {
+        color: #0000EE;
+        text-decoration: underline;
+    }
+
+    li {
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 14px;
+        position: relative;
+    }
+    li::before {
+        content: "-";
+        position: absolute;
+        left: 0;
+    }
+}
+
 @media (max-width: 861px){
     .section-wrapper {
         --max-width: 1252px;
