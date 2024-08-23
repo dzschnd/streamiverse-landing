@@ -120,20 +120,18 @@ a {
         color: #0000EE;
         text-decoration: underline;
     }
-    ul li::before {
-        content: "-";
-        position: absolute;
-        left: 0;
-    }
 }
 
-.ul-dashed {
-    li {
+.ul-dashed li {
         list-style-type: none;
         margin-left: 0;
         padding-left: 14px;
         position: relative;
-    }
+}
+.ul-dashed li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
 }
 
 @media (max-width: 861px){
