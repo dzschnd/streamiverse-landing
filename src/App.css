@@ -115,11 +115,6 @@ a {
         font-family: Calibri, sans-serif;
         color: var(--color-neutral-900);
     }
-
-    a {
-        color: #0000EE;
-        text-decoration: underline;
-    }
 }
 
 .ul-dashed li {
@@ -132,6 +127,10 @@ a {
     content: "-";
     position: absolute;
     left: 0;
+}
+.a-default {
+    color: #0000EE;
+    text-decoration: underline;
 }
 
 @media (max-width: 861px){
