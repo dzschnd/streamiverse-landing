@@ -20,7 +20,7 @@ function Footer() {
                         </ul>
                     </div>
                     <div className={'social-media'}>
-                        <a href={'https://discord.gg/6APUn7Xq'} target='_blank' rel="noreferrer">
+                        <a href={'https://discord.gg/j75schSghs'} target='_blank' rel="noreferrer">
                             <img src={discordLogo} alt={'Discord'}/>
                         </a>
                         <a href={'https://x.com/Streamiverseio'} target='_blank' rel="noreferrer">
