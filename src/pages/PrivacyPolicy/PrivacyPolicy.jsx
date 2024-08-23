@@ -29,7 +29,7 @@ function PrivacyPolicy() {
             <p className={'doc-subheader fw-bold'} style={{marginBottom: '14px'}}>
                 What Information We May Collect
             </p>
-            <ul className={'doc-text'} style={{marginBottom: '24px', marginLeft: '16px'}}>
+            <ul className={'doc-text ul-dashed'} style={{marginBottom: '24px', marginLeft: '16px'}}>
                 <li>Email;</li>
                 <li>Password;</li>
                 <li>Backup Mnemonic;</li>

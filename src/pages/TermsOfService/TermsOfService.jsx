@@ -87,7 +87,7 @@ function TermsOfService() {
                 doubt the Streamiverse Technology and Services are not provided and the Service Provider does
                 not operate in the following jurisdictions:
             </p>
-            <ul className={'doc-text'} style={{marginBottom: '12px', marginLeft: '16px'}}>
+            <ul className={'doc-text ul-dashed'} style={{marginBottom: '12px', marginLeft: '16px'}}>
                 <li>Any jurisdiction that require a license or any other permit to provide or use the Streamiverse
                     Technology and Services that the Service Provider or the Streamer had not obtained;
                 </li>
