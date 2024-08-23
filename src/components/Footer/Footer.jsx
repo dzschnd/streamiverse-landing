@@ -15,15 +15,15 @@ function Footer() {
                             <li><a href={'#'}>Follow Us</a></li>
                         </ul>
                         <ul className={'nav-set-2'}>
-                            <li><a href={'/terms-of-service'} target='_blank'>Terms of Use</a></li>
-                            <li><a href={'/privacy-policy'} target='_blank'>Privacy Policy</a></li>
+                            <li><a href={'/terms-of-use'} target='_blank' rel="noreferrer">Terms of Use</a></li>
+                            <li><a href={'/privacy-policy'} target='_blank' rel="noreferrer">Privacy Policy</a></li>
                         </ul>
                     </div>
                     <div className={'social-media'}>
-                        <a href={'https://discord.gg/6APUn7Xq'} target='_blank'>
+                        <a href={'https://discord.gg/6APUn7Xq'} target='_blank' rel="noreferrer">
                             <img src={discordLogo} alt={'Discord'}/>
                         </a>
-                        <a href={'https://x.com/Streamiverseio'} target='_blank'>
+                        <a href={'https://x.com/Streamiverseio'} target='_blank' rel="noreferrer">
                             <img src={twitterLogo} alt={'Twitter'}/>
                         </a>
                     </div>

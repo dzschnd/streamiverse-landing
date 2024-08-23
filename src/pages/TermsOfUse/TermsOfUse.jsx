@@ -1,4 +1,4 @@
-function TermsOfService() {
+function TermsOfUse() {
     return (
         <div className={'doc'}>
             <p className={'doc-header'} style={{marginBottom: '12px'}}>
@@ -346,4 +346,4 @@ function TermsOfService() {
     )
 }
 
-export default TermsOfService;
+export default TermsOfUse;

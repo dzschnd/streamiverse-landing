@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
-import TermsOfService from "./pages/TermsOfService/TermsOfService";
+import TermsOfUse from "./pages/TermsOfUse/TermsOfUse";
 import Main from "./pages/Main/Main";
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
                 <Route path="/privacy-policy" element={
                     <PrivacyPolicy/>
                 }/>
-                <Route path="/terms-of-service" element={
-                    <TermsOfService/>
+                <Route path="/terms-of-use" element={
+                    <TermsOfUse/>
                 }/>
             </Routes>
         </Router>
