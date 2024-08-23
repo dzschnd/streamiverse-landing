@@ -120,6 +120,11 @@ a {
         color: #0000EE;
         text-decoration: underline;
     }
+    ul li::before {
+        content: "-";
+        position: absolute;
+        left: 0;
+    }
 }
 
 .ul-dashed {
@@ -128,11 +133,6 @@ a {
         margin-left: 0;
         padding-left: 14px;
         position: relative;
-    }
-    li::before {
-        content: "-";
-        position: absolute;
-        left: 0;
     }
 }
 
