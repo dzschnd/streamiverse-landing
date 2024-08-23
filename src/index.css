@@ -8,8 +8,11 @@
     --color-neutral-500: rgba(93, 93, 93, 0.09);
     --color-neutral-900: #0F0E10;
 
+    --font-size-200: 0.75rem;
+    --font-size-300: 0.875rem;
     --font-size-400: 1rem;
     --font-size-500: 1.5rem;
+    --font-size-550: 1.75rem;
     --font-size-600: 2rem;
     --font-size-700: 4rem;
 
@@ -99,3 +102,12 @@ div:has(.canvas-html) {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
+
+.fw-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.border-1 {
+    border: 1px solid var(--color-neutral-900);
+}
+

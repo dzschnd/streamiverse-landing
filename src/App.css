@@ -16,7 +16,6 @@
 }
 
 a {
-    color: var(--color-neutral-100);
     text-decoration: none;
 }
 
@@ -95,6 +94,18 @@ a {
     font-size: var(--font-size-400);
     font-weight: var(--font-weight-medium);
     line-height: 1.6;
+}
+
+.doc-header {
+    font-size: var(--font-size-550);
+}
+
+.doc-subheader {
+    font-size: var(--font-size-300);
+}
+
+.doc-text {
+    font-size: var(--font-size-200);
 }
 
 @media (max-width: 861px){
