@@ -15,7 +15,7 @@ function Footer() {
                             <li><a href={'#'}>Follow Us</a></li>
                         </ul>
                         <ul className={'nav-set-2'}>
-                            <li><a href={'/terms-of-service'} target='_blank'>Terms of Service</a></li>
+                            <li><a href={'/terms-of-service'} target='_blank'>Terms of Use</a></li>
                             <li><a href={'/privacy-policy'} target='_blank'>Privacy Policy</a></li>
                         </ul>
                     </div>
