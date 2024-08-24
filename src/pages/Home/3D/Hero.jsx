@@ -2,8 +2,8 @@ import { Plane, Text } from "@react-three/drei";
 import { useLoader } from "@react-three/fiber";
 import React, { useState, useEffect } from "react";
 import * as THREE from "three";
-import logo from '../../assets/images/hero/hero-logo.svg';
-import font from '../../assets/fonts/IBMPlexMono-Medium.ttf';
+import logo from '../../../assets/images/hero/hero-logo.svg';
+import font from '../../../assets/fonts/IBMPlexMono-Medium.ttf';
 
 const LOGO_SCALE = 7.05;
 const LOGO_WIDTH_TO_HEIGHT_RATIO = 1680 / 213;

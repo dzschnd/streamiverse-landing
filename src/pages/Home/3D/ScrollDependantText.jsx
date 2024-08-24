@@ -1,7 +1,7 @@
 import { Text, useScroll } from "@react-three/drei";
 import { useState } from "react";
 import { useFrame } from "@react-three/fiber";
-import font from '../../assets/fonts/IBMPlexMono-Medium.ttf';
+import font from '../../../assets/fonts/IBMPlexMono-Medium.ttf';
 
 export const ScrollDependantText = ({ position, rotation, fontSize, offsetStart, offsetEnd, children }) => {
     const scroll = useScroll();

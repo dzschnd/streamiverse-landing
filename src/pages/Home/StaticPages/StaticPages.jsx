@@ -1,13 +1,12 @@
 import React, {lazy, Suspense, useState} from "react";
 import './StaticPages.css'
-import LoadingScreen from "../LoadingScreen/LoadingScreen";
-const Header = lazy(()=> import("../Header/Header"));
-const Features = lazy(()=> import("../Features/Features"));
-const Solutions = lazy(()=> import("../Solutions/Solutions"));
-const Community = lazy(()=> import("../Community/Community"));
-const Footer = lazy(()=> import("../Footer/Footer"));
-const WaitlistWidget = lazy(()=> import("../Header/WaitlistWidget"));
-
+import LoadingScreen from "../../LoadingScreen/LoadingScreen";
+const Header = lazy(()=> import("../../../components/Header/Header"));
+const Features = lazy(()=> import("./Reasons/Reasons"));
+const Solutions = lazy(()=> import("./Solutions/Solutions"));
+const Community = lazy(()=> import("./Community/Community"));
+const Footer = lazy(()=> import("../../../components/Footer/Footer"));
+const WaitlistWidget = lazy(()=> import("../../../components/Header/WaitlistWidget"));
 
 function StaticPages({dimensions, animationPages, scrollOffset}) {
     const [widgetVisible, setWidgetVisible] = useState(false);
@@ -17,9 +16,6 @@ function StaticPages({dimensions, animationPages, scrollOffset}) {
             <div className={'sticky blur'}>
                 <Header openWidget={() => {
                     setWidgetVisible(true);
-                    if (window.innerHeight > screenHeight) {
-                        console.log('smth happened');
-                    }
                     setScreenHeight(window.innerHeight);
                 }
                 }/>

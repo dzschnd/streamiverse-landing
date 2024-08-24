@@ -1,13 +1,13 @@
 import {Html, Scroll, ScrollControls} from "@react-three/drei";
 import {SheetProvider} from "@theatre/r3f";
-import StaticPages from "../../components/StaticPages/StaticPages";
+import StaticPages from "./StaticPages/StaticPages";
 import {Canvas} from "@react-three/fiber";
 import React, {lazy, useCallback, useEffect, useState} from "react";
 import {getProject} from "@theatre/core";
 import animation from "../../assets/animations/animation-fly-through-bigger-gap.json";
-const Scene = lazy(()=> import("../../components/3D/Scene"));
+const Scene = lazy(()=> import("./3D/Scene"));
 
-function Main() {
+function HomePage() {
     const [sheet, setSheet] = useState(null);
     const [scrollOffset, setScrollOffset] = useState(0);
     const animationPages = 10;
@@ -90,4 +90,4 @@ function Main() {
     )
 }
 
-export default Main;
+export default HomePage;

@@ -1,9 +1,9 @@
-import './Features.css'
-import globe from '../../assets/images/features/globe.png'
-import brick from '../../assets/images/features/brick.png'
-import moneyJar from '../../assets/images/features/money-jar.png'
-import platform from '../../assets/images/features/platform.png'
-function Features() {
+import './Reasons.css'
+import globe from '../../../../assets/images/features/globe.png'
+import brick from '../../../../assets/images/features/brick.png'
+import moneyJar from '../../../../assets/images/features/money-jar.png'
+import platform from '../../../../assets/images/features/platform.png'
+function Reasons() {
     return (
         <div className={'section-wrapper'}>
             <div className={'section-header'}>
@@ -66,4 +66,4 @@ function Features() {
     )
 }
 
-export default Features;
+export default Reasons;

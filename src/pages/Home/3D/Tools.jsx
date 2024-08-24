@@ -1,8 +1,8 @@
 import {ScrollDependantText} from "./ScrollDependantText";
-import planet1Upscale from '../../assets/images/hero/planet-1-upscale.png'
-import planet2Upscale from '../../assets/images/hero/planet-2-upscale.png'
-import planet3Upscale from '../../assets/images/hero/planet-3-upscale.png'
-import planet4Upscale from '../../assets/images/hero/planet-4-upscale.png'
+import planet1Upscale from '../../../assets/images/hero/planet-1-upscale.png'
+import planet2Upscale from '../../../assets/images/hero/planet-2-upscale.png'
+import planet3Upscale from '../../../assets/images/hero/planet-3-upscale.png'
+import planet4Upscale from '../../../assets/images/hero/planet-4-upscale.png'
 import {useEffect, useState} from "react";
 import {ScrollDependantSphere} from "./ScrollDependantSphere";
 
