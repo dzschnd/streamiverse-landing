@@ -4,6 +4,8 @@ import Features from "./Features/Features";
 import Widgets from "./Widgets/Widgets";
 import Wallet from "./Wallet/Wallet";
 import MonetizationTools from "./MonetizationTools/MonetizationTools";
+import React, {useState} from "react";
+import WaitlistWidget from "../../components/Header/WaitlistWidget";
 
 function FeaturesPage() {
     return (

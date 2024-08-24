@@ -1,8 +1,8 @@
 import './Reasons.css'
-import globe from '../../../../assets/images/features/globe.png'
-import brick from '../../../../assets/images/features/brick.png'
-import moneyJar from '../../../../assets/images/features/money-jar.png'
-import platform from '../../../../assets/images/features/platform.png'
+import globe from '../../../../assets/images/home/reasons/globe.png'
+import brick from '../../../../assets/images/home/reasons/brick.png'
+import moneyJar from '../../../../assets/images/home/reasons/money-jar.png'
+import platform from '../../../../assets/images/home/reasons/platform.png'
 function Reasons() {
     return (
         <div className={'section-wrapper'}>

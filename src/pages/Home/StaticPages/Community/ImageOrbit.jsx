@@ -14,15 +14,15 @@ function ImageOrbit() {
             orbit3Guy,
             orbit3GlassesGuy
         ] = await Promise.all([
-            import('../../../../assets/images/community/logo.svg'),
-            import('../../../../assets/images/community/orbit-2-guy.svg'),
-            import('../../../../assets/images/community/orbit-1-headphones-guy.svg'),
-            import('../../../../assets/images/community/orbit-1-girl.svg'),
-            import('../../../../assets/images/community/orbit-1-dot.svg'),
-            import('../../../../assets/images/community/orbit-2-red-girl.svg'),
-            import('../../../../assets/images/community/orbit-2-blonde-girl.svg'),
-            import('../../../../assets/images/community/orbit-3-guy.svg'),
-            import('../../../../assets/images/community/orbit-3-glasses-guy.svg')
+            import('../../../../assets/images/home/community/logo.svg'),
+            import('../../../../assets/images/home/community/orbit-2-guy.svg'),
+            import('../../../../assets/images/home/community/orbit-1-headphones-guy.svg'),
+            import('../../../../assets/images/home/community/orbit-1-girl.svg'),
+            import('../../../../assets/images/home/community/orbit-1-dot.svg'),
+            import('../../../../assets/images/home/community/orbit-2-red-girl.svg'),
+            import('../../../../assets/images/home/community/orbit-2-blonde-girl.svg'),
+            import('../../../../assets/images/home/community/orbit-3-guy.svg'),
+            import('../../../../assets/images/home/community/orbit-3-glasses-guy.svg')
         ]);
 
         return {

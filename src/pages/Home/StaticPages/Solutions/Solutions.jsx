@@ -17,18 +17,18 @@ function Solutions() {
             ethereumLogo,
             bitcoinLogo
         ] = await Promise.all([
-            import('../../../../assets/images/solutions/phone.png'),
-            import('../../../../assets/images/solutions/solution-card-image-withdraw.png'),
-            import('../../../../assets/images/solutions/solution-card-integrate.png'),
-            import('../../../../assets/images/solutions/payment-icons/visa-logo.svg'),
-            import('../../../../assets/images/solutions/payment-icons/google-pay-logo.svg'),
-            import('../../../../assets/images/solutions/payment-icons/apple-pay-logo.svg'),
-            import('../../../../assets/images/solutions/payment-icons/mastercard-logo.svg'),
-            import('../../../../assets/images/solutions/payment-icons/tether-logo.svg'),
-            import('../../../../assets/images/solutions/payment-icons/doge-logo.svg'),
-            import('../../../../assets/images/solutions/payment-icons/shiba-inu-logo.svg'),
-            import('../../../../assets/images/solutions/payment-icons/ethereum-logo.svg'),
-            import('../../../../assets/images/solutions/payment-icons/bitcoin-logo.svg')
+            import('../../../../assets/images/home/solutions/phone.png'),
+            import('../../../../assets/images/home/solutions/solution-card-image-withdraw.png'),
+            import('../../../../assets/images/home/solutions/solution-card-integrate.png'),
+            import('../../../../assets/images/home/solutions/payment-icons/visa-logo.svg'),
+            import('../../../../assets/images/home/solutions/payment-icons/google-pay-logo.svg'),
+            import('../../../../assets/images/home/solutions/payment-icons/apple-pay-logo.svg'),
+            import('../../../../assets/images/home/solutions/payment-icons/mastercard-logo.svg'),
+            import('../../../../assets/images/home/solutions/payment-icons/tether-logo.svg'),
+            import('../../../../assets/images/home/solutions/payment-icons/doge-logo.svg'),
+            import('../../../../assets/images/home/solutions/payment-icons/shiba-inu-logo.svg'),
+            import('../../../../assets/images/home/solutions/payment-icons/ethereum-logo.svg'),
+            import('../../../../assets/images/home/solutions/payment-icons/bitcoin-logo.svg')
         ]);
 
         return {
