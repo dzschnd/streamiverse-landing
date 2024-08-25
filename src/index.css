@@ -3,6 +3,7 @@
 
     --color-primary-100: #CD8CFF;
     --color-primary-400: #7948FF;
+    --color-primary-700: #6B37F4;
 
     --color-neutral-100: #F1F0F1;
     --color-neutral-500: rgba(93, 93, 93, 0.09);
@@ -84,7 +85,6 @@ div:has(.canvas-html) {
     background-color: var(--color-neutral-900);
 }
 
-
 .background-neutral-500 {
     background-color: var(--color-neutral-500);
 }
@@ -112,3 +112,14 @@ div:has(.canvas-html) {
     border: 1px solid var(--color-neutral-900);
 }
 
+.color-primary-700 {
+    color: var(--color-primary-700);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.margin-inline-auto {
+    margin-inline: auto;
+}

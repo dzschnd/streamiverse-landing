@@ -1,0 +1,10 @@
+.resources-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.resources-card {
+    background-color: var(--color-neutral-500);
+    border-radius: 30px;
+}

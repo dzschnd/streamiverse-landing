@@ -1,0 +1,9 @@
+.wallet-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.wallet-card {
+    background-color: var(--color-neutral-500);
+    border-radius: 30px;
+}

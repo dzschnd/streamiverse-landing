@@ -1,16 +1,20 @@
+import streamersRow from '../../../assets/images/labs/labs-streamers-row.png'
+
 function Contact() {
     return (
         <div className={'section-wrapper'}>
-            <img alt={''}/>
-            <div>
+            <img className={'margin-inline-auto'} src={streamersRow} alt={''}/>
+            <div className={'section-header-smaller text-center'}>
                 Get Involved
             </div>
-            <div>
+            <div className={'section-subheader-smaller text-center'}>
                 Become a part of Streamiverse Labs and start building your tech company today
             </div>
-            <button className="button button-gradient">
-                Contact us
-            </button>
+            <div className={'text-center'}>
+                <button className="button button-gradient">
+                    Contact us
+                </button>
+            </div>
         </div>
     )
 }

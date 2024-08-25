@@ -1,0 +1,8 @@
+.monetization-tools-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.monetization-tools-tab {
+    display: flex;
+}
