@@ -1,0 +1,22 @@
+.contact-wrapper {
+    margin-bottom: 200px;
+    .section-subheader-smaller {
+        margin-bottom: 60px;
+        margin-inline: auto;
+        max-width: 737px;
+    }
+    img {
+        margin-bottom: 40px;
+    }
+    .button {
+        min-width: 263px;
+    }
+}
+
+@media (max-width: 1012px) {
+    .contact-wrapper {
+        margin-bottom: 150px;
+    }
+}
+
+

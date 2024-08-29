@@ -1,0 +1,31 @@
+.labs-description {
+    margin-bottom: 40px;
+    margin-inline: auto;
+    max-width: 704px;
+}
+
+.labs-wrapper {
+    margin-top: 120px;
+    margin-bottom: 200px;
+    .color-primary-700 {
+        margin-bottom: 30px;
+    }
+    img {
+        border-radius: 30px;
+    }
+}
+
+@media (max-width: 1012px) {
+    .labs-wrapper {
+        margin-top: 100px;
+        margin-bottom: 150px;
+    }
+}
+@media (max-width: 705px) {
+    .labs-wrapper {
+        margin-top: 75px;
+    }
+    .labs-wrapper > img {
+        content: url("../../../assets/images/labs/labs-streamer-girl-vertical.png");
+    }
+}

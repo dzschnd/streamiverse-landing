@@ -1,4 +1,32 @@
-.widgets-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.widgets-bullets, .widgets-images {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1010px;
+    margin-inline: auto;
+}
+
+.widgets-column-2 {
+    justify-content: end;
+}
+
+.widgets-column-1 .bullet-point {
+    max-width: 445px;
+}
+.widgets-column-2 .bullet-point {
+    max-width: 392px;
+}
+
+.widgets-bullets .bullet-point {
+    margin-bottom: 80px;
+    .section-subheader-smaller {
+        margin-bottom: 20px;
+    }
+}
+
+.widgets-wrapper {
+    margin-bottom: 200px;
+}
+
+.widgets-description {
+    margin-bottom: 80px;
 }

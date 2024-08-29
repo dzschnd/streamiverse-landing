@@ -6,7 +6,7 @@ function Header({openWidget}) {
         <div className="section-wrapper">
             <div className="header-wrapper">
                 <img className="header-logo" src={logoFull} alt="Streamiverse"/>
-                <button className="button button-gradient header-button" onClick={openWidget}>
+                <button className="button button-gradient header-button button-shrinkable" onClick={openWidget}>
                     <span>
                         Join the Waitlist
                     </span>

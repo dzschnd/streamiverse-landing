@@ -11,13 +11,13 @@ function Wallet() {
                     Digital Wallet
                 </div>
             </div>
-            <div className={'section-text text-center'}>
+            <div className={'wallet-description section-text text-center'}>
                 Collect and use your donations and payments effortlessly in one place
             </div>
             <img className={'margin-inline-auto'} src={phones} alt={''}/>
             <div className={'wallet-content'}>
                 <div className={'wallet-card'}>
-                    <div className={'section-subheader-smaller'}>
+                    <div className={'section-subheader-smaller text-center'}>
                         Real-Time Access
                     </div>
                     <div className={'section-text text-center'}>
@@ -25,7 +25,7 @@ function Wallet() {
                     </div>
                 </div>
                 <div className={'wallet-card'}>
-                    <div className={'section-subheader-smaller'}>
+                    <div className={'section-subheader-smaller text-center'}>
                         Issue Debit Card
                     </div>
                     <div className={'section-text text-center'}>
@@ -34,7 +34,7 @@ function Wallet() {
                     </div>
                 </div>
                 <div className={'wallet-card'}>
-                    <div className={'section-subheader-smaller'}>
+                    <div className={'section-subheader-smaller text-center'}>
                         One-stop Solution
                     </div>
                     <div className={'section-text text-center'}>

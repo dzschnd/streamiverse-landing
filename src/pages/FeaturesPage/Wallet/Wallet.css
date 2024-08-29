@@ -1,9 +1,21 @@
 .wallet-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 60px;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.wallet-description {
+    margin-bottom: 60px;
 }
 
 .wallet-card {
     background-color: var(--color-neutral-500);
     border-radius: 30px;
+    padding: 60px 30px;
+    max-width: 392px;
+    .section-subheader-smaller {
+        margin-bottom: 30px;
+    }
 }

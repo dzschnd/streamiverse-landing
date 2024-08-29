@@ -1,8 +1,50 @@
+.monetization-tools-wrapper {
+    margin-bottom: 200px;
+}
+
 .monetization-tools-nav {
+    margin-top: 40px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
 
 .monetization-tools-tab {
     display: flex;
+    margin-bottom: 40px;
+    margin-inline: auto;
+    max-width: 1111px;
+}
+
+.monetization-tools-tab > div {
+    position: relative;
+    width: 100%;
+}
+
+.monetization-tools-tab p {
+    max-width: 495px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.monetization-tools-tab .color-primary-700 {
+    margin-bottom: 20px;
+}
+
+.monetization-tools-tab img {
+    width: 498px;
+}
+
+.monetization-tools-tab#tab-1 img {
+    mix-blend-mode: lighten;
+}
+.monetization-tools-tab#tab-3 img {
+    mix-blend-mode: screen;
+}
+
+.slider-nav-button {
+
 }

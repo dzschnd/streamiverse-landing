@@ -1,8 +1,8 @@
 import streamersRow from '../../../assets/images/labs/labs-streamers-row.png'
-
+import './Contact.css'
 function Contact() {
     return (
-        <div className={'section-wrapper'}>
+        <div className={'contact-wrapper section-wrapper'}>
             <img className={'margin-inline-auto'} src={streamersRow} alt={''}/>
             <div className={'section-header-smaller text-center'}>
                 Get Involved

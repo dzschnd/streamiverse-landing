@@ -9,88 +9,98 @@ import donationPreviewGame from '../../../assets/images/features/donation-previe
 import './Widgets.css'
 function Widgets() {
     return (
-        <div className={'section-wrapper'}>
+        <div className={'widgets-wrapper section-wrapper'}>
             <div className={'section-header-smaller text-center'}>
                 Donation Widgets
             </div>
-            <div className={'section-text text-center'}>
+            <div className={'widgets-description section-text text-center'}>
                 Show donations from viewers around the world with ease
             </div>
-            <div className={'widgets-content'}>
-                <div className={'bullet-point'}>
-                    <img className={'bullet'} src={alertsBullet} alt={''}/>
-                    <div>
-                        <div className={'section-subheader-smaller'}>
-                            Customizable Alerts
+            <div className={'widgets-bullets'}>
+                <div className={'widgets-column-1'}>
+                    <div className={'bullet-point'}>
+                        <img className={'bullet'} src={alertsBullet} alt={''}/>
+                        <div>
+                            <div className={'section-subheader-smaller'}>
+                                Customizable Alerts
+                            </div>
+                            <div className={'section-text'}>
+                                Set up alerts for donations, follows, and subscriptions. Customize the appearance and
+                                sound
+                                to
+                                match your brand
+                            </div>
                         </div>
-                        <div className={'section-text'}>
-                            Set up alerts for donations, follows, and subscriptions. Customize the appearance and sound
-                            to
-                            match your brand
+                    </div>
+                    <div className={'bullet-point'}>
+                        <img className={'bullet'} src={overlaysBullet} alt={''}/>
+                        <div>
+                            <div className={'section-subheader-smaller'}>
+                                Overlays
+                            </div>
+                            <div className={'section-text'}>
+                                Create interactive overlays that engage viewers with real-time data, such as recent
+                                donations,
+                                top supporters, and more
+                            </div>
+                        </div>
+                    </div>
+                    <div className={'bullet-point'}>
+                        <img className={'bullet'} src={paymentMethodsBullet} alt={''}/>
+                        <div>
+                            <div className={'section-subheader-smaller'}>
+                                Multiple Payment Methods
+                            </div>
+                            <div className={'section-text'}>
+                                Set up your donation page to accept payments from over 150 methods, including credit
+                                cards,
+                                PayPal, Mastercard, Visa, PIX and 500+ cryptocurrencies
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className={'bullet-point'}>
-                    <img className={'bullet'} src={withdrawalsBullet} alt={''}/>
-                    <div>
-                        <div className={'section-subheader-smaller'}>
-                            Instant Withdrawals
+                <div className={'widgets-column-2'}>
+                    <div className={'bullet-point'}>
+                        <img className={'bullet'} src={withdrawalsBullet} alt={''}/>
+                        <div>
+                            <div className={'section-subheader-smaller'}>
+                                Instant Withdrawals
+                            </div>
+                            <div className={'section-text'}>
+                                Link your bank account or digital wallet to instantly withdraw donations in any currency
+                            </div>
                         </div>
-                        <div className={'section-text'}>
-                            Link your bank account or digital wallet to instantly withdraw donations in any currency
+                    </div>
+                    <div className={'bullet-point'}>
+                        <img className={'bullet'} src={widgetsBullet} alt={''}/>
+                        <div>
+                            <div className={'section-subheader-smaller'}>
+                                Widgets
+                            </div>
+                            <div className={'section-text'}>
+                                Use pre-built widgets for polls, in-stream stickers, and other interactive elements to
+                                keep
+                                your
+                                audience engaged
+                            </div>
+                        </div>
+                    </div>
+                    <div className={'bullet-point'}>
+                        <img className={'bullet'} src={feesBullet} alt={''}/>
+                        <div>
+                            <div className={'section-subheader-smaller'}>
+                                Transparent Fees
+                            </div>
+                            <div className={'section-text'}>
+                                Choose who covers the transaction fees—either the donor or the streamer. Enjoy lower
+                                fees
+                                compared to legacy platforms
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className={'bullet-point'}>
-                    <img className={'bullet'} src={overlaysBullet} alt={''}/>
-                    <div>
-                        <div className={'section-subheader-smaller'}>
-                            Overlays
-                        </div>
-                        <div className={'section-text'}>
-                            Create interactive overlays that engage viewers with real-time data, such as recent
-                            donations,
-                            top supporters, and more
-                        </div>
-                    </div>
-                </div>
-                <div className={'bullet-point'}>
-                    <img className={'bullet'} src={widgetsBullet} alt={''}/>
-                    <div>
-                        <div className={'section-subheader-smaller'}>
-                            Widgets
-                        </div>
-                        <div className={'section-text'}>
-                            Use pre-built widgets for polls, in-stream stickers, and other interactive elements to keep
-                            your
-                            audience engaged
-                        </div>
-                    </div>
-                </div>
-                <div className={'bullet-point'}>
-                    <img className={'bullet'} src={paymentMethodsBullet} alt={''}/>
-                    <div>
-                        <div className={'section-subheader-smaller'}>
-                            Multiple Payment Methods
-                        </div>
-                        <div className={'section-text'}>
-                            Set up your donation page to accept payments from over 150 methods, including credit cards,
-                            PayPal, Mastercard, Visa, PIX and 500+ cryptocurrencies
-                        </div>
-                    </div>
-                </div>
-                <div className={'bullet-point'}>
-                    <img className={'bullet'} src={feesBullet} alt={''}/>
-                    <div>
-                        <div className={'section-subheader-smaller'}>
-                            Transparent Fees
-                        </div>
-                        <div className={'section-text'}>
-                            Choose who covers the transaction fees—either the donor or the streamer. Enjoy lower fees
-                            compared to legacy platforms
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div className={'widgets-images'}>
                 <img src={donationPreviewMessage} alt={''}/>
                 <img src={donationPreviewGame} alt={''}/>
             </div>

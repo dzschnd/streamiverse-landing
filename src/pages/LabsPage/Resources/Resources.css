@@ -1,10 +1,77 @@
+.resources-wrapper {
+    margin-bottom: 200px;
+}
+
 .resources-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.resources-content > div {
+    margin-inline: auto;
+}
+
+.resources-cards-big, .resources-cards-small {
+    display: flex;
+    gap: 20px;
 }
 
 .resources-card {
     background-color: var(--color-neutral-500);
     border-radius: 30px;
+}
+
+.resources-cards-big > .resources-card {
+    max-width: 598px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .section-header-smaller {
+        margin-inline: 30px;
+    }
+    .section-subheader-smaller {
+        max-width: 538px;
+        margin-inline: 30px;
+    }
+    img {
+        border-radius: 30px;
+    }
+}
+.resources-cards-small > .resources-card {
+    max-width: 392px;
+    padding: 0 30px 60px;
+    img {
+        margin-inline: auto;
+    }
+    img#stats {
+        margin-top: 64px;
+    }
+    img#rocket {
+        margin-top: -17px;
+    }
+}
+
+@media (max-width: 1012px) {
+    .resources-wrapper {
+        margin-bottom: 150px;
+    }
+}
+
+@media (max-width: 705px) {
+    .resources-cards-big, .resources-cards-small {
+        flex-direction: column;
+        .resources-card {
+            max-width: 312px;
+            gap: 40px;
+            .section-header-smaller {
+                margin: 60px 20px 0 20px;
+            }
+            .section-subheader-smaller {
+                margin: 0 20px 60px 20px;
+            }
+        }
+    }
+    .resources-cards-big img {
+        content: url("../../../assets/images/labs/labs-streamer-guy-vertical.png");
+    }
 }

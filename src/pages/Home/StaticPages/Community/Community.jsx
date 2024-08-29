@@ -12,7 +12,7 @@ function Community({openWidget}) {
                    <div className={'section-subheader'}>
                        Join the universe<br/>of streamers
                    </div>
-                   <button className={'button button-gradient community-button'} onClick={openWidget}>
+                   <button className={'button button-gradient community-button button-shrinkable'} onClick={openWidget}>
                         <span>
                             Join the Waitlist
                         </span>

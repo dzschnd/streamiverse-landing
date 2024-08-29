@@ -1,0 +1,12 @@
+.features-wrapper {
+    padding-top: 120px;
+    margin-bottom: 200px;
+}
+
+.features-description {
+    margin-bottom: 40px;
+    p {
+        max-width: 600px;
+        margin-inline: auto;
+    }
+}
