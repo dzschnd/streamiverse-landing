@@ -2,14 +2,11 @@ import phones from '../../../assets/images/features/feature-phones.png'
 import './Wallet.css'
 function Wallet() {
     return (
-        <div className={'section-wrapper'}>
+        <div className={'wallet-wrapper section-wrapper'}>
             <div className={'section-header-smaller text-center'}>
-                <div className={'color-primary-700'}>
-                    All-in-One
-                </div>
-                <div>
-                    Digital Wallet
-                </div>
+                <span className={'color-primary-700'}>All-in-One </span>
+                <br/>
+                <span>Digital&nbsp;Wallet</span>
             </div>
             <div className={'wallet-description section-text text-center'}>
                 Collect and use your donations and payments effortlessly in one place

@@ -2,12 +2,20 @@
     margin-bottom: 200px;
 }
 
+.monetization-tools-description {
+    margin-bottom: 40px;
+}
+
 .monetization-tools-nav {
-    margin-top: 40px;
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+
+.monetization-tools-tab-wrapper {
+    /*display: flex;*/
+    overflow: hidden;
 }
 
 .monetization-tools-tab {
@@ -45,6 +53,12 @@
     mix-blend-mode: screen;
 }
 
-.slider-nav-button {
-
+@media (max-width: 1012px) {
+    .monetization-tools-nav {
+        display: none;
+    }
+    .monetization-tools-tab {
+        flex-direction: column;
+        text-align: center;
+    }
 }

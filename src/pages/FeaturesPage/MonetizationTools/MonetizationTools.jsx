@@ -8,7 +8,7 @@ function MonetizationTools() {
             <div className={'section-header-smaller text-center'}>
                 Innovative Monetization Tools
             </div>
-            <div className={'section-text text-center'}>
+            <div className={'monetization-tools-description section-text text-center'}>
                 Unlock new revenue streams through digital assets and tokens
             </div>
             <div className={'monetization-tools-nav'}>

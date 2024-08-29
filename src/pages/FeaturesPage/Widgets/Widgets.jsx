@@ -101,8 +101,12 @@ function Widgets() {
                 </div>
             </div>
             <div className={'widgets-images'}>
-                <img src={donationPreviewMessage} alt={''}/>
-                <img src={donationPreviewGame} alt={''}/>
+                <div>
+                    <img id={'donation-preview-message'} src={donationPreviewMessage} alt={''}/>
+                </div>
+                <div>
+                    <img id={'donation-preview-game'} src={donationPreviewGame} alt={''}/>
+                </div>
             </div>
         </div>
     )
