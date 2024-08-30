@@ -13,7 +13,7 @@ function StaticPages({dimensions, animationPages, scrollOffset}) {
     const [screenHeight, setScreenHeight] = useState(window.innerHeight);
     return (
         <Suspense fallback={<LoadingScreen/>}>
-            <div className={'sticky blur'}>
+            <div className={'sticky'}>
                 <Header openWidget={() => {
                     setWidgetVisible(true);
                     setScreenHeight(window.innerHeight);

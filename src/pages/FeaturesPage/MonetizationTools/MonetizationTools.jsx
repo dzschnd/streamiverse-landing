@@ -6,7 +6,7 @@ import arrowLeft from '../../../assets/images/features/arrow-left.svg'
 import arrowRight from '../../../assets/images/features/arrow-right.svg'
 import './MonetizationTools.css'
 
-function MonetizationTools() {
+function MonetizationTools({openWidget}) {
     const [currentTab, setCurrentTab] = useState(1);
     const [dragging, setDragging] = useState(false);
     const sliderRef = useRef(null);
@@ -133,7 +133,7 @@ function MonetizationTools() {
                 </div>
             </div>
             <div className={'text-center'}>
-                <button className="button button-gradient">
+                <button className="button button-gradient" onClick={openWidget}>
                     <span>
                         Join the Waitlist
                     </span>

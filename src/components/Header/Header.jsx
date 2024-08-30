@@ -23,16 +23,8 @@ function Header({openWidget}) {
         };
     }, []);
 
-    function toggleScroll(){
-        let style = document.body.style.overflow
-        document.body.style.overflow = (style === 'hidden') ? 'auto':'hidden'
-    }
-    useEffect(() => {
-        toggleScroll();
-    }, [navToggle]);
-
         return (
-        <div className="section-wrapper">
+        <div className="blur section-wrapper">
             <div className="header-wrapper">
                 <a href={'/'}>
                     <img className="header-logo" src={logoFull} alt="Streamiverse"/>
