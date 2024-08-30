@@ -7,12 +7,14 @@ function Footer() {
         <div className={'background-neutral-500'}>
             <div id={'contact'} className={'section-wrapper'}>
                 <div className={'footer-wrapper'}>
-                    <img className={'footer-logo'} src={logoFull} alt={'Streamiverse'}/>
+                    <a href={'/'}>
+                        <img className={'footer-logo'} src={logoFull} alt={'Streamiverse'}/>
+                    </a>
                     <div className={'nav-list footer-nav-list'}>
                         <ul className={'nav-set-1'}>
-                            <li><a href={'#'}>Contact Us</a></li>
-                            <li><a href={'#'}>FAQ</a></li>
-                            <li><a href={'#'}>Follow Us</a></li>
+                            <li><a href={''}>Contact Us</a></li>
+                            <li><a href={''}>FAQ</a></li>
+                            <li><a href={''}>Follow Us</a></li>
                         </ul>
                         <ul className={'nav-set-2'}>
                             <li><a href={'/terms-of-use'} target='_blank' rel="noreferrer">Terms of Use</a></li>

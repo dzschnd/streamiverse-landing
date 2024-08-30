@@ -19,7 +19,7 @@ a {
     text-decoration: none;
 }
 
-.nav-list {
+.nav-list li{
     list-style: none;
 }
 
