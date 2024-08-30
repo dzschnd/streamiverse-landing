@@ -28,11 +28,11 @@ function TermsOfUse() {
                 The <span className={'fw-bold'}>Service Provider</span> you are contracting with is:
             </p>
             <p className={'doc-text'} style={{marginBottom: '14px'}}>
-                [Full Legal Name Of The Company], incorporated in the Saint Vincent and the Grenadines and
+                Streamiverse LLS, incorporated in the Saint Vincent and the Grenadines and
                 operating under the laws of Saint Vincent and the Grenadines.
             </p>
             <p className={'doc-text'} style={{marginBottom: '14px'}}>
-                [Company address]
+                Euro House, Richmond Hil Road, Kingstown, St. Vincent and the Grenadines
             </p>
             <p className={'doc-text'} style={{marginBottom: '28px'}}>
                 The <span className={'fw-bold'}>Streamiverse Technology and Services</span> is a one-stop complex of

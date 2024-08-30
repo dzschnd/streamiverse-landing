@@ -20,7 +20,7 @@ function PrivacyPolicy() {
                 account. Make sure you have independent control over all your data and funds before doing so.
             </p>
             <p className={'doc-text'} style={{marginBottom: '14px'}}>
-                <span className={'fw-bold'}>The controller of data processing</span> is [Full Legal Name Of The Company], [Company address].
+                <span className={'fw-bold'}>The controller of data processing</span> is Streamiverse LLS, Euro House, Richmond Hil Road, Kingstown, St. Vincent and the Grenadines.
             </p>
             <p className={'doc-text'} style={{marginBottom: '28px'}}>
                 <span className={'fw-bold'}>To contact our data protection officer</span>, please address correspondence to the “Data Protection
