@@ -51,7 +51,7 @@ a {
     background-color: var(--color-neutral-900);
     width: 263px;
 }
-.button-slider:hover {
+.button-slider:hover, .button-slider.active {
     background-color: var(--color-primary-700);
 }
 
