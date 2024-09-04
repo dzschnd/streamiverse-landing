@@ -24,33 +24,35 @@ function Header({openWidget}) {
     }, []);
 
         return (
-        <div className="blur section-wrapper">
-            <div className="header-wrapper">
-                <a href={'/'}>
-                    <img className="header-logo" src={logoFull} alt="Streamiverse"/>
-                </a>
-                <div className={'nav-list header-nav-list'} style={{transform: `${navToggle === 0 ? 'translateY(-100%)' : 'translateY(0)'}`}}>
-                    <button className={'close-icon'} onClick={() => setNavToggle(0)}
-                            style={{visibility: `${navToggle === 0 ? 'hidden' : 'visible'}`}}>
-                        <img src={closeIcon} alt={'Close'}/>
-                    </button>
-                    <ul style={{transform: `${smallScreen === 0 ? 'translateY(100%)' : 'none'}`}}>
-                        <li><a href={'/features'}>Features</a></li>
-                        <li><a href={'/labs'}>Labs</a></li>
-                        <li><a href={'mailto:support@streamiverse.io'}>Contact Us</a></li>
-                    </ul>
+            <div className={'blur'}>
+                <div className="section-wrapper">
+                    <div className="header-wrapper">
+                        <a href={'/'}>
+                            <img className="header-logo" src={logoFull} alt="Streamiverse"/>
+                        </a>
+                        <div className={'nav-list header-nav-list'} style={{transform: `${navToggle === 0 ? 'translateY(-100%)' : 'translateY(0)'}`}}>
+                            <button className={'close-icon'} onClick={() => setNavToggle(0)}
+                                    style={{visibility: `${navToggle === 0 ? 'hidden' : 'visible'}`}}>
+                                <img src={closeIcon} alt={'Close'}/>
+                            </button>
+                            <ul style={{transform: `${smallScreen === 0 ? 'translateY(100%)' : 'none'}`}}>
+                                <li><a href={'/features'}>Features</a></li>
+                                <li><a href={'/labs'}>Labs</a></li>
+                                <li><a href={'mailto:support@streamiverse.io'}>Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <button className={'burger-menu'} onClick={() => setNavToggle(1)}
+                                style={{visibility: `${navToggle === 1 ? 'hidden' : 'visible'}`}}>
+                            <img src={burgerMenu} alt={'Burger Menu'}/>
+                        </button>
+                        <button className="button button-gradient header-button button-shrinkable" onClick={openWidget}>
+                            <span>
+                                Join the Waitlist
+                            </span>
+                        </button>
+                    </div>
                 </div>
-                <button className={'burger-menu'} onClick={() => setNavToggle(1)}
-                        style={{visibility: `${navToggle === 1 ? 'hidden' : 'visible'}`}}>
-                    <img src={burgerMenu} alt={'Burger Menu'}/>
-                </button>
-                <button className="button button-gradient header-button button-shrinkable" onClick={openWidget}>
-                    <span>
-                        Join the Waitlist
-                    </span>
-                </button>
             </div>
-        </div>
         );
 }
 
