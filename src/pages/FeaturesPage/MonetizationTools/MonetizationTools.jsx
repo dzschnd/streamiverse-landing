@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import moneyTree from '../../../assets/images/features/money-tree.png'
 import streamerCoins from '../../../assets/images/features/streamer-coins.png'
-import gameController from '../../../assets/images/features/game-controller.png'
+import gameController from '../../../assets/images/features/game-controller.jpg'
 import arrowLeft from '../../../assets/images/features/arrow-left.svg'
 import arrowRight from '../../../assets/images/features/arrow-right.svg'
 import './MonetizationTools.css'
@@ -100,7 +100,7 @@ function MonetizationTools({openWidget}) {
                     style={{transform: `translateX(-${(currentTab - 1) * 100 / numTabs}%)`}}
                 >
                     <div className={'monetization-tools-tab'} id={'tab-1'}>
-                        <img src={moneyTree} alt={''}/>
+                        <img src={moneyTree} alt={''} id={'money-tree'}/>
                         <div>
                             <p>
                                 Explore various methods of monetization, such as selling digital assets, offering
@@ -109,7 +109,7 @@ function MonetizationTools({openWidget}) {
                         </div>
                     </div>
                     <div className={'monetization-tools-tab'} id={'tab-2'}>
-                        <img src={streamerCoins} alt={''}/>
+                        <img src={streamerCoins} alt={''} id={'streamer-coins'}/>
                         <div>
                             <p>
                                 Create and distribute your own tokens to engage your community. Use them for special
@@ -119,7 +119,7 @@ function MonetizationTools({openWidget}) {
                         </div>
                     </div>
                     <div className={'monetization-tools-tab'} id={'tab-3'}>
-                        <img src={gameController} alt={''}/>
+                        <img src={gameController} alt={''} id={'game-controller'}/>
                         <div>
                             <p>
                                 <div className={'color-primary-700'}>

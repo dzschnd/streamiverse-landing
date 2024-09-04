@@ -12,9 +12,9 @@ function Footer() {
                     </a>
                     <div className={'nav-list footer-nav-list'}>
                         <ul className={'nav-set-1'}>
-                            <li><a href={''}>Contact Us</a></li>
-                            <li><a href={''}>FAQ</a></li>
-                            <li><a href={''}>Follow Us</a></li>
+                            <li><a href={'/features'}>Features</a></li>
+                            <li><a href={'/labs'}>Labs</a></li>
+                            <li><a href={'mailto:support@streamiverse.io'}>Contact Us</a></li>
                         </ul>
                         <ul className={'nav-set-2'}>
                             <li><a href={'/terms-of-use'} target='_blank' rel="noreferrer">Terms of Use</a></li>

@@ -66,17 +66,32 @@
 }
 
 .monetization-tools-tab img {
-    width: 498px;
+    width: 310px;
+    max-height: 340px;
 }
 
-.monetization-tools-tab#tab-1 img {
-    mix-blend-mode: lighten;
+.monetization-tools-tab img#money-tree {
+    width: 310px;
+    max-height: 340px;
+    margin-left: 157px;
 }
-.monetization-tools-tab#tab-3 img {
-    mix-blend-mode: screen;
+.monetization-tools-tab img#streamer-coins {
+    width: 338px;
+    max-height: 295px;
+    margin-left: 105px;
+}
+.monetization-tools-tab img#game-controller {
+    width: 328px;
+    max-height: 328px;
+    margin-left: 85px;
 }
 
 @media (max-width: 1012px) {
+    .monetization-tools-tab img#money-tree,
+    .monetization-tools-tab img#streamer-coins,
+    .monetization-tools-tab img#game-controller {
+        margin-left: 0;
+    }
     .monetization-tools-nav {
         display: none;
     }

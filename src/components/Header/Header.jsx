@@ -37,7 +37,7 @@ function Header({openWidget}) {
                     <ul style={{transform: `${smallScreen === 0 ? 'translateY(100%)' : 'none'}`}}>
                         <li><a href={'/features'}>Features</a></li>
                         <li><a href={'/labs'}>Labs</a></li>
-                        <li><a href={''}>Contact Us</a></li>
+                        <li><a href={'mailto:support@streamiverse.io'}>Contact Us</a></li>
                     </ul>
                 </div>
                 <button className={'burger-menu'} onClick={() => setNavToggle(1)}

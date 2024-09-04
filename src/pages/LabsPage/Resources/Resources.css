@@ -12,8 +12,14 @@
 }
 
 .resources-cards-big, .resources-cards-small {
-    display: flex;
+    display: grid;
     gap: 20px;
+}
+.resources-cards-big {
+    grid-template-columns: 1fr 1fr;
+}
+.resources-cards-small {
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .resources-card {
@@ -39,15 +45,18 @@
 }
 .resources-cards-small > .resources-card {
     max-width: 392px;
-    padding: 0 30px 60px;
+    padding: 60px 30px 60px;
     img {
+        width: 180px;
         margin-inline: auto;
+        margin-bottom: 20px;
+        object-fit: contain;
     }
     img#stats {
-        margin-top: 64px;
+        mix-blend-mode: screen;
     }
     img#rocket {
-        margin-top: -17px;
+        mix-blend-mode: lighten;
     }
 }
 
@@ -59,7 +68,7 @@
 
 @media (max-width: 705px) {
     .resources-cards-big, .resources-cards-small {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         .resources-card {
             max-width: 312px;
             gap: 40px;

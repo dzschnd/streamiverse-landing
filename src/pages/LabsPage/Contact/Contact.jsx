@@ -11,12 +11,12 @@ function Contact() {
                 Become a part of Streamiverse Labs and start building your tech company today
             </div>
             <div className={'text-center'}>
-                <button className="button button-gradient">
-                    Contact us
+                <button onClick={() => {window.location.href = 'mailto:support@streamiverse.io'}} className="button button-gradient">
+                    Contact Us
                 </button>
-            </div>
         </div>
-    )
+</div>
+)
 }
 
 export default Contact;
