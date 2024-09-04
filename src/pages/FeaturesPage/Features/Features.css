@@ -1,5 +1,5 @@
 .features-wrapper {
-    padding-top: 120px;
+    margin-top: 120px;
     margin-bottom: 200px;
 }
 
@@ -13,6 +13,7 @@
 
 @media (max-width: 1012px) {
     .features-wrapper {
+        margin-top: 40px;
         margin-bottom: 150px;
         img {
             content: url("../../../assets/images/features/app-preview-tablet.png");

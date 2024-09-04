@@ -23,11 +23,10 @@
     display: none;
     justify-content: space-between;
     position: absolute;
-    top: 50%;
+    top: 179px;
     left: 0;
     right: 0;
     width: 100%;
-    transform: translateY(-50%);
     z-index: 1;
     button {
         background-color: transparent;
