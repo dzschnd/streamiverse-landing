@@ -1,0 +1,86 @@
+.resources-wrapper {
+    margin-bottom: 200px;
+}
+
+.resources-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.resources-content > div {
+    margin-inline: auto;
+}
+
+.resources-cards-big, .resources-cards-small {
+    display: grid;
+    gap: 20px;
+}
+.resources-cards-big {
+    grid-template-columns: 1fr 1fr;
+}
+.resources-cards-small {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.resources-card {
+    background-color: var(--color-neutral-500);
+    border-radius: 30px;
+}
+
+.resources-cards-big > .resources-card {
+    max-width: 598px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .section-header-smaller {
+        margin-inline: 30px;
+    }
+    .section-subheader-smaller {
+        max-width: 538px;
+        margin-inline: 30px;
+    }
+    img {
+        border-radius: 30px;
+    }
+}
+.resources-cards-small > .resources-card {
+    max-width: 392px;
+    padding: 60px 30px 60px;
+    img {
+        width: 180px;
+        margin-inline: auto;
+        margin-bottom: 20px;
+        object-fit: contain;
+    }
+    img#stats {
+        mix-blend-mode: screen;
+    }
+    img#rocket {
+        mix-blend-mode: lighten;
+    }
+}
+
+@media (max-width: 1012px) {
+    .resources-wrapper {
+        margin-bottom: 150px;
+    }
+}
+
+@media (max-width: 705px) {
+    .resources-cards-big, .resources-cards-small {
+        grid-template-columns: 1fr;
+        .resources-card {
+            max-width: 312px;
+            gap: 40px;
+            .section-header-smaller {
+                margin: 60px 20px 0 20px;
+            }
+            .section-subheader-smaller {
+                margin: 0 20px 60px 20px;
+            }
+        }
+    }
+    .resources-cards-big img {
+        content: url("../../../assets/images/labs/labs-streamer-guy-vertical.png");
+    }
+}

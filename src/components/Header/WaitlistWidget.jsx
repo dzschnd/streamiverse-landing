@@ -48,7 +48,7 @@ function WaitlistWidget({ closeWidget }) {
         <>
             <div className="waitlist-popup">
                 <button className={'close-button'} onClick={closeWidget}>
-                    <img className={'close-icon'} src={closeIcon} alt={''}/>
+                    <img src={closeIcon} alt={''}/>
                 </button>
                 <div id="getWaitlistContainer" data-waitlist_id="18199" data-widget_type="WIDGET_1"></div>
             </div>

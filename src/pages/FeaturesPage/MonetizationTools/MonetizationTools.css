@@ -1,0 +1,117 @@
+.monetization-tools-wrapper {
+    margin-bottom: 200px;
+}
+
+.monetization-tools-description {
+    margin-bottom: 40px;
+}
+
+.monetization-tools-nav {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.monetization-tools-slider {
+    position: relative;
+    overflow-x: hidden;
+    margin-bottom: 40px;
+}
+
+.monetization-tools-arrows {
+    display: none;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 1;
+    button {
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+    }
+}
+
+.monetization-tools-tab-wrapper {
+    display: flex;
+    width: 300%;
+}
+
+.monetization-tools-tab {
+    display: flex;
+    align-items: center;
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1111px;
+}
+
+.monetization-tools-tab > div {
+    position: relative;
+    width: 100%;
+}
+
+.monetization-tools-tab p {
+    max-width: 495px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.monetization-tools-tab .color-primary-700 {
+    margin-bottom: 20px;
+}
+
+.monetization-tools-tab img#money-tree {
+    width: 310px;
+    max-height: 340px;
+    margin-left: 157px;
+}
+.monetization-tools-tab img#streamer-coins {
+    width: 288px;
+    max-height: 259px;
+    margin-left: 124px;
+}
+.monetization-tools-tab img#game-controller {
+    width: 328px;
+    max-height: 328px;
+    margin-left: 85px;
+}
+
+@media (max-width: 1012px) {
+    .monetization-tools-tab img#money-tree,
+    .monetization-tools-tab img#streamer-coins,
+    .monetization-tools-tab img#game-controller {
+        margin-left: 0;
+    }
+    .monetization-tools-tab img#streamer-coins {
+        margin-top: 21px;
+        margin-bottom: 21px;
+    }
+    .monetization-tools-tab img#game-controller {
+        margin-top: -42px;
+    }
+    .monetization-tools-nav {
+        display: none;
+    }
+    .monetization-tools-arrows {
+        display: flex;
+    }
+    .monetization-tools-tab-wrapper {
+        transition: transform 0.5s ease-in-out;
+    }
+    .monetization-tools-tab {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        p {
+            position: static;
+            transform: translateY(0);
+            margin-inline: auto;
+        }
+    }
+}

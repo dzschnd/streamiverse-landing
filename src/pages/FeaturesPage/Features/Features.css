@@ -1,0 +1,28 @@
+.features-wrapper {
+    padding-top: 120px;
+    margin-bottom: 200px;
+}
+
+.features-description {
+    margin-bottom: 40px;
+    p {
+        max-width: 600px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 1012px) {
+    .features-wrapper {
+        margin-bottom: 150px;
+        img {
+            content: url("../../../assets/images/features/app-preview-tablet.png");
+        }
+    }
+}
+@media (max-width: 705px) {
+    .features-wrapper {
+        img {
+            content: url("../../../assets/images/features/app-preview-mobile.png");
+        }
+    }
+}

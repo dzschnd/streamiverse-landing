@@ -1,0 +1,63 @@
+.widgets-bullets, .widgets-images {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1010px;
+    gap: 20px;
+    margin-inline: auto;
+}
+
+.widgets-column-2 {
+    justify-content: end;
+}
+
+.widgets-column-1 .bullet-point {
+    max-width: 445px;
+}
+.widgets-column-2 .bullet-point {
+    max-width: 392px;
+}
+
+.widgets-bullets .bullet-point {
+    margin-bottom: 80px;
+    .section-subheader-smaller {
+        margin-bottom: 20px;
+    }
+}
+
+.widgets-wrapper {
+    margin-bottom: 200px;
+}
+
+.widgets-description {
+    margin-bottom: 80px;
+}
+
+@media (max-width: 1012px) {
+    .widgets-wrapper {
+        margin-bottom: 150px;
+    }
+    .widgets-description {
+        margin-bottom: 60px;
+    }
+    .widgets-images {
+        img#donation-preview-message {
+            content: url("../../../assets/images/features/donation-preview-message-tablet.png");
+        }
+        img#donation-preview-game {
+            content: url("../../../assets/images/features/donation-preview-game-tablet.png");
+        }
+    }
+}
+@media (max-width: 705px) {
+    .widgets-bullets, .widgets-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .widgets-bullets {
+        text-align: center;
+        .bullet-point {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
