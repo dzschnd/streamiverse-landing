@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import moneyTree from '../../../assets/images/features/money-tree.png'
 import streamerCoins from '../../../assets/images/features/streamer-coins.png'
-import gameController from '../../../assets/images/features/game-controller.jpg'
+import gameController from '../../../assets/images/features/game-controller.png'
 import arrowLeft from '../../../assets/images/features/arrow-left.svg'
 import arrowRight from '../../../assets/images/features/arrow-right.svg'
 import './MonetizationTools.css'
