@@ -18,6 +18,12 @@
     display: none;
     width: 35px;
 }
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    margin-right: 30px;
+}
 
 .header-logo {
     max-height: 26px;
@@ -55,11 +61,6 @@
         justify-content: center;
         gap: 60px;
     }
-    .close-icon {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-    }
 }
 @media (max-width: 861px) {
     .header-nav-list {
@@ -73,6 +74,7 @@
     }
     .close-icon {
         right: 24px;
+        margin-right: 24px;
     }
 }
 
