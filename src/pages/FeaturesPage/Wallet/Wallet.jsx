@@ -1,6 +1,30 @@
-import phones from '../../../assets/images/features/feature-phones.png'
 import './Wallet.css'
+import {useEffect, useState} from "react";
 function Wallet() {
+    const importImages = async () => {
+        const [
+            phones
+        ] = await Promise.all([
+            import('../../../assets/images/features/feature-phones.png'),
+        ]);
+
+        return {
+            phones: phones.default,
+        };
+    };
+
+    const [images, setImages] = useState({
+        phones: null,
+    });
+
+    useEffect(() => {
+        importImages().then((importedImages) => {
+            setImages(importedImages);
+        }).catch((error) => {
+            console.error('Failed to import images:', error);
+        });
+    }, []);
+
     return (
         <div className={'wallet-wrapper section-wrapper'}>
             <div className={'section-header-smaller text-center'}>
@@ -11,7 +35,7 @@ function Wallet() {
             <div className={'wallet-description section-text text-center'}>
                 Collect and use your donations and payments effortlessly in one place
             </div>
-            <img className={'margin-inline-auto'} src={phones} alt={''}/>
+            <img className={'margin-inline-auto'} src={images.phones} alt={''}/>
             <div className={'wallet-content'}>
                 <div className={'wallet-card'}>
                     <div className={'section-subheader-smaller text-center'}>

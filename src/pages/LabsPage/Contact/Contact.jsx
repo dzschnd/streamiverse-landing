@@ -1,9 +1,33 @@
-import streamersRow from '../../../assets/images/labs/labs-streamers-row.png'
 import './Contact.css'
+import {useEffect, useState} from "react";
 function Contact() {
+    const importImages = async () => {
+        const [
+            streamersRow
+        ] = await Promise.all([
+            import('../../../assets/images/labs/labs-streamers-row.png'),
+        ]);
+
+        return {
+            streamersRow: streamersRow.default,
+        };
+    };
+
+    const [images, setImages] = useState({
+        streamersRow: null,
+    });
+
+    useEffect(() => {
+        importImages().then((importedImages) => {
+            setImages(importedImages);
+        }).catch((error) => {
+            console.error('Failed to import images:', error);
+        });
+    }, []);
+
     return (
         <div className={'contact-wrapper section-wrapper'}>
-            <img className={'margin-inline-auto'} src={streamersRow} alt={''}/>
+            <img className={'margin-inline-auto'} src={images.streamersRow} alt={''}/>
             <div className={'section-header-smaller text-center'}>
                 Get Involved
             </div>

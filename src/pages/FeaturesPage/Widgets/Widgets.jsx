@@ -1,13 +1,58 @@
-import alertsBullet from '../../../assets/images/features/bullets/alerts-bullet.svg'
-import feesBullet from '../../../assets/images/features/bullets/fees-bullet.svg'
-import overlaysBullet from '../../../assets/images/features/bullets/overlays-bullet.svg'
-import paymentMethodsBullet from '../../../assets/images/features/bullets/payment-methods-bullet.svg'
-import widgetsBullet from '../../../assets/images/features/bullets/widgets-bullet.svg'
-import withdrawalsBullet from '../../../assets/images/features/bullets/withdrawals-bullet.svg'
-import donationPreviewMessage from '../../../assets/images/features/donation-preview-message.png'
-import donationPreviewGame from '../../../assets/images/features/donation-preview-game.png'
 import './Widgets.css'
+import {useEffect, useState} from "react";
 function Widgets() {
+    const importImages = async () => {
+        const [
+            alertsBullet,
+            feesBullet,
+            overlaysBullet,
+            paymentMethodsBullet,
+            widgetsBullet,
+            withdrawalsBullet,
+            donationPreviewMessage,
+            donationPreviewGame
+        ] = await Promise.all([
+            import('../../../assets/images/features/bullets/alerts-bullet.svg'),
+            import('../../../assets/images/features/bullets/fees-bullet.svg'),
+            import('../../../assets/images/features/bullets/overlays-bullet.svg'),
+            import('../../../assets/images/features/bullets/payment-methods-bullet.svg'),
+            import('../../../assets/images/features/bullets/widgets-bullet.svg'),
+            import('../../../assets/images/features/bullets/withdrawals-bullet.svg'),
+            import('../../../assets/images/features/donation-preview-message.png'),
+            import('../../../assets/images/features/donation-preview-game.png'),
+        ]);
+
+        return {
+            alertsBullet: alertsBullet.default,
+            feesBullet: feesBullet.default,
+            overlaysBullet: overlaysBullet.default,
+            paymentMethodsBullet: paymentMethodsBullet.default,
+            widgetsBullet: widgetsBullet.default,
+            withdrawalsBullet: withdrawalsBullet.default,
+            donationPreviewMessage: donationPreviewMessage.default,
+            donationPreviewGame: donationPreviewGame.default,
+        };
+    };
+
+    const [images, setImages] = useState({
+        alertsBullet: null,
+        feesBullet: null,
+        overlaysBullet: null,
+        paymentMethodsBullet: null,
+        widgetsBullet: null,
+        withdrawalsBullet: null,
+        donationPreviewMessage: null,
+        donationPreviewGame: null,
+    });
+
+    useEffect(() => {
+        importImages().then((importedImages) => {
+            setImages(importedImages);
+        }).catch((error) => {
+            console.error('Failed to import images:', error);
+        });
+    }, []);
+
     return (
         <div className={'widgets-wrapper section-wrapper'}>
             <div className={'section-header-smaller text-center'}>
@@ -19,7 +64,7 @@ function Widgets() {
             <div className={'widgets-bullets'}>
                 <div className={'widgets-column-1'}>
                     <div className={'bullet-point'}>
-                        <img className={'bullet'} src={alertsBullet} alt={''}/>
+                        <img className={'bullet'} src={images.alertsBullet} alt={''}/>
                         <div>
                             <div className={'section-subheader-smaller'}>
                                 Customizable Alerts
@@ -33,7 +78,7 @@ function Widgets() {
                         </div>
                     </div>
                     <div className={'bullet-point'}>
-                        <img className={'bullet'} src={overlaysBullet} alt={''}/>
+                        <img className={'bullet'} src={images.overlaysBullet} alt={''}/>
                         <div>
                             <div className={'section-subheader-smaller'}>
                                 Overlays
@@ -46,7 +91,7 @@ function Widgets() {
                         </div>
                     </div>
                     <div className={'bullet-point'}>
-                        <img className={'bullet'} src={paymentMethodsBullet} alt={''}/>
+                        <img className={'bullet'} src={images.paymentMethodsBullet} alt={''}/>
                         <div>
                             <div className={'section-subheader-smaller'}>
                                 Multiple Payment Methods
@@ -61,7 +106,7 @@ function Widgets() {
                 </div>
                 <div className={'widgets-column-2'}>
                     <div className={'bullet-point'}>
-                        <img className={'bullet'} src={withdrawalsBullet} alt={''}/>
+                        <img className={'bullet'} src={images.withdrawalsBullet} alt={''}/>
                         <div>
                             <div className={'section-subheader-smaller'}>
                                 Instant Withdrawals
@@ -72,7 +117,7 @@ function Widgets() {
                         </div>
                     </div>
                     <div className={'bullet-point'}>
-                        <img className={'bullet'} src={widgetsBullet} alt={''}/>
+                        <img className={'bullet'} src={images.widgetsBullet} alt={''}/>
                         <div>
                             <div className={'section-subheader-smaller'}>
                                 Widgets
@@ -86,7 +131,7 @@ function Widgets() {
                         </div>
                     </div>
                     <div className={'bullet-point'}>
-                        <img className={'bullet'} src={feesBullet} alt={''}/>
+                        <img className={'bullet'} src={images.feesBullet} alt={''}/>
                         <div>
                             <div className={'section-subheader-smaller'}>
                                 Transparent Fees
@@ -102,10 +147,10 @@ function Widgets() {
             </div>
             <div className={'widgets-images'}>
                 <div>
-                    <img id={'donation-preview-message'} src={donationPreviewMessage} alt={''}/>
+                    <img id={'donation-preview-message'} src={images.donationPreviewMessage} alt={''}/>
                 </div>
                 <div>
-                    <img id={'donation-preview-game'} src={donationPreviewGame} alt={''}/>
+                    <img id={'donation-preview-game'} src={images.donationPreviewGame} alt={''}/>
                 </div>
             </div>
         </div>

@@ -1,12 +1,47 @@
-import { useState, useRef } from "react";
-import moneyTree from '../../../assets/images/features/money-tree.png'
-import streamerCoins from '../../../assets/images/features/streamer-coins.png'
-import gameController from '../../../assets/images/features/game-controller.png'
-import arrowLeft from '../../../assets/images/features/arrow-left.svg'
-import arrowRight from '../../../assets/images/features/arrow-right.svg'
+import {useState, useRef, useEffect} from "react";
 import './MonetizationTools.css'
 
 function MonetizationTools({openWidget}) {
+    const importImages = async () => {
+        const [
+            moneyTree,
+            streamerCoins,
+            gameController,
+            arrowLeft,
+            arrowRight
+        ] = await Promise.all([
+            import('../../../assets/images/features/money-tree.png'),
+            import('../../../assets/images/features/streamer-coins.png'),
+            import('../../../assets/images/features/game-controller.png'),
+            import('../../../assets/images/features/arrow-left.svg'),
+            import('../../../assets/images/features/arrow-right.svg'),
+        ]);
+
+        return {
+            moneyTree: moneyTree.default,
+            streamerCoins: streamerCoins.default,
+            gameController: gameController.default,
+            arrowLeft: arrowLeft.default,
+            arrowRight: arrowRight.default,
+        };
+    };
+
+    const [images, setImages] = useState({
+        moneyTree: null,
+        streamerCoins: null,
+        gameController: null,
+        arrowLeft: null,
+        arrowRight: null,
+    });
+
+    useEffect(() => {
+        importImages().then((importedImages) => {
+            setImages(importedImages);
+        }).catch((error) => {
+            console.error('Failed to import images:', error);
+        });
+    }, []);
+
     const [currentTab, setCurrentTab] = useState(1);
     const [dragging, setDragging] = useState(false);
     const sliderRef = useRef(null);
@@ -84,11 +119,11 @@ function MonetizationTools({openWidget}) {
                 <div className={'monetization-tools-arrows'}>
                     <button style={{visibility: `${currentTab === 1 ? 'hidden' : 'visible'}`}}
                             onClick={() => setCurrentTab(currentTab - 1)}>
-                        <img src={arrowLeft} alt={''}/>
+                        <img src={images.arrowLeft} alt={''}/>
                     </button>
                     <button style={{visibility: `${currentTab === numTabs ? 'hidden' : 'visible'}`}}
                             onClick={() => setCurrentTab(currentTab + 1)}>
-                        <img src={arrowRight} alt={''}/>
+                        <img src={images.arrowRight} alt={''}/>
                     </button>
                 </div>
                 <div
@@ -100,7 +135,7 @@ function MonetizationTools({openWidget}) {
                     style={{transform: `translateX(-${(currentTab - 1) * 100 / numTabs}%)`}}
                 >
                     <div className={'monetization-tools-tab'} id={'tab-1'}>
-                        <img src={moneyTree} alt={''} id={'money-tree'}/>
+                        <img src={images.moneyTree} alt={''} id={'money-tree'}/>
                         <div>
                             <p>
                                 Explore various methods of monetization, such as selling digital assets, offering
@@ -109,7 +144,7 @@ function MonetizationTools({openWidget}) {
                         </div>
                     </div>
                     <div className={'monetization-tools-tab'} id={'tab-2'}>
-                        <img src={streamerCoins} alt={''} id={'streamer-coins'}/>
+                        <img src={images.streamerCoins} alt={''} id={'streamer-coins'}/>
                         <div>
                             <p>
                                 Create and distribute your own tokens to engage your community. Use them for special
@@ -119,7 +154,7 @@ function MonetizationTools({openWidget}) {
                         </div>
                     </div>
                     <div className={'monetization-tools-tab'} id={'tab-3'}>
-                        <img src={gameController} alt={''} id={'game-controller'}/>
+                        <img src={images.gameController} alt={''} id={'game-controller'}/>
                         <div>
                             <p>
                                 <div className={'color-primary-700'}>

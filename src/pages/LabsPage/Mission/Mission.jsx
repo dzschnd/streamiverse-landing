@@ -1,7 +1,34 @@
-import rocketBullet from '../../../assets/images/labs/rocket-bullet.svg'
-import astronautBullet from '../../../assets/images/labs/astronaut-bullet.svg'
 import './Mission.css'
+import {useEffect, useState} from "react";
 function Mission() {
+    const importImages = async () => {
+        const [
+            rocketBullet,
+            astronautBullet
+        ] = await Promise.all([
+            import('../../../assets/images/labs/rocket-bullet.svg'),
+            import('../../../assets/images/labs/astronaut-bullet.svg'),
+        ]);
+
+        return {
+            rocketBullet: rocketBullet.default,
+            astronautBullet: astronautBullet.default,
+        };
+    };
+
+    const [images, setImages] = useState({
+        rocketBullet: null,
+        astronautBullet: null,
+    });
+
+    useEffect(() => {
+        importImages().then((importedImages) => {
+            setImages(importedImages);
+        }).catch((error) => {
+            console.error('Failed to import images:', error);
+        });
+    }, []);
+
     return (
         <div className={'mission-wrapper section-wrapper'}>
             <div className={'mission-header'}>
@@ -17,13 +44,13 @@ function Mission() {
             </div>
             <div className={'mission-content'}>
                 <div className={'bullet-point'}>
-                    <img className={'bullet'} src={rocketBullet} alt={''}/>
+                    <img className={'bullet'} src={images.rocketBullet} alt={''}/>
                     <div className={'section-text'}>
                         We help with sales and business development for your product
                     </div>
                 </div>
                 <div className={'bullet-point'}>
-                    <img className={'bullet'} src={astronautBullet} alt={''}/>
+                    <img className={'bullet'} src={images.astronautBullet} alt={''}/>
                     <div className={'section-text'}>
                         We facilitate operational and development part, you lead the strategy
                     </div>

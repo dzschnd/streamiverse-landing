@@ -1,9 +1,42 @@
 import './Reasons.css'
-import globe from '../../../../assets/images/home/reasons/globe.png'
-import brick from '../../../../assets/images/home/reasons/brick.png'
-import moneyJar from '../../../../assets/images/home/reasons/money-jar.png'
-import platform from '../../../../assets/images/home/reasons/platform.png'
+import {useEffect, useState} from "react";
 function Reasons() {
+    const importImages = async () => {
+        const [
+            globe,
+            brick,
+            moneyJar,
+            platform,
+        ] = await Promise.all([
+            import('../../../../assets/images/home/reasons/globe.png'),
+            import('../../../../assets/images/home/reasons/brick.png'),
+            import('../../../../assets/images/home/reasons/money-jar.png'),
+            import('../../../../assets/images/home/reasons/platform.png'),
+        ]);
+
+        return {
+            globe: globe.default,
+            brick: brick.default,
+            moneyJar: moneyJar.default,
+            platform: platform.default,
+        };
+    };
+
+    const [images, setImages] = useState({
+        globe: null,
+        brick: null,
+        moneyJar: null,
+        platform: null,
+    });
+
+    useEffect(() => {
+        importImages().then((importedImages) => {
+            setImages(importedImages);
+        }).catch((error) => {
+            console.error('Failed to import images:', error);
+        });
+    }, []);
+
     return (
         <div className={'section-wrapper'}>
             <div className={'section-header'}>
@@ -11,7 +44,7 @@ function Reasons() {
             </div>
             <div className={'features-content'}>
                 <div className={'feature-card background-gradient'} id={'gradient-upper-right'}>
-                    <img id={'globe'} src={globe} alt={''}/>
+                    <img id={'globe'} src={images.globe} alt={''}/>
                     <div className={'feature-text'}>
                         <div className={'section-subheader'}>
                             Global Payment Methods
@@ -23,8 +56,8 @@ function Reasons() {
                 </div>
                 <div className={'feature-card background-gradient'} id={'gradient-bottom'}>
                     <div className={'bricks-image'}>
-                        <img id={'brick-top'} src={brick} alt={''}/>
-                        <img id={'brick-bottom'} src={brick} alt={''}/>
+                        <img id={'brick-top'} src={images.brick} alt={''}/>
+                        <img id={'brick-bottom'} src={images.brick} alt={''}/>
                     </div>
                     <div className={'feature-text'}>
                         <div className={'section-subheader'}>
@@ -36,7 +69,7 @@ function Reasons() {
                     </div>
                 </div>
                 <div className={'feature-card background-gradient'} id={'gradient-upper-left'}>
-                    <img id={'money-jar'} src={moneyJar} alt={''}/>
+                    <img id={'money-jar'} src={images.moneyJar} alt={''}/>
                     <div className={'feature-text'}>
                         <div className={'section-subheader'}>
                             Digital Asset Wallet
@@ -48,9 +81,9 @@ function Reasons() {
                 </div>
                 <div className={'feature-card background-gradient'} id={'gradient-bottom'}>
                     <div className={'platform-image'}>
-                        <img id={'platform-bottom'} src={platform} alt={''}/>
-                        <img id={'platform-mid'} src={platform} alt={''}/>
-                        <img id={'platform-top'} src={platform} alt={''}/>
+                        <img id={'platform-bottom'} src={images.platform} alt={''}/>
+                        <img id={'platform-mid'} src={images.platform} alt={''}/>
+                        <img id={'platform-top'} src={images.platform} alt={''}/>
                     </div>
                     <div className={'feature-text'}>
                         <div className={'section-subheader'}>
