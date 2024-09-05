@@ -19,7 +19,6 @@ export const ScrollDependantSphere = ({ position, scale, offsetStart, offsetEnd,
         } else {
             setOpacity(offset < offsetStart ? 0 : 1);
         }
-
         if (modelRef.current) {
             modelRef.current.traverse((child) => {
                 if (child.isMesh) {
