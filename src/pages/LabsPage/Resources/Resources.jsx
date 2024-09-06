@@ -9,9 +9,9 @@ function Resources() {
             rocket,
         ] = await Promise.all([
             import('../../../assets/images/labs/labs-streamer-guy.png'),
-            import('../../../assets/images/labs/labs-streamer-girl.png'),
             import('../../../assets/images/labs/gears.png'),
             import('../../../assets/images/labs/stats.png'),
+            import('../../../assets/images/labs/rocket.png'),
         ]);
 
         return {
