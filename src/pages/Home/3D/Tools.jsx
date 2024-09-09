@@ -1,8 +1,8 @@
 import {ScrollDependantText} from "./ScrollDependantText";
-import planet1Upscale from '../../../assets/images/home/hero/hearts.png'
-import planet2Upscale from '../../../assets/images/home/hero/hearts.png'
-import planet3Upscale from '../../../assets/images/home/hero/hearts.png'
-import planet4Upscale from '../../../assets/images/home/hero/hearts.png'
+import planet1Upscale from '../../../assets/images/home/hero/1.png'
+import planet2Upscale from '../../../assets/images/home/hero/2.png'
+import planet3Upscale from '../../../assets/images/home/hero/3.png'
+import planet4Upscale from '../../../assets/images/home/hero/4.png'
 import {useEffect, useState} from "react";
 import {ScrollDependantSphere} from "./ScrollDependantSphere";
 
@@ -200,7 +200,7 @@ function Tools() {
 
 
             <group position={[-210, 0, -340]}>
-                <ScrollDependantSphere
+                <ScrollDependantSphere isSecond={true}
                     position={screenWidth === 'desktop' ? [1.6, 0, 0]
                         : screenWidth === 'tablet' ? [5, 0, 0]
                             : [10, 3.5, 0]}
