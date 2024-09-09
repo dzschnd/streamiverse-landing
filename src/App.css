@@ -120,43 +120,6 @@ a {
     line-height: 1.6;
 }
 
-.doc-header {
-    font-size: var(--font-size-550);
-}
-
-.doc-subheader {
-    font-size: var(--font-size-300);
-}
-
-.doc-text {
-    font-size: var(--font-size-200);
-}
-
-.doc {
-    padding: 42px 52px 84px 52px;
-
-    * {
-        font-family: Calibri, sans-serif;
-        color: var(--color-neutral-900);
-    }
-}
-
-.ul-dashed li {
-        list-style-type: none;
-        margin-left: 0;
-        padding-left: 14px;
-        position: relative;
-}
-.ul-dashed li::before {
-    content: "-";
-    position: absolute;
-    left: 0;
-}
-.a-default {
-    color: #0000EE;
-    text-decoration: underline;
-}
-
 .bullet-point {
     display: flex;
     gap: 20px;

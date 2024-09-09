@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
-import TermsOfUse from "./pages/TermsOfUse/TermsOfUse";
+import PrivacyPolicy from "./pages/LegalPages/PrivacyPolicy";
+import TermsOfUse from "./pages/LegalPages/TermsOfUse";
 import HomePage from "./pages/Home/HomePage";
 import FeaturesPage from "./pages/FeaturesPage/FeaturesPage";
 import LabsPage from "./pages/LabsPage/LabsPage";
