@@ -1,13 +1,14 @@
-import { useScroll } from "@react-three/drei";
+import {Plane, Sphere, useScroll} from "@react-three/drei";
 import { useState, useRef } from "react";
-import { useFrame, useLoader } from "@react-three/fiber";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { useFrame } from "@react-three/fiber";
+import { useLoader } from "@react-three/fiber";
+import { TextureLoader } from "three";
 
-export const ScrollDependantSphere = ({ position, scale, offsetStart, offsetEnd, texture, ...props }) => {
+export const ScrollDependantSphere = ({ position, args, offsetStart, offsetEnd, texture, ...props }) => {
     const scroll = useScroll();
     const [opacity, setOpacity] = useState(0);
-    const modelRef = useRef();
-    const gltf = useLoader(GLTFLoader, texture);
+    const sphereRef = useRef();
+    const textureMap = useLoader(TextureLoader, texture);
 
     useFrame(() => {
         const offset = scroll.offset;
@@ -19,19 +20,15 @@ export const ScrollDependantSphere = ({ position, scale, offsetStart, offsetEnd,
         } else {
             setOpacity(offset < offsetStart ? 0 : 1);
         }
-        if (modelRef.current) {
-            modelRef.current.traverse((child) => {
-                if (child.isMesh) {
-                    child.material.opacity = opacity;
-                    child.material.transparent = true;
-                }
-            });
+        if (sphereRef.current) {
+            sphereRef.current.material.opacity = opacity;
+            sphereRef.current.material.transparent = true;
         }
     });
 
     return (
-        <group ref={modelRef} position={position} {...props}>
-            <primitive object={gltf.scene} scale={scale} />
-        </group>
+        <Plane ref={sphereRef} position={position} args={args} {...props}>
+            <meshBasicMaterial map={textureMap} transparent={true} opacity={0} />
+        </Plane>
     );
 };

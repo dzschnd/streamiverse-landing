@@ -133,7 +133,7 @@ a {
 }
 
 .doc {
-    padding: 42px 52px 84px 52px;
+    padding: 42px 0 0 52px;
 
     * {
         font-family: Calibri, sans-serif;
