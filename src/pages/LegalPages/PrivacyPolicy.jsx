@@ -102,7 +102,7 @@ function PrivacyPolicy() {
                 <p className={'doc-text'}>
                     We use Google Analytics on our website. You can control and/or delete cookies if you wish. If
                     you want to know more about Google Analytics and its “do not track” policy, please
-                    visit <a className={'a-default'} href={'https://www.google.com/analytics/terms/default.html'} target='_blank' rel="noreferrer">https://www.google.com/analytics/terms/default.html</a>
+                    visit <a className={'a-default'} href={'https://www.google.com/analytics/terms/default.html'} target='_blank' rel="noreferrer">https://www.google.com/analytics/<wbr/>terms/default.html</a>
                 </p>
                 <p className={'doc-subheader-2'}>Consent And Its Withdrawal</p>
                 <p className={'doc-text'}>

@@ -67,8 +67,11 @@
     font-weight: var(--font-weight-medium);
 }
 
-@media (max-width: 861px) {
+wbr {
+    display: none;
+}
 
+@media (max-width: 861px) {
     .doc-wrapper {
         --max-width: 1010px;
         --padding: 48px;
@@ -92,5 +95,11 @@
 
     .doc-subheader {
         margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 566px) {
+    wbr {
+        display: block;
     }
 }
