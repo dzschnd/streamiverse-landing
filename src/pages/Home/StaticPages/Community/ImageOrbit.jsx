@@ -64,11 +64,11 @@ function ImageOrbit() {
                 <img src={images.logo} alt={'logo'} />
             </div>
             <div className={'orbit backwards'} id={'orbit-empty'} />
-            <div className={'orbit forwards'} id={'orbit-planet-planet-1.glb.glb.glb.glb'}>
-                <img className={'planet backwards'} id={'orbit-planet-planet-1.glb.glb.glb.glb-guy'} src={images.orbit1Guy} alt={''} />
-                <img className={'planet backwards'} id={'orbit-planet-planet-1.glb.glb.glb.glb-headphones-guy'} src={images.orbit1HeadphonesGuy} alt={''} />
-                <img className={'planet backwards'} id={'orbit-planet-planet-1.glb.glb.glb.glb-girl'} src={images.orbit1Girl} alt={''} />
-                <img className={'planet backwards'} id={'orbit-dot-planet-planet-1.glb.glb.glb.glb'} src={images.orbitDot} alt={''} />
+            <div className={'orbit forwards'} id={'orbit-1'}>
+                <img className={'planet backwards'} id={'orbit-1-guy'} src={images.orbit1Guy} alt={''} />
+                <img className={'planet backwards'} id={'orbit-1-headphones-guy'} src={images.orbit1HeadphonesGuy} alt={''} />
+                <img className={'planet backwards'} id={'orbit-1-girl'} src={images.orbit1Girl} alt={''} />
+                <img className={'planet backwards'} id={'orbit-dot-1'} src={images.orbitDot} alt={''} />
                 <img className={'planet backwards'} id={'orbit-dot-2'} src={images.orbitDot} alt={''} />
                 <img className={'planet backwards'} id={'orbit-dot-3'} src={images.orbitDot} alt={''} />
             </div>
