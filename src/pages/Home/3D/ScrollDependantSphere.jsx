@@ -1,15 +1,14 @@
 import { useScroll } from "@react-three/drei";
 import { useState, useRef } from "react";
-import { useFrame, useLoader } from "@react-three/fiber";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { useFrame } from "@react-three/fiber";
 
-export const ScrollDependantSphere = ({ position, scale, offsetStart, offsetEnd, texture, ...props }) => {
+export const ScrollDependantSphere = ({ position, scale, offsetStart, offsetEnd, scene, ...props }) => {
     const scroll = useScroll();
     const [opacity, setOpacity] = useState(0);
     const modelRef = useRef();
-    const gltf = useLoader(GLTFLoader, texture);
+    const modelRotationSpeed = 0.04;
 
-    useFrame(() => {
+    useFrame((state, delta) => {
         const offset = scroll.offset;
         const range = offsetEnd - offsetStart;
         const progress = (offset - offsetStart) / range;
@@ -19,11 +18,16 @@ export const ScrollDependantSphere = ({ position, scale, offsetStart, offsetEnd,
         } else {
             setOpacity(offset < offsetStart ? 0 : 1);
         }
+
         if (modelRef.current) {
+            modelRef.current.rotation.y -= modelRotationSpeed * delta;
+
             modelRef.current.traverse((child) => {
                 if (child.isMesh) {
                     child.material.opacity = opacity;
-                    child.material.transparent = true;
+                    child.material.transparent = opacity < 1;
+                    child.material.depthWrite = true;
+                    child.material.depthTest = true;
                 }
             });
         }
@@ -31,7 +35,7 @@ export const ScrollDependantSphere = ({ position, scale, offsetStart, offsetEnd,
 
     return (
         <group ref={modelRef} position={position} {...props}>
-            <primitive object={gltf.scene} scale={scale} />
+            <primitive frustumCulled={true} object={scene} scale={scale} />
         </group>
     );
 };

@@ -76,7 +76,7 @@ function Solutions() {
                 How Streamiverse Works
             </div>
             <div className={'solutions-content'}>
-                <div className={'solution-card'} id={'solution-card-1'}>
+                <div className={'solution-card'} id={'solution-card-planet-planet-1.glb.glb.glb'}>
                     <div className={'card-text'}>
                         <div className={'section-subheader'}>
                             Sign Up
@@ -108,7 +108,7 @@ function Solutions() {
                             Use multiple payment methods
                         </div>
                     </div>
-                    <div className={'payment-methods-carousel'} id={'carousel-set-1'}>
+                    <div className={'payment-methods-carousel'} id={'carousel-set-planet-planet-1.glb.glb.glb'}>
                         <img src={images.tetherLogo} alt={''} />
                         <img src={images.bitcoinLogo} alt={''} />
                         <img src={images.ethereumLogo} alt={''} />

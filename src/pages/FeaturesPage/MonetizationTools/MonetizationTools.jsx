@@ -134,7 +134,7 @@ function MonetizationTools({openWidget}) {
                     onTouchEnd={handleTouchEnd}
                     style={{transform: `translateX(-${(currentTab - 1) * 100 / numTabs}%)`}}
                 >
-                    <div className={'monetization-tools-tab'} id={'tab-1'}>
+                    <div className={'monetization-tools-tab'} id={'tab-planet-planet-1.glb.glb.glb'}>
                         <img src={images.moneyTree} alt={''} id={'money-tree'}/>
                         <div>
                             <p>
