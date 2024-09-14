@@ -112,7 +112,7 @@ function Widgets() {
                                 Instant Withdrawals
                             </div>
                             <div className={'section-text'}>
-                                Link your bank account or digital wallet to instantly withdraw donations in any currency
+                                Instantly withdraw donations in any currency to your Streamiverse Wallet
                             </div>
                         </div>
                     </div>
