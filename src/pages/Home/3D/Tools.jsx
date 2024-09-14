@@ -278,7 +278,7 @@ function Tools() {
                                            : screenWidth === 'tablet' ? 1.6
                                                : 1.2}
                                        scene={planet3}
-                                       rotation={[0,0,0]}
+                                       rotation={[0.4,-0.5,0]}
                                        offsetStart={0.5} offsetEnd={0.55}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [-1.4, 3, -5]
                     : screenWidth === 'tablet' ? [-1.4, 2, -5]
