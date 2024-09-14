@@ -155,6 +155,7 @@ function Tools() {
                     scale={screenWidth === 'desktop' ? 2
                         : screenWidth === 'tablet' ? 1.6
                             : 1.2}
+                    rotation={[0, 1, 0]}
                     scene={planet1}
                     offsetStart={0} offsetEnd={0}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [0, 3, 2]
@@ -219,7 +220,7 @@ function Tools() {
                         : screenWidth === 'tablet' ? 1.6
                             : 1.2}
                     scene={planet2}
-                    rotation={[0, -1, 0.1]}
+                    rotation={[0, 0, 0]}
                     offsetStart={0.3} offsetEnd={0.3}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [11.8, 3, 0]
                     : screenWidth === 'tablet' ? [13.8, 2, 0]
@@ -277,7 +278,7 @@ function Tools() {
                                            : screenWidth === 'tablet' ? 1.6
                                                : 1.2}
                                        scene={planet3}
-                                       rotation={[0,-1.5,0]}
+                                       rotation={[0,0,0]}
                                        offsetStart={0.5} offsetEnd={0.55}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [-1.4, 3, -5]
                     : screenWidth === 'tablet' ? [-1.4, 2, -5]
@@ -334,7 +335,7 @@ function Tools() {
                                        scale={screenWidth === 'desktop' ? 2
                                            : screenWidth === 'tablet' ? 1.6
                                                : 1.2}
-                                       rotation={[1.45, 4.8, 0]}
+                                       rotation={[1.45, 5.8, 0]}
                                        scene={planet4}
                                        offsetStart={0.55} offsetEnd={0.55}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [1.2, 0, 3]
