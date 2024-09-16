@@ -138,9 +138,6 @@ function MonetizationTools({openWidget}) {
                         <img src={images.moneyTree} alt={''} id={'money-tree'}/>
                         <div>
                             <p>
-                                <div className={'color-primary-700'}>
-                                    Coming Soon
-                                </div>
                                 Explore various methods of monetization, such as selling digital assets, offering
                                 subscription services, and more
                             </p>
@@ -150,6 +147,9 @@ function MonetizationTools({openWidget}) {
                         <img src={images.streamerCoins} alt={''} id={'streamer-coins'}/>
                         <div>
                             <p>
+                                <div className={'color-primary-700'}>
+                                    Coming Soon
+                                </div>
                                 Create and distribute your own tokens to engage your community. Use them for special
                                 perks,
                                 access to exclusive content, or as a currency within your platform
