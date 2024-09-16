@@ -1,12 +1,19 @@
 import {ScrollDependantText} from "./ScrollDependantText";
-import planet1Upscale from '../../../assets/images/home/hero/planet-1-upscale.png'
-import planet2Upscale from '../../../assets/images/home/hero/planet-2-upscale.png'
-import planet3Upscale from '../../../assets/images/home/hero/planet-3-upscale.png'
-import planet4Upscale from '../../../assets/images/home/hero/planet-4-upscale.png'
+import planetModel1 from '../../../assets/models/compressed-1.glb'
+import planetModel2 from '../../../assets/models/compressed-2.glb'
+import planetModel3 from '../../../assets/models/compressed-3.glb'
+import planetModel4 from '../../../assets/models/compressed-4.glb'
 import {useEffect, useState} from "react";
 import {ScrollDependantSphere} from "./ScrollDependantSphere";
-
+import {useThree} from "@react-three/fiber";
+import {useGLTF} from "@react-three/drei";
 function Tools() {
+    const { scene: planet1 } = useGLTF(planetModel1, true);
+    const { scene: planet2 } = useGLTF(planetModel2, true);
+    const { scene: planet3 } = useGLTF(planetModel3, true);
+    const { scene: planet4 } = useGLTF(planetModel4, true);
+
+    const { gl, scene, camera } = useThree();
     const [screenWidth, setScreenWidth] = useState('desktop');
     const handleResize = () => {
         if (window.innerWidth >= 1170) {
@@ -25,6 +32,11 @@ function Tools() {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+
+    useEffect(() => {
+        gl.compile(scene, camera);
+        gl.render(scene, camera);
+    }, [camera, gl, scene]);
 
     return (
         <>
@@ -140,10 +152,11 @@ function Tools() {
                     position={screenWidth === 'desktop' ? [0, 0, -9]
                         : screenWidth === 'tablet' ? [0, 0, -4.5]
                             : [0, 3.5, 0]}
-                    args={screenWidth === 'desktop' ? [5, 32, 32]
-                        : screenWidth === 'tablet' ? [4, 32, 32]
-                            : [3, 32, 32]}
-                    texture={planet1Upscale}
+                    scale={screenWidth === 'desktop' ? 2
+                        : screenWidth === 'tablet' ? 1.6
+                            : 1.2}
+                    rotation={[0, 1, 0]}
+                    scene={planet1}
                     offsetStart={0} offsetEnd={0}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [0, 3, 2]
                     : screenWidth === 'tablet' ? [0, 2, 3]
@@ -203,11 +216,11 @@ function Tools() {
                     position={screenWidth === 'desktop' ? [1.6, 0, 0]
                         : screenWidth === 'tablet' ? [5, 0, 0]
                             : [10, 3.5, 0]}
-                    args={screenWidth === 'desktop' ? [5, 32, 32]
-                        : screenWidth === 'tablet' ? [4, 32, 32]
-                            : [3, 32, 32]}
-                    texture={planet2Upscale}
-                    rotation={[0, -1, 0.1]}
+                    scale={screenWidth === 'desktop' ? 2
+                        : screenWidth === 'tablet' ? 1.6
+                            : 1.2}
+                    scene={planet2}
+                    rotation={[0, 0, 0]}
                     offsetStart={0.3} offsetEnd={0.3}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [11.8, 3, 0]
                     : screenWidth === 'tablet' ? [13.8, 2, 0]
@@ -261,11 +274,11 @@ function Tools() {
                 <ScrollDependantSphere position={screenWidth === 'desktop' ? [7, 0, -5]
                     : screenWidth === 'tablet' ? [4.5, 0, -5]
                         : [0, 2.5, -5]}
-                                       args={screenWidth === 'desktop' ? [4, 32, 32]
-                                           : screenWidth === 'tablet' ? [3, 32, 32]
-                                               : [2.3, 32, 32]}
-                                       texture={planet3Upscale}
-                                       rotation={[0,-1.5,0]}
+                                       scale={screenWidth === 'desktop' ? 2
+                                           : screenWidth === 'tablet' ? 1.6
+                                               : 1.2}
+                                       scene={planet3}
+                                       rotation={[0.4,-0.5,0]}
                                        offsetStart={0.5} offsetEnd={0.55}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [-1.4, 3, -5]
                     : screenWidth === 'tablet' ? [-1.4, 2, -5]
@@ -319,11 +332,11 @@ function Tools() {
                 <ScrollDependantSphere position={screenWidth === 'desktop' ? [-9, 0, 0]
                     : screenWidth === 'tablet' ? [-4.5, 0, 0]
                         : [0, 0, 3.5]}
-                                       args={screenWidth === 'desktop' ? [5, 32, 32]
-                                           : screenWidth === 'tablet' ? [4, 32, 32]
-                                               : [3, 32, 32]}
-                                       rotation={[1.45, 4.8, 0]}
-                                       texture={planet4Upscale}
+                                       scale={screenWidth === 'desktop' ? 2
+                                           : screenWidth === 'tablet' ? 1.6
+                                               : 1.2}
+                                       rotation={[1.45, 5.8, 0]}
+                                       scene={planet4}
                                        offsetStart={0.55} offsetEnd={0.55}/>
                 <ScrollDependantText position={screenWidth === 'desktop' ? [1.2, 0, 3]
                     : screenWidth === 'tablet' ? [2.2, 0, 2]
