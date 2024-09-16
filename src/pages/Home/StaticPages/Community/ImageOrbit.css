@@ -50,14 +50,17 @@
     position: absolute;
 }
 #orbit-1-girl {
+    max-height: 84px;
     top: -42px;
     left: 145px;
 }
 #orbit-1-guy {
+    max-height: 58px;
     top: 252px;
     left: 320px;
 }
 #orbit-1-headphones-guy {
+    max-height: 71px;
     top: 252px;
     left: -8px;
 }
@@ -74,18 +77,22 @@
     left: 1px;
 }
 #orbit-2-red-girl {
+    max-height: 47px;
     top: 94px;
     left: 460px;
 }
 #orbit-2-blonde-girl {
+    max-height: 70px;
     top: 210px;
     left: -35px;
 }
 #orbit-3-guy {
+    max-height: 42px;
     top: -11px;
     left: 230px;
 }
 #orbit-3-glasses-guy {
+    max-height: 55px;
     top: 633px;
     left: 420px;
 }

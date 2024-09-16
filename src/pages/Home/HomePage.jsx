@@ -4,7 +4,7 @@ import StaticPages from "./StaticPages/StaticPages";
 import {Canvas} from "@react-three/fiber";
 import React, {lazy, useCallback, useEffect, useState} from "react";
 import {getProject} from "@theatre/core";
-import animation from "../../assets/animations/animation-fly-through-bigger-gap.json";
+import animation from "../../assets/animations/fly-through-animation.json";
 const Scene = lazy(()=> import("./3D/Scene"));
 
 function HomePage() {
