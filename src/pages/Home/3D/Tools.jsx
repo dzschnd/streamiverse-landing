@@ -1,17 +1,17 @@
 import {ScrollDependantText} from "./ScrollDependantText";
-import planetModel1 from '../../../assets/models/planet-1 webp (512).glb'
-import planetModel2 from '../../../assets/models/planet-2 webp (512).glb'
-import planetModel3 from '../../../assets/models/planet-3 webp (512).glb'
-import planetModel4 from '../../../assets/models/planet-4 webp (512).glb'
+import planetModel1 from '../../../assets/models/compressed-1.glb'
+import planetModel2 from '../../../assets/models/compressed-2.glb'
+import planetModel3 from '../../../assets/models/compressed-3.glb'
+import planetModel4 from '../../../assets/models/compressed-4.glb'
 import {useEffect, useState} from "react";
 import {ScrollDependantSphere} from "./ScrollDependantSphere";
 import {useThree} from "@react-three/fiber";
 import {useGLTF} from "@react-three/drei";
 function Tools() {
-    const {scene: planet1} = useGLTF(planetModel1);
-    const {scene: planet2} = useGLTF(planetModel2);
-    const {scene: planet3} = useGLTF(planetModel3);
-    const {scene: planet4} = useGLTF(planetModel4);
+    const { scene: planet1 } = useGLTF(planetModel1, true);
+    const { scene: planet2 } = useGLTF(planetModel2, true);
+    const { scene: planet3 } = useGLTF(planetModel3, true);
+    const { scene: planet4 } = useGLTF(planetModel4, true);
 
     const { gl, scene, camera } = useThree();
     const [screenWidth, setScreenWidth] = useState('desktop');
