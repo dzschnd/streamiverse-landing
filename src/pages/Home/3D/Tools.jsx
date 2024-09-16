@@ -1,8 +1,8 @@
 import {ScrollDependantText} from "./ScrollDependantText";
-import planetModel1 from '../../../assets/models/compressed-1.glb'
-import planetModel2 from '../../../assets/models/compressed-2.glb'
-import planetModel3 from '../../../assets/models/compressed-3.glb'
-import planetModel4 from '../../../assets/models/compressed-4.glb'
+import planetModel1 from '../../../assets/models/planet-1-webp-2048.glb'
+import planetModel2 from '../../../assets/models/planet-2-webp-2048.glb'
+import planetModel3 from '../../../assets/models/planet-3-webp-2048.glb'
+import planetModel4 from '../../../assets/models/planet-4-webp-2048.glb'
 import {useEffect, useState} from "react";
 import {ScrollDependantSphere} from "./ScrollDependantSphere";
 import {useThree} from "@react-three/fiber";
