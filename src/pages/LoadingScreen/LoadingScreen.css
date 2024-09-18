@@ -1,5 +1,6 @@
 .loading-screen {
     min-height: 100vh;
+    overflow: hidden;
     pointer-events: none;
     user-select: none;
 }
