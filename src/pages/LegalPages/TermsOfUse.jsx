@@ -3,15 +3,15 @@ function TermsOfUse() {
     return (
         <div className={'doc'}>
             <div className={'doc-wrapper'}>
-                <p className={'doc-header'}>
+                <h1 className={'doc-header'}>
                     Terms of Use
-                </p>
-                <p className={'doc-text last-amended'}>
+                </h1>
+                <h3 className={'doc-text last-amended'}>
                     Last amended on 07-25-2024
-                </p>
-                <p className={'doc-subheader'} id={'doc-subheader--first'}>
+                </h3>
+                <h2 className={'doc-subheader'} id={'doc-subheader--first'}>
                     Preamble
-                </p>
+                </h2>
                 <p className={'doc-text border-primary'}>
                     This Terms of Use (hereinafter – the Terms) and other
                     documents that are incorporated herein or referred to herein set forth the terms and condition on

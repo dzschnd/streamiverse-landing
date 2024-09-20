@@ -39,19 +39,19 @@ function Reasons() {
 
     return (
         <div className={'section-wrapper'}>
-            <div className={'section-header'}>
+            <h1 className={'section-header'}>
                 Why Streamiverse?
-            </div>
+            </h1>
             <div className={'features-content'}>
                 <div className={'feature-card background-gradient'} id={'gradient-upper-right'}>
                     <img id={'globe'} src={images.globe} alt={''}/>
                     <div className={'feature-text'}>
-                        <div className={'section-subheader'}>
+                        <h2 className={'section-subheader'}>
                             Global Payment Methods
-                        </div>
-                        <div className={'section-text'}>
+                        </h2>
+                        <p className={'section-text'}>
                             150+ payment methods and 500+ cryptocurrencies
-                        </div>
+                        </p>
                     </div>
                 </div>
                 <div className={'feature-card background-gradient'} id={'gradient-bottom'}>
@@ -60,23 +60,23 @@ function Reasons() {
                         <img id={'brick-bottom'} src={images.brick} alt={''}/>
                     </div>
                     <div className={'feature-text'}>
-                        <div className={'section-subheader'}>
+                        <h2 className={'section-subheader'}>
                             Customizable Notifications
-                        </div>
-                        <div className={'section-text'}>
+                        </h2>
+                        <p className={'section-text'}>
                             In-stream alerts and notifications and overlays
-                        </div>
+                        </p>
                     </div>
                 </div>
                 <div className={'feature-card background-gradient'} id={'gradient-upper-left'}>
                     <img id={'money-jar'} src={images.moneyJar} alt={''}/>
                     <div className={'feature-text'}>
-                        <div className={'section-subheader'}>
+                        <h2 className={'section-subheader'}>
                             Digital Asset Wallet
-                        </div>
-                        <div className={'section-text'}>
+                        </h2>
+                        <p className={'section-text'}>
                             Donations are collected in place. No need for manual withdrawals
-                        </div>
+                        </p>
                     </div>
                 </div>
                 <div className={'feature-card background-gradient'} id={'gradient-bottom'}>
@@ -86,12 +86,12 @@ function Reasons() {
                         <img id={'platform-top'} src={images.platform} alt={''}/>
                     </div>
                     <div className={'feature-text'}>
-                        <div className={'section-subheader'}>
+                        <h2 className={'section-subheader'}>
                             Integrated Platform
-                        </div>
-                        <div className={'section-text'}>
+                        </h2>
+                        <p className={'section-text'}>
                             Ultimate suite of tools for streamers
-                        </div>
+                        </p>
                     </div>
                 </div>
             </div>

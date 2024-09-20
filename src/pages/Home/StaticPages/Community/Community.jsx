@@ -3,15 +3,15 @@ import ImageOrbit from "./ImageOrbit";
 function Community({openWidget}) {
     return (
         <div className={'section-wrapper'}>
-            <div className={'section-header'}>
+            <h1 className={'section-header'}>
                 Join our community
-            </div>
+            </h1>
            <div className={'community-content'}>
               <ImageOrbit/>
                <div className={'cta'}>
-                   <div className={'section-subheader'}>
+                   <h2 className={'section-subheader'}>
                        Join the universe<br/>of streamers
-                   </div>
+                   </h2>
                    <button className={'button button-gradient community-button button-shrinkable'} onClick={openWidget}>
                         <span>
                             Join the Waitlist

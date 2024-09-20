@@ -28,18 +28,18 @@ function Contact() {
     return (
         <div className={'contact-wrapper section-wrapper'}>
             <img className={'margin-inline-auto'} src={images.streamersRow} alt={''}/>
-            <div className={'section-header-smaller text-center'}>
+            <h1 className={'section-header-smaller text-center'}>
                 Get Involved
-            </div>
-            <div className={'section-subheader-smaller text-center'}>
+            </h1>
+            <h2 className={'section-subheader-smaller text-center'}>
                 Become a part of Streamiverse Labs and start building your tech company today
-            </div>
+            </h2>
             <div className={'text-center'}>
                 <button onClick={() => {window.location.href = 'mailto:support@streamiverse.io'}} className="button button-gradient">
                     Contact Us
                 </button>
+            </div>
         </div>
-</div>
 )
 }
 

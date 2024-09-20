@@ -27,15 +27,15 @@ function Labs() {
 
     return (
         <div className={'labs-wrapper section-wrapper'}>
-            <div className={'section-text text-center color-primary-700'}>
-                Coming Soon
+            <div className={'section-text text-center'}>
+                <span className={'color-primary-700'}>Coming Soon</span>
             </div>
-            <div className={'section-header-smaller text-center'}>
+            <h1 className={'section-header-smaller text-center'}>
                 Streamiverse Labs
-            </div>
-            <div className={'labs-description section-text text-center'}>
+            </h1>
+            <p className={'labs-description section-text text-center'}>
                 Streamiverse Labs is a hub helping creators to build technology companies that leverage their influence and direct access to consumers
-            </div>
+            </p>
             <img className={'margin-inline-auto'} src={images.streamerGirl} alt={''}/>
         </div>
     )

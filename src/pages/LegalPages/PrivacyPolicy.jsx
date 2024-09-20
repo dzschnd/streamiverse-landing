@@ -3,15 +3,15 @@ function PrivacyPolicy() {
     return (
         <div className={'doc'}>
             <div className={'doc-wrapper'}>
-                <p className={'doc-header'}>
+                <h1 className={'doc-header'}>
                     Privacy Policy
-                </p>
-                <p className={'doc-text last-amended'}>
+                </h1>
+                <h3 className={'doc-text last-amended'}>
                     Last Amended 07-26-2024
-                </p>
-                <p className={'doc-subheader'} id={'doc-subheader--first'}>
+                </h3>
+                <h2 className={'doc-subheader'} id={'doc-subheader--first'}>
                     Preamble
-                </p>
+                </h2>
                 <p className={'doc-text border-primary'}>
                     This Privacy Policy (hereinafter – the Policy) and other documents that are referred to herein
                     explain how and why we, the Service Provider, collect

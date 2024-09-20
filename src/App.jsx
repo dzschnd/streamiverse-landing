@@ -5,6 +5,7 @@ import TermsOfUse from "./pages/LegalPages/TermsOfUse";
 import HomePage from "./pages/Home/HomePage";
 import FeaturesPage from "./pages/FeaturesPage/FeaturesPage";
 import LabsPage from "./pages/LabsPage/LabsPage";
+import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
 function App() {
     return (
@@ -24,6 +25,9 @@ function App() {
                 }/>
                 <Route path="/terms-of-use" element={
                     <TermsOfUse/>
+                }/>
+                <Route path="*" element={
+                    <PageNotFound/>
                 }/>
             </Routes>
         </Router>

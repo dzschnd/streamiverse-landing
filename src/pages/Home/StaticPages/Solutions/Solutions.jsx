@@ -72,41 +72,41 @@ function Solutions() {
 
     return (
         <div className={'section-wrapper'}>
-            <div className={'section-header'}>
+            <h1 className={'section-header'}>
                 How Streamiverse Works
-            </div>
+            </h1>
             <div className={'solutions-content'}>
                 <div className={'solution-card'} id={'solution-card-1'}>
                     <div className={'card-text'}>
-                        <div className={'section-subheader'}>
+                        <h2 className={'section-subheader'}>
                             Sign Up
-                        </div>
-                        <div className={'section-text'}>
+                        </h2>
+                        <p className={'section-text'}>
                             Create an account.
-                        </div>
+                        </p>
                         <button className={'button'} id={'illustration-button-top'}>Get started</button>
                         <button className={'button'} id={'illustration-button-bottom'}>Get started</button>
                     </div>
                 </div>
                 <div className={'solution-card'} id={'solution-card-2'}>
                     <div className={'card-text'}>
-                        <div className={'section-subheader'}>
+                        <h2 className={'section-subheader'}>
                             Integrate Tools
-                        </div>
-                        <div className={'section-text'}>
+                        </h2>
+                        <p className={'section-text'}>
                             Customize your streaming setup
-                        </div>
+                        </p>
                     </div>
                     <img src={images.integrate} alt={''} />
                 </div>
                 <div className={'solution-card'} id={'solution-card-3'}>
                     <div className={'card-text'}>
-                        <div className={'section-subheader'}>
+                        <h2 className={'section-subheader'}>
                             Start Accepting Donations
-                        </div>
-                        <div className={'section-text'}>
+                        </h2>
+                        <p className={'section-text'}>
                             Use multiple payment methods
-                        </div>
+                        </p>
                     </div>
                     <div className={'payment-methods-carousel'} id={'carousel-set-1'}>
                         <img src={images.tetherLogo} alt={''} />
@@ -131,12 +131,12 @@ function Solutions() {
                 </div>
                 <div className={'solution-card'} id={'solution-card-4'}>
                     <div className={'card-text'}>
-                        <div className={'section-subheader'}>
+                        <h2 className={'section-subheader'}>
                             Withdraw Funds Instantly
-                        </div>
-                        <div className={'section-text'}>
+                        </h2>
+                        <p className={'section-text'}>
                             Access your earnings in&nbsp;real-time.
-                        </div>
+                        </p>
                         <img src={images.withdraw} alt={''} />
                     </div>
                 </div>
