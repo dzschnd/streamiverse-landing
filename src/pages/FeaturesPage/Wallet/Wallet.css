@@ -4,7 +4,10 @@
 
 .wallet-content {
     margin-top: 60px;
-    display: flex;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1216px;
     justify-content: center;
     gap: 20px;
 }
@@ -14,6 +17,7 @@
 }
 
 .wallet-card {
+    margin-inline: auto;
     background-color: var(--color-neutral-500);
     border-radius: 30px;
     padding: 60px 30px;
@@ -31,7 +35,7 @@
         display: none;
     }
     .wallet-content {
-       flex-direction: column;
+       grid-template-columns: 1fr;
        align-items: center;
     }
 }

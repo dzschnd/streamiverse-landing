@@ -42,16 +42,8 @@ function Wallet() {
                         Real-Time Access
                     </div>
                     <div className={'section-text text-center'}>
-                        Access your funds instantly and use them as needed, whether for personal expenses or reinvestment into your streaming setup
-                    </div>
-                </div>
-                <div className={'wallet-card'}>
-                    <div className={'section-subheader-smaller text-center'}>
-                        Issue Debit Card
-                    </div>
-                    <div className={'section-text text-center'}>
-                        Get a debit card linked to your wallet for easy spending. Use it anywhere that accepts card
-                        payments
+                        Access your funds instantly and use them as needed, whether for personal expenses or
+                        reinvestment into your streaming setup
                     </div>
                 </div>
                 <div className={'wallet-card'}>
@@ -61,6 +53,18 @@ function Wallet() {
                     <div className={'section-text text-center'}>
                         Use the Streamiverse digital wallet to collect all your donations in one place. No need for
                         multiple accounts or manual tracking
+                    </div>
+                </div>
+                <div className={'wallet-card'}>
+                    <div className={'section-subheader-smaller text-center'}>
+                        Issue Debit Card
+                    </div>
+                    <div className={'section-text text-center'}>
+                        <div className={'color-primary-700'}>
+                            Coming Soon
+                        </div>
+                        Get a debit card linked to your wallet for easy spending. Use it anywhere that accepts card
+                        payments
                     </div>
                 </div>
             </div>
