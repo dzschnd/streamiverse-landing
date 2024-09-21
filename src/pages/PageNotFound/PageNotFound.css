@@ -1,0 +1,15 @@
+.page-not-found {
+    padding-block: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    .button {
+        width: 263px;
+    }
+}
+
+.footer-404 {
+
+}
