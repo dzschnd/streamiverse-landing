@@ -42,13 +42,13 @@ function Resources() {
             <div className={'resources-content'}>
                 <div className={'resources-cards-big'}>
                     <div className={'resources-card'}>
-                        <div className={'section-header-smaller'}>
+                        <h1 className={'section-header-smaller'}>
                             Comprehensive Resources
-                        </div>
-                        <div className={'section-subheader-smaller'}>
+                        </h1>
+                        <h2 className={'section-subheader-smaller'}>
                             Access a wealth of resources designed to help you turn your ideas into thriving
                             businesses
-                        </div>
+                        </h2>
                     </div>
                     <div className={'resources-card'}>
                         <img src={images.streamerGuy} alt={''}/>
@@ -57,21 +57,21 @@ function Resources() {
                 <div className={'resources-cards-small'}>
                     <div className={'resources-card'}>
                         <img src={images.gears} alt={''} id={'gears'}/>
-                        <div className={'section-text'}>
+                        <h3 className={'section-text'}>
                             Technical development tools and platforms
-                        </div>
+                        </h3>
                     </div>
                     <div className={'resources-card'}>
                         <img src={images.stats} alt={''} id={'stats'}/>
-                        <div className={'section-text'}>
+                        <h3 className={'section-text'}>
                             Business development and marketing strategies
-                        </div>
+                        </h3>
                     </div>
                     <div className={'resources-card'}>
                         <img src={images.rocket} alt={''} id={'rocket'}/>
-                        <div className={'section-text'}>
+                        <h3 className={'section-text'}>
                             Financial planning and funding opportunities
-                        </div>
+                        </h3>
                     </div>
                 </div>
             </div>

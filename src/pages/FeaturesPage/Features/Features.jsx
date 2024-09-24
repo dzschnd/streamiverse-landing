@@ -27,14 +27,12 @@ function Features() {
 
     return (
         <div className={'features-wrapper section-wrapper'}>
-            <div className={'section-header-smaller text-center'}>
+            <h1 className={'section-header-smaller text-center'}>
                 Streamiverse Features
-            </div>
-            <div className={'features-description section-text text-center'}>
-                <p>
-                    Explore the cutting-edge features that make Streamiverse the ultimate platform for streamers
-                </p>
-            </div>
+            </h1>
+            <p className={'features-description section-text text-center'}>
+                Explore the cutting-edge features that make Streamiverse the ultimate platform for streamers
+            </p>
             <img className={'margin-inline-auto'} src={images.appPreview} alt={''}/>
         </div>
     )

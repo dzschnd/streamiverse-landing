@@ -55,52 +55,52 @@ function Widgets() {
 
     return (
         <div className={'widgets-wrapper section-wrapper'}>
-            <div className={'section-header-smaller text-center'}>
+            <h1 className={'section-header-smaller text-center'}>
                 Donation Widgets
-            </div>
-            <div className={'widgets-description section-text text-center'}>
+            </h1>
+            <h3 className={'widgets-description section-text text-center'}>
                 Show donations from viewers around the world with ease
-            </div>
+            </h3>
             <div className={'widgets-bullets'}>
                 <div className={'widgets-column-1'}>
                     <div className={'bullet-point'}>
                         <img className={'bullet'} src={images.alertsBullet} alt={''}/>
                         <div>
-                            <div className={'section-subheader-smaller'}>
+                            <h2 className={'section-subheader-smaller'}>
                                 Customizable Alerts
-                            </div>
-                            <div className={'section-text'}>
+                            </h2>
+                            <p className={'section-text'}>
                                 Set up alerts for donations, follows, and subscriptions. Customize the appearance and
                                 sound
                                 to
                                 match your brand
-                            </div>
+                            </p>
                         </div>
                     </div>
                     <div className={'bullet-point'}>
                         <img className={'bullet'} src={images.overlaysBullet} alt={''}/>
                         <div>
-                            <div className={'section-subheader-smaller'}>
+                            <h2 className={'section-subheader-smaller'}>
                                 Overlays
-                            </div>
-                            <div className={'section-text'}>
+                            </h2>
+                            <p className={'section-text'}>
                                 Create interactive overlays that engage viewers with real-time data, such as recent
                                 donations,
                                 top supporters, and more
-                            </div>
+                            </p>
                         </div>
                     </div>
                     <div className={'bullet-point'}>
                         <img className={'bullet'} src={images.paymentMethodsBullet} alt={''}/>
                         <div>
-                            <div className={'section-subheader-smaller'}>
+                            <h2 className={'section-subheader-smaller'}>
                                 Multiple Payment Methods
-                            </div>
-                            <div className={'section-text'}>
+                            </h2>
+                            <p className={'section-text'}>
                                 Set up your donation page to accept payments from over 150 methods, including credit
                                 cards,
                                 PayPal, Mastercard, Visa, PIX and 500+ cryptocurrencies
-                            </div>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -108,39 +108,39 @@ function Widgets() {
                     <div className={'bullet-point'}>
                         <img className={'bullet'} src={images.withdrawalsBullet} alt={''}/>
                         <div>
-                            <div className={'section-subheader-smaller'}>
+                            <h2 className={'section-subheader-smaller'}>
                                 Instant Withdrawals
-                            </div>
-                            <div className={'section-text'}>
+                            </h2>
+                            <p className={'section-text'}>
                                 Instantly withdraw donations in any currency to your Streamiverse Wallet
-                            </div>
+                            </p>
                         </div>
                     </div>
                     <div className={'bullet-point'}>
                         <img className={'bullet'} src={images.widgetsBullet} alt={''}/>
                         <div>
-                            <div className={'section-subheader-smaller'}>
+                            <h2 className={'section-subheader-smaller'}>
                                 Widgets
-                            </div>
-                            <div className={'section-text'}>
+                            </h2>
+                            <p className={'section-text'}>
                                 Use pre-built widgets for polls, in-stream stickers, and other interactive elements to
                                 keep
                                 your
                                 audience engaged
-                            </div>
+                            </p>
                         </div>
                     </div>
                     <div className={'bullet-point'}>
                         <img className={'bullet'} src={images.feesBullet} alt={''}/>
                         <div>
-                            <div className={'section-subheader-smaller'}>
+                            <h2 className={'section-subheader-smaller'}>
                                 Transparent Fees
-                            </div>
-                            <div className={'section-text'}>
+                            </h2>
+                            <p className={'section-text'}>
                                 Choose who covers the transaction fees—either the donor or the streamer. Enjoy lower
                                 fees
                                 compared to legacy platforms
-                            </div>
+                            </p>
                         </div>
                     </div>
                 </div>

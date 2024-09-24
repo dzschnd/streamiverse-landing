@@ -79,8 +79,7 @@ function HomePage() {
                         <SheetProvider sheet={sheet}>
                             <Scene/>
                             <Html className={'canvas-html'}>
-                                <StaticPages scrollOffset={scrollOffset} animationPages={animationPages}
-                                             dimensions={dimensions}/>
+                                <StaticPages scrollOffset={scrollOffset} animationPages={animationPages} dimensions={dimensions}/>
                             </Html>
                         </SheetProvider>
                     </Scroll>

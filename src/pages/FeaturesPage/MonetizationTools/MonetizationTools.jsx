@@ -98,12 +98,12 @@ function MonetizationTools({openWidget}) {
 
     return (
         <div className={'monetization-tools-wrapper section-wrapper'}>
-            <div className={'section-header-smaller text-center'}>
+            <h1 className={'section-header-smaller text-center'}>
                 Innovative Monetization Tools
-            </div>
-            <div className={'monetization-tools-description section-text text-center'}>
+            </h1>
+            <h3 className={'monetization-tools-description section-text text-center'}>
                 Unlock new revenue streams through digital assets and tokens
-            </div>
+            </h3>
             <div className={'monetization-tools-nav'}>
                 <button className={`button button-slider ${currentTab === 1 ? 'active' : ''}`} onClick={() => setCurrentTab(1)}>
                     Streams
@@ -145,28 +145,24 @@ function MonetizationTools({openWidget}) {
                     </div>
                     <div className={'monetization-tools-tab'} id={'tab-2'}>
                         <img src={images.streamerCoins} alt={''} id={'streamer-coins'}/>
-                        <div>
-                            <p>
-                                <div className={'color-primary-700'}>
+                        <p>
+                            <span className={'color-primary-700'}>
                                     Coming Soon
-                                </div>
-                                Create and distribute your own tokens to engage your community. Use them for special
-                                perks,
-                                access to exclusive content, or as a currency within your platform
-                            </p>
-                        </div>
+                            </span>
+                            Create and distribute your own tokens to engage your community. Use them for special
+                            perks,
+                            access to exclusive content, or as a currency within your platform
+                        </p>
                     </div>
                     <div className={'monetization-tools-tab'} id={'tab-3'}>
                         <img src={images.gameController} alt={''} id={'game-controller'}/>
-                        <div>
-                            <p>
-                                <div className={'color-primary-700'}>
-                                    Coming Soon
-                                </div>
-                                Convert in-game items, digital content, and other assets into tokens that can be bought,
-                                sold, or traded
-                            </p>
-                        </div>
+                        <p>
+                            <span className={'color-primary-700'}>
+                                Coming Soon
+                            </span>
+                            Convert in-game items, digital content, and other assets into tokens that can be bought,
+                            sold, or traded
+                        </p>
                     </div>
                 </div>
             </div>
