@@ -1,11 +1,11 @@
 .contact-wrapper {
     margin-bottom: 200px;
-    .section-subheader-smaller {
+    .section-text {
         margin-bottom: 60px;
         margin-inline: auto;
-        max-width: 737px;
+        max-width: 458px;
     }
-    img {
+    img, .section-subheader {
         margin-bottom: 40px;
     }
     .button {

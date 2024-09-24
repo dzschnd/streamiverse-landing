@@ -63,6 +63,7 @@ function Wallet() {
                         <span className={'color-primary-700'}>
                             Coming Soon
                         </span>
+                        <br/>
                         Get a debit card linked to your wallet for easy spending. Use it anywhere that accepts card
                         payments
                     </p>

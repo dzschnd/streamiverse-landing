@@ -28,10 +28,10 @@ function Contact() {
     return (
         <div className={'contact-wrapper section-wrapper'}>
             <img className={'margin-inline-auto'} src={images.streamersRow} alt={''}/>
-            <h1 className={'section-header-smaller text-center'}>
+            <h1 className={'section-subheader text-center'}>
                 Get Involved
             </h1>
-            <h2 className={'section-subheader-smaller text-center'}>
+            <h2 className={'section-text text-center'}>
                 Become a part of Streamiverse Labs and start building your tech company today
             </h2>
             <div className={'text-center'}>
