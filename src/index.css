@@ -74,7 +74,7 @@ svg {
     scroll-behavior: smooth;
 }
 
-/* document later */
+/* костыль под баг r3f */
 div:has(.canvas-html) {
     transform: none !important;
 }
