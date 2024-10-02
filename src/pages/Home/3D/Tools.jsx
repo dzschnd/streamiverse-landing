@@ -288,7 +288,7 @@ const heroTitlesDesktop = ['Ultimate crypto solution for streamers'];
 const heroTextsDesktop = [
     'Earn more by accepting donations in any cryptocurrency.',
     'We automatically convert incoming donations to a preferred crypto.',
-    'Collect and use your donations effortlessly in all-in-one digital wallet.',
+    'Effortlessly collect and manage your donations in an all-in-one digital wallet.',
     'Focus on creating content, leave complex world of crypto for us.'
 ];
 
@@ -302,8 +302,8 @@ const heroTextsMobile = [
     'in any cryptocurrency.',
     'We automatically convert incoming',
     'donations to a preferred crypto.',
-    'Collect and use your donations',
-    'in all-in-one digital wallet.',
+    'Collect and manage your donations',
+    'in an all-in-one digital wallet.',
     'Focus on creating content,',
     'leave crypto for us.',
 ];
