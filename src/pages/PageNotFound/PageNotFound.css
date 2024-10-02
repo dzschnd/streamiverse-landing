@@ -1,6 +1,13 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .page-not-found {
     padding-block: 120px;
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
